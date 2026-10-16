@@ -1,0 +1,11 @@
+# Keep research evidence byte-identical across checkout platforms.
+/data/** -text -whitespace
+/notes/assets/*.csv -text
+/notes/assets/*.json -text
+
+# Upstream notices and patch context retain their original whitespace.
+/third_party/** -text -whitespace
+/patches/*.patch -text -whitespace
+
+# CSV writers legitimately use CRLF record terminators.
+*.csv whitespace=cr-at-eol

@@ -1,0 +1,5877 @@
+{
+  "seed": 40002,
+  "environment_config": {
+    "n_agents": 2,
+    "starting_cash": 10000000,
+    "k": 10,
+    "max_size": 100,
+    "max_inventory": 1000,
+    "inventory_penalty": 0.0001,
+    "termination_penalty": -1.0,
+    "start_time": "09:30:00",
+    "end_time": "09:40:00",
+    "wakeup_interval": "1s",
+    "gated_actions": true,
+    "offset_span": 15,
+    "mid_rounding": "outward",
+    "agent_id_obs": true,
+    "agent_id_width": 2,
+    "include_ofi": true,
+    "latency_edge": 1.0,
+    "config_kwargs": {
+      "num_noise_agents": 2000,
+      "num_value_agents": 50,
+      "num_momentum_agents": 10
+    }
+  },
+  "agent_ids": {
+    "2063": "mm_0",
+    "2064": "mm_1"
+  },
+  "risk_terminated": false,
+  "exchange_matches": [
+    {
+      "time": 1591176602005097510,
+      "type": "EXEC",
+      "order_id": 62515,
+      "agent_id": 2047,
+      "oppos_order_id": 62517,
+      "oppos_agent_id": 2063,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176602306157433,
+      "type": "EXEC",
+      "order_id": 62516,
+      "agent_id": 2063,
+      "oppos_order_id": 62520,
+      "oppos_agent_id": 2041,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176602306157433,
+      "type": "EXEC",
+      "order_id": 62518,
+      "agent_id": 2064,
+      "oppos_order_id": 62520,
+      "oppos_agent_id": 2041,
+      "side": "BUY",
+      "quantity": 1,
+      "price": null
+    },
+    {
+      "time": 1591176606005097510,
+      "type": "EXEC",
+      "order_id": 62537,
+      "agent_id": 2007,
+      "oppos_order_id": 62538,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176610396461058,
+      "type": "EXEC",
+      "order_id": 62557,
+      "agent_id": 2063,
+      "oppos_order_id": 62562,
+      "oppos_agent_id": 2037,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176610637622460,
+      "type": "EXEC",
+      "order_id": 62558,
+      "agent_id": 2064,
+      "oppos_order_id": 62563,
+      "oppos_agent_id": 2025,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176615537087331,
+      "type": "EXEC",
+      "order_id": 62586,
+      "agent_id": 2064,
+      "oppos_order_id": 62629,
+      "oppos_agent_id": 2027,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176627005097510,
+      "type": "EXEC",
+      "order_id": 62833,
+      "agent_id": 2004,
+      "oppos_order_id": 62835,
+      "oppos_agent_id": 2063,
+      "side": "BUY",
+      "quantity": 8,
+      "price": null
+    },
+    {
+      "time": 1591176627005097510,
+      "type": "EXEC",
+      "order_id": 62834,
+      "agent_id": 2012,
+      "oppos_order_id": 62835,
+      "oppos_agent_id": 2063,
+      "side": "BUY",
+      "quantity": 2,
+      "price": null
+    },
+    {
+      "time": 1591176628655656748,
+      "type": "EXEC",
+      "order_id": 62840,
+      "agent_id": 2064,
+      "oppos_order_id": 62846,
+      "oppos_agent_id": 2026,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176631006449427,
+      "type": "EXEC",
+      "order_id": 62860,
+      "agent_id": 2064,
+      "oppos_order_id": 62861,
+      "oppos_agent_id": 2024,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176644163649660,
+      "type": "EXEC",
+      "order_id": 63029,
+      "agent_id": 2063,
+      "oppos_order_id": 63032,
+      "oppos_agent_id": 2017,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176646400769558,
+      "type": "EXEC",
+      "order_id": 63059,
+      "agent_id": 2064,
+      "oppos_order_id": 63060,
+      "oppos_agent_id": 2014,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176655002994653,
+      "type": "EXEC",
+      "order_id": 63141,
+      "agent_id": 2064,
+      "oppos_order_id": 63167,
+      "oppos_agent_id": 2050,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1.591176661889539e+18,
+      "type": "EXEC",
+      "order_id": 63242,
+      "agent_id": 2063,
+      "oppos_order_id": 63266,
+      "oppos_agent_id": 643,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176669005097510,
+      "type": "EXEC",
+      "order_id": 63337,
+      "agent_id": 2050,
+      "oppos_order_id": 63338,
+      "oppos_agent_id": 2064,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176671458092533,
+      "type": "EXEC",
+      "order_id": 63350,
+      "agent_id": 2063,
+      "oppos_order_id": 63353,
+      "oppos_agent_id": 2033,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176672005097510,
+      "type": "EXEC",
+      "order_id": 63354,
+      "agent_id": 1449,
+      "oppos_order_id": 63355,
+      "oppos_agent_id": 2063,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176688005097510,
+      "type": "EXEC",
+      "order_id": 63506,
+      "agent_id": 2021,
+      "oppos_order_id": 63509,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 6,
+      "price": null
+    },
+    {
+      "time": 1591176688005097510,
+      "type": "EXEC",
+      "order_id": 63507,
+      "agent_id": 2012,
+      "oppos_order_id": 63509,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 4,
+      "price": null
+    },
+    {
+      "time": 1591176696381273557,
+      "type": "EXEC",
+      "order_id": 63603,
+      "agent_id": 2064,
+      "oppos_order_id": 63605,
+      "oppos_agent_id": 2046,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176760005097510,
+      "type": "EXEC",
+      "order_id": 64115,
+      "agent_id": 2026,
+      "oppos_order_id": 64117,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176779330532137,
+      "type": "EXEC",
+      "order_id": 64306,
+      "agent_id": 2064,
+      "oppos_order_id": 64308,
+      "oppos_agent_id": 2044,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176784800401227,
+      "type": "EXEC",
+      "order_id": 64370,
+      "agent_id": 2063,
+      "oppos_order_id": 64376,
+      "oppos_agent_id": 2035,
+      "side": "SELL",
+      "quantity": 4,
+      "price": null
+    },
+    {
+      "time": 1591176799456383183,
+      "type": "EXEC",
+      "order_id": 64509,
+      "agent_id": 2064,
+      "oppos_order_id": 64511,
+      "oppos_agent_id": 2045,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176800005097510,
+      "type": "EXEC",
+      "order_id": 64511,
+      "agent_id": 2045,
+      "oppos_order_id": 64513,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176826005097510,
+      "type": "EXEC",
+      "order_id": 64673,
+      "agent_id": 2047,
+      "oppos_order_id": 64674,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176827322874478,
+      "type": "EXEC",
+      "order_id": 64682,
+      "agent_id": 2064,
+      "oppos_order_id": 64684,
+      "oppos_agent_id": 2009,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176827964823699,
+      "type": "EXEC",
+      "order_id": 64681,
+      "agent_id": 2063,
+      "oppos_order_id": 64689,
+      "oppos_agent_id": 2046,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176832914817939,
+      "type": "EXEC",
+      "order_id": 64743,
+      "agent_id": 2064,
+      "oppos_order_id": 64748,
+      "oppos_agent_id": 2017,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176835795036692,
+      "type": "EXEC",
+      "order_id": 64764,
+      "agent_id": 2064,
+      "oppos_order_id": 64776,
+      "oppos_agent_id": 2025,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176836878004849,
+      "type": "EXEC",
+      "order_id": 64778,
+      "agent_id": 2064,
+      "oppos_order_id": 64780,
+      "oppos_agent_id": 2002,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176841707692259,
+      "type": "EXEC",
+      "order_id": 64807,
+      "agent_id": 2064,
+      "oppos_order_id": 64812,
+      "oppos_agent_id": 2013,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176845419078231,
+      "type": "EXEC",
+      "order_id": 64863,
+      "agent_id": 2064,
+      "oppos_order_id": 64865,
+      "oppos_agent_id": 2006,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176861217699394,
+      "type": "EXEC",
+      "order_id": 64999,
+      "agent_id": 2064,
+      "oppos_order_id": 65003,
+      "oppos_agent_id": 2035,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176881005097510,
+      "type": "EXEC",
+      "order_id": 65218,
+      "agent_id": 2024,
+      "oppos_order_id": 65220,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176886021117299,
+      "type": "EXEC",
+      "order_id": 65268,
+      "agent_id": 2063,
+      "oppos_order_id": 65271,
+      "oppos_agent_id": 2046,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176895019393132,
+      "type": "EXEC",
+      "order_id": 65339,
+      "agent_id": 2063,
+      "oppos_order_id": 65340,
+      "oppos_agent_id": 2040,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176900388176894,
+      "type": "EXEC",
+      "order_id": 65399,
+      "agent_id": 2064,
+      "oppos_order_id": 65401,
+      "oppos_agent_id": 2021,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1.5911769012055918e+18,
+      "type": "EXEC",
+      "order_id": 65405,
+      "agent_id": 2064,
+      "oppos_order_id": 65406,
+      "oppos_agent_id": 1621,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176901448316964,
+      "type": "EXEC",
+      "order_id": 65403,
+      "agent_id": 2063,
+      "oppos_order_id": 65407,
+      "oppos_agent_id": 2035,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176919854577480,
+      "type": "EXEC",
+      "order_id": 65534,
+      "agent_id": 2063,
+      "oppos_order_id": 65538,
+      "oppos_agent_id": 2039,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176921801004440,
+      "type": "EXEC",
+      "order_id": 65545,
+      "agent_id": 2064,
+      "oppos_order_id": 65547,
+      "oppos_agent_id": 2046,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176926134002958,
+      "type": "EXEC",
+      "order_id": 65593,
+      "agent_id": 2064,
+      "oppos_order_id": 65594,
+      "oppos_agent_id": 2009,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176927218713004,
+      "type": "EXEC",
+      "order_id": 65599,
+      "agent_id": 2064,
+      "oppos_order_id": 65602,
+      "oppos_agent_id": 2009,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176930026958201,
+      "type": "EXEC",
+      "order_id": 65636,
+      "agent_id": 2064,
+      "oppos_order_id": 65637,
+      "oppos_agent_id": 2003,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176930377078768,
+      "type": "EXEC",
+      "order_id": 65634,
+      "agent_id": 2063,
+      "oppos_order_id": 65640,
+      "oppos_agent_id": 2044,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176933005097510,
+      "type": "EXEC",
+      "order_id": 65655,
+      "agent_id": 2022,
+      "oppos_order_id": 65657,
+      "oppos_agent_id": 2064,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176937668005535,
+      "type": "EXEC",
+      "order_id": 65683,
+      "agent_id": 2064,
+      "oppos_order_id": 65686,
+      "oppos_agent_id": 2012,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176944005097510,
+      "type": "EXEC",
+      "order_id": 65742,
+      "agent_id": 2047,
+      "oppos_order_id": 65743,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176955127422451,
+      "type": "EXEC",
+      "order_id": 65861,
+      "agent_id": 2064,
+      "oppos_order_id": 65863,
+      "oppos_agent_id": 2022,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176956005097510,
+      "type": "EXEC",
+      "order_id": 65869,
+      "agent_id": 748,
+      "oppos_order_id": 65871,
+      "oppos_agent_id": 2064,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176958871582982,
+      "type": "EXEC",
+      "order_id": 65878,
+      "agent_id": 2063,
+      "oppos_order_id": 65883,
+      "oppos_agent_id": 2005,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176963005097510,
+      "type": "EXEC",
+      "order_id": 65924,
+      "agent_id": 2001,
+      "oppos_order_id": 65926,
+      "oppos_agent_id": 2064,
+      "side": "BUY",
+      "quantity": 8,
+      "price": null
+    },
+    {
+      "time": 1591176963181302821,
+      "type": "EXEC",
+      "order_id": 65926,
+      "agent_id": 2064,
+      "oppos_order_id": 65927,
+      "oppos_agent_id": 2027,
+      "side": "SELL",
+      "quantity": 2,
+      "price": null
+    },
+    {
+      "time": 1591176966310394985,
+      "type": "EXEC",
+      "order_id": 65958,
+      "agent_id": 2063,
+      "oppos_order_id": 65961,
+      "oppos_agent_id": 2035,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176988258845979,
+      "type": "EXEC",
+      "order_id": 66137,
+      "agent_id": 2063,
+      "oppos_order_id": 66142,
+      "oppos_agent_id": 2026,
+      "side": "BUY",
+      "quantity": 8,
+      "price": null
+    },
+    {
+      "time": 1591176988345093396,
+      "type": "EXEC",
+      "order_id": 66137,
+      "agent_id": 2063,
+      "oppos_order_id": 66143,
+      "oppos_agent_id": 2050,
+      "side": "BUY",
+      "quantity": 2,
+      "price": null
+    },
+    {
+      "time": 1591176994005097510,
+      "type": "EXEC",
+      "order_id": 66220,
+      "agent_id": 2028,
+      "oppos_order_id": 66223,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591176999931260595,
+      "type": "EXEC",
+      "order_id": 66267,
+      "agent_id": 2064,
+      "oppos_order_id": 66268,
+      "oppos_agent_id": 2014,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177001939986527,
+      "type": "EXEC",
+      "order_id": 66314,
+      "agent_id": 2064,
+      "oppos_order_id": 66316,
+      "oppos_agent_id": 2046,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177008057469027,
+      "type": "EXEC",
+      "order_id": 66348,
+      "agent_id": 2064,
+      "oppos_order_id": 66349,
+      "oppos_agent_id": 2045,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177011278865079,
+      "type": "EXEC",
+      "order_id": 66359,
+      "agent_id": 2064,
+      "oppos_order_id": 66361,
+      "oppos_agent_id": 2023,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177017005097510,
+      "type": "EXEC",
+      "order_id": 66408,
+      "agent_id": 2027,
+      "oppos_order_id": 66409,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177020764071384,
+      "type": "EXEC",
+      "order_id": 66421,
+      "agent_id": 2064,
+      "oppos_order_id": 66423,
+      "oppos_agent_id": 2015,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177021607869006,
+      "type": "EXEC",
+      "order_id": 66425,
+      "agent_id": 2064,
+      "oppos_order_id": 66426,
+      "oppos_agent_id": 2005,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177025005097510,
+      "type": "EXEC",
+      "order_id": 66435,
+      "agent_id": 2044,
+      "oppos_order_id": 66436,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177026465270265,
+      "type": "EXEC",
+      "order_id": 66442,
+      "agent_id": 2064,
+      "oppos_order_id": 66445,
+      "oppos_agent_id": 2046,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177029706861722,
+      "type": "EXEC",
+      "order_id": 66473,
+      "agent_id": 2063,
+      "oppos_order_id": 66476,
+      "oppos_agent_id": 2047,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1.5911770326912297e+18,
+      "type": "EXEC",
+      "order_id": 66490,
+      "agent_id": 2064,
+      "oppos_order_id": 66491,
+      "oppos_agent_id": 1831,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177037005097510,
+      "type": "EXEC",
+      "order_id": 66508,
+      "agent_id": 2036,
+      "oppos_order_id": 66509,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177045964193868,
+      "type": "EXEC",
+      "order_id": 66575,
+      "agent_id": 2064,
+      "oppos_order_id": 66600,
+      "oppos_agent_id": 2017,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177048514814956,
+      "type": "EXEC",
+      "order_id": 66609,
+      "agent_id": 2064,
+      "oppos_order_id": 66613,
+      "oppos_agent_id": 2007,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177049161383734,
+      "type": "EXEC",
+      "order_id": 66614,
+      "agent_id": 2063,
+      "oppos_order_id": 66636,
+      "oppos_agent_id": 2017,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177059005097510,
+      "type": "EXEC",
+      "order_id": 66696,
+      "agent_id": 2047,
+      "oppos_order_id": 66697,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177078005097510,
+      "type": "EXEC",
+      "order_id": 66855,
+      "agent_id": 2009,
+      "oppos_order_id": 66858,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 8,
+      "price": null
+    },
+    {
+      "time": 1591177078038630650,
+      "type": "EXEC",
+      "order_id": 66858,
+      "agent_id": 2064,
+      "oppos_order_id": 66859,
+      "oppos_agent_id": 2040,
+      "side": "BUY",
+      "quantity": 2,
+      "price": null
+    },
+    {
+      "time": 1591177096005097510,
+      "type": "EXEC",
+      "order_id": 66991,
+      "agent_id": 2024,
+      "oppos_order_id": 66993,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177099156570176,
+      "type": "EXEC",
+      "order_id": 67006,
+      "agent_id": 2064,
+      "oppos_order_id": 67007,
+      "oppos_agent_id": 2028,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177112199007077,
+      "type": "EXEC",
+      "order_id": 67133,
+      "agent_id": 2064,
+      "oppos_order_id": 67135,
+      "oppos_agent_id": 2044,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177119022819374,
+      "type": "EXEC",
+      "order_id": 67202,
+      "agent_id": 2064,
+      "oppos_order_id": 67203,
+      "oppos_agent_id": 2046,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177131158085589,
+      "type": "EXEC",
+      "order_id": 67259,
+      "agent_id": 2063,
+      "oppos_order_id": 67260,
+      "oppos_agent_id": 2037,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177133073748062,
+      "type": "EXEC",
+      "order_id": 67272,
+      "agent_id": 2063,
+      "oppos_order_id": 67274,
+      "oppos_agent_id": 2019,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177134005097510,
+      "type": "EXEC",
+      "order_id": 67277,
+      "agent_id": 2026,
+      "oppos_order_id": 67279,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177141602719858,
+      "type": "EXEC",
+      "order_id": 67348,
+      "agent_id": 2063,
+      "oppos_order_id": 67353,
+      "oppos_agent_id": 2037,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177142052528778,
+      "type": "EXEC",
+      "order_id": 67377,
+      "agent_id": 2064,
+      "oppos_order_id": 67379,
+      "oppos_agent_id": 2009,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177143440239787,
+      "type": "EXEC",
+      "order_id": 67407,
+      "agent_id": 2064,
+      "oppos_order_id": 67410,
+      "oppos_agent_id": 2017,
+      "side": "BUY",
+      "quantity": 8,
+      "price": null
+    },
+    {
+      "time": 1591177143806663667,
+      "type": "EXEC",
+      "order_id": 67407,
+      "agent_id": 2064,
+      "oppos_order_id": 67412,
+      "oppos_agent_id": 2050,
+      "side": "BUY",
+      "quantity": 2,
+      "price": null
+    },
+    {
+      "time": 1591177149005097510,
+      "type": "EXEC",
+      "order_id": 67439,
+      "agent_id": 2019,
+      "oppos_order_id": 67441,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177150203162297,
+      "type": "EXEC",
+      "order_id": 67448,
+      "agent_id": 2064,
+      "oppos_order_id": 67449,
+      "oppos_agent_id": 2038,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177155772019741,
+      "type": "EXEC",
+      "order_id": 67532,
+      "agent_id": 2064,
+      "oppos_order_id": 67536,
+      "oppos_agent_id": 2029,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177157005097510,
+      "type": "EXEC",
+      "order_id": 67542,
+      "agent_id": 2040,
+      "oppos_order_id": 67544,
+      "oppos_agent_id": 2064,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177175871522203,
+      "type": "EXEC",
+      "order_id": 67700,
+      "agent_id": 2064,
+      "oppos_order_id": 67704,
+      "oppos_agent_id": 2007,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177176005097510,
+      "type": "EXEC",
+      "order_id": 67704,
+      "agent_id": 2007,
+      "oppos_order_id": 67705,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177181005097510,
+      "type": "EXEC",
+      "order_id": 67725,
+      "agent_id": 2048,
+      "oppos_order_id": 67728,
+      "oppos_agent_id": 2064,
+      "side": "SELL",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177181581637919,
+      "type": "EXEC",
+      "order_id": 67727,
+      "agent_id": 2063,
+      "oppos_order_id": 67732,
+      "oppos_agent_id": 2010,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177184801611184,
+      "type": "EXEC",
+      "order_id": 67766,
+      "agent_id": 2064,
+      "oppos_order_id": 67768,
+      "oppos_agent_id": 2036,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    },
+    {
+      "time": 1591177186050158530,
+      "type": "EXEC",
+      "order_id": 67774,
+      "agent_id": 2064,
+      "oppos_order_id": 67776,
+      "oppos_agent_id": 2050,
+      "side": "BUY",
+      "quantity": 10,
+      "price": null
+    }
+  ],
+  "executions": {
+    "mm_0": [
+      {
+        "received_time_ns": 1591176602010195120,
+        "order_id": 62517,
+        "signed_quantity": -10,
+        "price_cents": 100025
+      },
+      {
+        "received_time_ns": 1591176602311254793,
+        "order_id": 62516,
+        "signed_quantity": 10,
+        "price_cents": 100019
+      },
+      {
+        "received_time_ns": 1591176610401558418,
+        "order_id": 62557,
+        "signed_quantity": 10,
+        "price_cents": 100104
+      },
+      {
+        "received_time_ns": 1591176627010194870,
+        "order_id": 62835,
+        "signed_quantity": -8,
+        "price_cents": 100128
+      },
+      {
+        "received_time_ns": 1591176627010194920,
+        "order_id": 62835,
+        "signed_quantity": -2,
+        "price_cents": 100128
+      },
+      {
+        "received_time_ns": 1591176644168747020,
+        "order_id": 63029,
+        "signed_quantity": -10,
+        "price_cents": 100164
+      },
+      {
+        "received_time_ns": 1591176661894636544,
+        "order_id": 63242,
+        "signed_quantity": -10,
+        "price_cents": 100200
+      },
+      {
+        "received_time_ns": 1591176671463189893,
+        "order_id": 63350,
+        "signed_quantity": -10,
+        "price_cents": 100262
+      },
+      {
+        "received_time_ns": 1591176672010195020,
+        "order_id": 63355,
+        "signed_quantity": -10,
+        "price_cents": 100275
+      },
+      {
+        "received_time_ns": 1591176784805498587,
+        "order_id": 64370,
+        "signed_quantity": -4,
+        "price_cents": 100313
+      },
+      {
+        "received_time_ns": 1591176827969921059,
+        "order_id": 64681,
+        "signed_quantity": 10,
+        "price_cents": 100235
+      },
+      {
+        "received_time_ns": 1591176886026214659,
+        "order_id": 65268,
+        "signed_quantity": -10,
+        "price_cents": 100168
+      },
+      {
+        "received_time_ns": 1591176895024490492,
+        "order_id": 65339,
+        "signed_quantity": -10,
+        "price_cents": 100195
+      },
+      {
+        "received_time_ns": 1591176901453414324,
+        "order_id": 65403,
+        "signed_quantity": -10,
+        "price_cents": 100208
+      },
+      {
+        "received_time_ns": 1591176919859674840,
+        "order_id": 65534,
+        "signed_quantity": -10,
+        "price_cents": 100252
+      },
+      {
+        "received_time_ns": 1591176930382176128,
+        "order_id": 65634,
+        "signed_quantity": -10,
+        "price_cents": 100300
+      },
+      {
+        "received_time_ns": 1591176958876680342,
+        "order_id": 65878,
+        "signed_quantity": -10,
+        "price_cents": 100343
+      },
+      {
+        "received_time_ns": 1591176966315492345,
+        "order_id": 65958,
+        "signed_quantity": -10,
+        "price_cents": 100358
+      },
+      {
+        "received_time_ns": 1591176988263943339,
+        "order_id": 66137,
+        "signed_quantity": 8,
+        "price_cents": 100348
+      },
+      {
+        "received_time_ns": 1591176988350190756,
+        "order_id": 66137,
+        "signed_quantity": 2,
+        "price_cents": 100348
+      },
+      {
+        "received_time_ns": 1591177029711959082,
+        "order_id": 66473,
+        "signed_quantity": 10,
+        "price_cents": 100056
+      },
+      {
+        "received_time_ns": 1591177049166481094,
+        "order_id": 66614,
+        "signed_quantity": 10,
+        "price_cents": 99963
+      },
+      {
+        "received_time_ns": 1591177131163182949,
+        "order_id": 67259,
+        "signed_quantity": 10,
+        "price_cents": 99836
+      },
+      {
+        "received_time_ns": 1591177133078845422,
+        "order_id": 67272,
+        "signed_quantity": 10,
+        "price_cents": 99808
+      },
+      {
+        "received_time_ns": 1591177141607817218,
+        "order_id": 67348,
+        "signed_quantity": 10,
+        "price_cents": 99771
+      },
+      {
+        "received_time_ns": 1591177181586735279,
+        "order_id": 67727,
+        "signed_quantity": 10,
+        "price_cents": 99664
+      }
+    ],
+    "mm_1": [
+      {
+        "received_time_ns": 1591176602311254793,
+        "order_id": 62518,
+        "signed_quantity": 1,
+        "price_cents": 100019
+      },
+      {
+        "received_time_ns": 1591176606010195020,
+        "order_id": 62538,
+        "signed_quantity": 10,
+        "price_cents": 100117
+      },
+      {
+        "received_time_ns": 1591176610642719820,
+        "order_id": 62558,
+        "signed_quantity": 10,
+        "price_cents": 100103
+      },
+      {
+        "received_time_ns": 1591176615542184691,
+        "order_id": 62586,
+        "signed_quantity": 10,
+        "price_cents": 100101
+      },
+      {
+        "received_time_ns": 1591176628660754108,
+        "order_id": 62840,
+        "signed_quantity": -10,
+        "price_cents": 100131
+      },
+      {
+        "received_time_ns": 1591176631011546787,
+        "order_id": 62860,
+        "signed_quantity": -10,
+        "price_cents": 100141
+      },
+      {
+        "received_time_ns": 1591176646405866918,
+        "order_id": 63059,
+        "signed_quantity": -10,
+        "price_cents": 100168
+      },
+      {
+        "received_time_ns": 1591176655008092013,
+        "order_id": 63141,
+        "signed_quantity": -10,
+        "price_cents": 100178
+      },
+      {
+        "received_time_ns": 1591176669010195020,
+        "order_id": 63338,
+        "signed_quantity": -10,
+        "price_cents": 100243
+      },
+      {
+        "received_time_ns": 1591176688010194970,
+        "order_id": 63509,
+        "signed_quantity": 6,
+        "price_cents": 100322
+      },
+      {
+        "received_time_ns": 1591176688010195020,
+        "order_id": 63509,
+        "signed_quantity": 4,
+        "price_cents": 100322
+      },
+      {
+        "received_time_ns": 1591176696386370917,
+        "order_id": 63603,
+        "signed_quantity": -10,
+        "price_cents": 100321
+      },
+      {
+        "received_time_ns": 1591176760010195020,
+        "order_id": 64117,
+        "signed_quantity": 10,
+        "price_cents": 100320
+      },
+      {
+        "received_time_ns": 1591176779335629497,
+        "order_id": 64306,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "received_time_ns": 1591176799461480543,
+        "order_id": 64509,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "received_time_ns": 1591176800010195020,
+        "order_id": 64513,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "received_time_ns": 1591176826010194870,
+        "order_id": 64674,
+        "signed_quantity": 10,
+        "price_cents": 100250
+      },
+      {
+        "received_time_ns": 1591176827327971838,
+        "order_id": 64682,
+        "signed_quantity": 10,
+        "price_cents": 100240
+      },
+      {
+        "received_time_ns": 1591176832919915299,
+        "order_id": 64743,
+        "signed_quantity": 10,
+        "price_cents": 100218
+      },
+      {
+        "received_time_ns": 1591176835800134052,
+        "order_id": 64764,
+        "signed_quantity": 10,
+        "price_cents": 100188
+      },
+      {
+        "received_time_ns": 1591176836883102209,
+        "order_id": 64778,
+        "signed_quantity": 10,
+        "price_cents": 100185
+      },
+      {
+        "received_time_ns": 1591176841712789619,
+        "order_id": 64807,
+        "signed_quantity": 10,
+        "price_cents": 100178
+      },
+      {
+        "received_time_ns": 1591176845424175591,
+        "order_id": 64863,
+        "signed_quantity": 10,
+        "price_cents": 100176
+      },
+      {
+        "received_time_ns": 1591176861222796754,
+        "order_id": 64999,
+        "signed_quantity": -10,
+        "price_cents": 100176
+      },
+      {
+        "received_time_ns": 1591176881010195070,
+        "order_id": 65220,
+        "signed_quantity": 10,
+        "price_cents": 100171
+      },
+      {
+        "received_time_ns": 1591176900393274254,
+        "order_id": 65399,
+        "signed_quantity": -10,
+        "price_cents": 100205
+      },
+      {
+        "received_time_ns": 1591176901210689280,
+        "order_id": 65405,
+        "signed_quantity": -10,
+        "price_cents": 100207
+      },
+      {
+        "received_time_ns": 1591176921806101800,
+        "order_id": 65545,
+        "signed_quantity": -10,
+        "price_cents": 100258
+      },
+      {
+        "received_time_ns": 1591176926139100318,
+        "order_id": 65593,
+        "signed_quantity": -10,
+        "price_cents": 100282
+      },
+      {
+        "received_time_ns": 1591176927223810364,
+        "order_id": 65599,
+        "signed_quantity": -10,
+        "price_cents": 100285
+      },
+      {
+        "received_time_ns": 1591176930032055561,
+        "order_id": 65636,
+        "signed_quantity": -10,
+        "price_cents": 100290
+      },
+      {
+        "received_time_ns": 1591176933010194920,
+        "order_id": 65657,
+        "signed_quantity": -10,
+        "price_cents": 100310
+      },
+      {
+        "received_time_ns": 1591176937673102895,
+        "order_id": 65683,
+        "signed_quantity": -10,
+        "price_cents": 100314
+      },
+      {
+        "received_time_ns": 1591176944010194970,
+        "order_id": 65743,
+        "signed_quantity": 10,
+        "price_cents": 100317
+      },
+      {
+        "received_time_ns": 1591176955132519811,
+        "order_id": 65861,
+        "signed_quantity": -10,
+        "price_cents": 100321
+      },
+      {
+        "received_time_ns": 1591176956010194970,
+        "order_id": 65871,
+        "signed_quantity": -10,
+        "price_cents": 100328
+      },
+      {
+        "received_time_ns": 1591176963010195120,
+        "order_id": 65926,
+        "signed_quantity": -8,
+        "price_cents": 100347
+      },
+      {
+        "received_time_ns": 1591176963186400181,
+        "order_id": 65926,
+        "signed_quantity": -2,
+        "price_cents": 100346
+      },
+      {
+        "received_time_ns": 1591176994010195020,
+        "order_id": 66223,
+        "signed_quantity": 10,
+        "price_cents": 100289
+      },
+      {
+        "received_time_ns": 1591176999936357955,
+        "order_id": 66267,
+        "signed_quantity": 10,
+        "price_cents": 100270
+      },
+      {
+        "received_time_ns": 1591177001945083887,
+        "order_id": 66314,
+        "signed_quantity": 10,
+        "price_cents": 100256
+      },
+      {
+        "received_time_ns": 1591177008062566387,
+        "order_id": 66348,
+        "signed_quantity": 10,
+        "price_cents": 100203
+      },
+      {
+        "received_time_ns": 1591177011283962439,
+        "order_id": 66359,
+        "signed_quantity": 10,
+        "price_cents": 100184
+      },
+      {
+        "received_time_ns": 1591177017010194870,
+        "order_id": 66409,
+        "signed_quantity": 10,
+        "price_cents": 100151
+      },
+      {
+        "received_time_ns": 1591177020769168744,
+        "order_id": 66421,
+        "signed_quantity": 10,
+        "price_cents": 100129
+      },
+      {
+        "received_time_ns": 1591177021612966366,
+        "order_id": 66425,
+        "signed_quantity": 10,
+        "price_cents": 100128
+      },
+      {
+        "received_time_ns": 1591177025010194920,
+        "order_id": 66436,
+        "signed_quantity": 10,
+        "price_cents": 100113
+      },
+      {
+        "received_time_ns": 1591177026470367625,
+        "order_id": 66442,
+        "signed_quantity": 10,
+        "price_cents": 100094
+      },
+      {
+        "received_time_ns": 1591177032696327168,
+        "order_id": 66490,
+        "signed_quantity": -10,
+        "price_cents": 100030
+      },
+      {
+        "received_time_ns": 1591177037010194870,
+        "order_id": 66509,
+        "signed_quantity": 10,
+        "price_cents": 100014
+      },
+      {
+        "received_time_ns": 1591177045969291228,
+        "order_id": 66575,
+        "signed_quantity": 10,
+        "price_cents": 99980
+      },
+      {
+        "received_time_ns": 1591177048519912316,
+        "order_id": 66609,
+        "signed_quantity": 10,
+        "price_cents": 99966
+      },
+      {
+        "received_time_ns": 1591177059010195020,
+        "order_id": 66697,
+        "signed_quantity": 10,
+        "price_cents": 99921
+      },
+      {
+        "received_time_ns": 1591177078010195020,
+        "order_id": 66858,
+        "signed_quantity": 8,
+        "price_cents": 99933
+      },
+      {
+        "received_time_ns": 1591177078043728010,
+        "order_id": 66858,
+        "signed_quantity": 2,
+        "price_cents": 99933
+      },
+      {
+        "received_time_ns": 1591177096010194870,
+        "order_id": 66993,
+        "signed_quantity": 10,
+        "price_cents": 99877
+      },
+      {
+        "received_time_ns": 1591177099161667536,
+        "order_id": 67006,
+        "signed_quantity": 10,
+        "price_cents": 99868
+      },
+      {
+        "received_time_ns": 1591177112204104437,
+        "order_id": 67133,
+        "signed_quantity": 10,
+        "price_cents": 99860
+      },
+      {
+        "received_time_ns": 1591177119027916734,
+        "order_id": 67202,
+        "signed_quantity": 10,
+        "price_cents": 99857
+      },
+      {
+        "received_time_ns": 1591177134010194970,
+        "order_id": 67279,
+        "signed_quantity": 10,
+        "price_cents": 99806
+      },
+      {
+        "received_time_ns": 1591177142057626138,
+        "order_id": 67377,
+        "signed_quantity": 10,
+        "price_cents": 99766
+      },
+      {
+        "received_time_ns": 1591177143445337147,
+        "order_id": 67407,
+        "signed_quantity": 8,
+        "price_cents": 99764
+      },
+      {
+        "received_time_ns": 1591177143811761027,
+        "order_id": 67407,
+        "signed_quantity": 2,
+        "price_cents": 99764
+      },
+      {
+        "received_time_ns": 1591177149010194970,
+        "order_id": 67441,
+        "signed_quantity": 10,
+        "price_cents": 99746
+      },
+      {
+        "received_time_ns": 1591177150208259657,
+        "order_id": 67448,
+        "signed_quantity": 10,
+        "price_cents": 99731
+      },
+      {
+        "received_time_ns": 1591177155777117101,
+        "order_id": 67532,
+        "signed_quantity": 10,
+        "price_cents": 99698
+      },
+      {
+        "received_time_ns": 1591177157010195070,
+        "order_id": 67544,
+        "signed_quantity": -10,
+        "price_cents": 99697
+      },
+      {
+        "received_time_ns": 1591177175876619563,
+        "order_id": 67700,
+        "signed_quantity": 10,
+        "price_cents": 99686
+      },
+      {
+        "received_time_ns": 1591177176010194870,
+        "order_id": 67705,
+        "signed_quantity": 10,
+        "price_cents": 99686
+      },
+      {
+        "received_time_ns": 1591177181010195020,
+        "order_id": 67728,
+        "signed_quantity": 10,
+        "price_cents": 99672
+      },
+      {
+        "received_time_ns": 1591177184806708544,
+        "order_id": 67766,
+        "signed_quantity": 10,
+        "price_cents": 99652
+      },
+      {
+        "received_time_ns": 1591177186055255890,
+        "order_id": 67774,
+        "signed_quantity": 10,
+        "price_cents": 99647
+      }
+    ]
+  },
+  "submissions": {
+    "mm_0": [
+      {
+        "submitted_time_ns": 1591176601000000100,
+        "signed_quantity": 10,
+        "price_cents": 100019
+      },
+      {
+        "submitted_time_ns": 1591176601000000100,
+        "signed_quantity": -10,
+        "price_cents": 100026
+      },
+      {
+        "submitted_time_ns": 1591176602000000100,
+        "signed_quantity": 10,
+        "price_cents": 100019
+      },
+      {
+        "submitted_time_ns": 1591176602000000100,
+        "signed_quantity": -10,
+        "price_cents": 100022
+      },
+      {
+        "submitted_time_ns": 1591176603000000100,
+        "signed_quantity": 10,
+        "price_cents": 100024
+      },
+      {
+        "submitted_time_ns": 1591176604000000100,
+        "signed_quantity": -10,
+        "price_cents": 100146
+      },
+      {
+        "submitted_time_ns": 1591176605000000100,
+        "signed_quantity": 10,
+        "price_cents": 100033
+      },
+      {
+        "submitted_time_ns": 1591176607000000100,
+        "signed_quantity": 10,
+        "price_cents": 100109
+      },
+      {
+        "submitted_time_ns": 1591176607000000100,
+        "signed_quantity": -10,
+        "price_cents": 100122
+      },
+      {
+        "submitted_time_ns": 1591176608000000100,
+        "signed_quantity": 10,
+        "price_cents": 100113
+      },
+      {
+        "submitted_time_ns": 1591176610000000100,
+        "signed_quantity": 10,
+        "price_cents": 100104
+      },
+      {
+        "submitted_time_ns": 1591176611000000100,
+        "signed_quantity": 10,
+        "price_cents": 100102
+      },
+      {
+        "submitted_time_ns": 1591176614000000100,
+        "signed_quantity": -10,
+        "price_cents": 100112
+      },
+      {
+        "submitted_time_ns": 1591176615000000100,
+        "signed_quantity": 10,
+        "price_cents": 100086
+      },
+      {
+        "submitted_time_ns": 1591176615000000100,
+        "signed_quantity": -10,
+        "price_cents": 100104
+      },
+      {
+        "submitted_time_ns": 1591176621000000100,
+        "signed_quantity": -10,
+        "price_cents": 100119
+      },
+      {
+        "submitted_time_ns": 1591176622000000100,
+        "signed_quantity": -10,
+        "price_cents": 100119
+      },
+      {
+        "submitted_time_ns": 1591176623000000100,
+        "signed_quantity": 10,
+        "price_cents": 100096
+      },
+      {
+        "submitted_time_ns": 1591176623000000100,
+        "signed_quantity": -10,
+        "price_cents": 100122
+      },
+      {
+        "submitted_time_ns": 1591176624000000100,
+        "signed_quantity": -10,
+        "price_cents": 100123
+      },
+      {
+        "submitted_time_ns": 1591176625000000100,
+        "signed_quantity": -10,
+        "price_cents": 100129
+      },
+      {
+        "submitted_time_ns": 1591176627000000100,
+        "signed_quantity": -10,
+        "price_cents": 100128
+      },
+      {
+        "submitted_time_ns": 1591176630000000100,
+        "signed_quantity": 10,
+        "price_cents": 100130
+      },
+      {
+        "submitted_time_ns": 1591176630000000100,
+        "signed_quantity": -10,
+        "price_cents": 100149
+      },
+      {
+        "submitted_time_ns": 1591176631000000100,
+        "signed_quantity": -10,
+        "price_cents": 100156
+      },
+      {
+        "submitted_time_ns": 1591176632000000100,
+        "signed_quantity": -10,
+        "price_cents": 100170
+      },
+      {
+        "submitted_time_ns": 1591176633000000100,
+        "signed_quantity": -10,
+        "price_cents": 100167
+      },
+      {
+        "submitted_time_ns": 1591176635000000100,
+        "signed_quantity": -10,
+        "price_cents": 100165
+      },
+      {
+        "submitted_time_ns": 1591176636000000100,
+        "signed_quantity": -10,
+        "price_cents": 100173
+      },
+      {
+        "submitted_time_ns": 1591176640000000100,
+        "signed_quantity": -10,
+        "price_cents": 100179
+      },
+      {
+        "submitted_time_ns": 1591176642000000100,
+        "signed_quantity": -10,
+        "price_cents": 100173
+      },
+      {
+        "submitted_time_ns": 1591176643000000100,
+        "signed_quantity": -10,
+        "price_cents": 100179
+      },
+      {
+        "submitted_time_ns": 1591176644000000100,
+        "signed_quantity": -10,
+        "price_cents": 100164
+      },
+      {
+        "submitted_time_ns": 1591176648000000100,
+        "signed_quantity": -10,
+        "price_cents": 100177
+      },
+      {
+        "submitted_time_ns": 1591176653000000100,
+        "signed_quantity": 10,
+        "price_cents": 100160
+      },
+      {
+        "submitted_time_ns": 1591176654000000100,
+        "signed_quantity": -10,
+        "price_cents": 100191
+      },
+      {
+        "submitted_time_ns": 1591176655000000100,
+        "signed_quantity": -10,
+        "price_cents": 100191
+      },
+      {
+        "submitted_time_ns": 1591176659000000100,
+        "signed_quantity": -10,
+        "price_cents": 100197
+      },
+      {
+        "submitted_time_ns": 1591176661000000100,
+        "signed_quantity": 10,
+        "price_cents": 100185
+      },
+      {
+        "submitted_time_ns": 1591176661000000100,
+        "signed_quantity": -10,
+        "price_cents": 100200
+      },
+      {
+        "submitted_time_ns": 1591176667000000100,
+        "signed_quantity": 10,
+        "price_cents": 100207
+      },
+      {
+        "submitted_time_ns": 1591176670000000100,
+        "signed_quantity": -10,
+        "price_cents": 100261
+      },
+      {
+        "submitted_time_ns": 1591176671000000100,
+        "signed_quantity": 10,
+        "price_cents": 100250
+      },
+      {
+        "submitted_time_ns": 1591176671000000100,
+        "signed_quantity": -10,
+        "price_cents": 100262
+      },
+      {
+        "submitted_time_ns": 1591176672000000100,
+        "signed_quantity": -10,
+        "price_cents": 100263
+      },
+      {
+        "submitted_time_ns": 1591176676000000100,
+        "signed_quantity": -10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176678000000100,
+        "signed_quantity": -10,
+        "price_cents": 100333
+      },
+      {
+        "submitted_time_ns": 1591176679000000100,
+        "signed_quantity": -10,
+        "price_cents": 100323
+      },
+      {
+        "submitted_time_ns": 1591176681000000100,
+        "signed_quantity": -10,
+        "price_cents": 100335
+      },
+      {
+        "submitted_time_ns": 1591176683000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176685000000100,
+        "signed_quantity": -10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176687000000100,
+        "signed_quantity": -10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176688000000100,
+        "signed_quantity": 10,
+        "price_cents": 100318
+      },
+      {
+        "submitted_time_ns": 1591176689000000100,
+        "signed_quantity": -10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176690000000100,
+        "signed_quantity": -10,
+        "price_cents": 100328
+      },
+      {
+        "submitted_time_ns": 1591176691000000100,
+        "signed_quantity": 10,
+        "price_cents": 100305
+      },
+      {
+        "submitted_time_ns": 1591176692000000100,
+        "signed_quantity": -10,
+        "price_cents": 100333
+      },
+      {
+        "submitted_time_ns": 1591176693000000100,
+        "signed_quantity": -10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176697000000100,
+        "signed_quantity": 10,
+        "price_cents": 100319
+      },
+      {
+        "submitted_time_ns": 1591176698000000100,
+        "signed_quantity": -10,
+        "price_cents": 100340
+      },
+      {
+        "submitted_time_ns": 1591176707000000100,
+        "signed_quantity": -10,
+        "price_cents": 100397
+      },
+      {
+        "submitted_time_ns": 1591176708000000100,
+        "signed_quantity": 10,
+        "price_cents": 100365
+      },
+      {
+        "submitted_time_ns": 1591176708000000100,
+        "signed_quantity": -10,
+        "price_cents": 100397
+      },
+      {
+        "submitted_time_ns": 1591176710000000100,
+        "signed_quantity": 10,
+        "price_cents": 100383
+      },
+      {
+        "submitted_time_ns": 1591176710000000100,
+        "signed_quantity": -10,
+        "price_cents": 100388
+      },
+      {
+        "submitted_time_ns": 1591176711000000100,
+        "signed_quantity": -10,
+        "price_cents": 100390
+      },
+      {
+        "submitted_time_ns": 1591176714000000100,
+        "signed_quantity": -10,
+        "price_cents": 100403
+      },
+      {
+        "submitted_time_ns": 1591176716000000100,
+        "signed_quantity": -10,
+        "price_cents": 100401
+      },
+      {
+        "submitted_time_ns": 1591176717000000100,
+        "signed_quantity": -10,
+        "price_cents": 100402
+      },
+      {
+        "submitted_time_ns": 1591176719000000100,
+        "signed_quantity": -10,
+        "price_cents": 100403
+      },
+      {
+        "submitted_time_ns": 1591176725000000100,
+        "signed_quantity": -10,
+        "price_cents": 100402
+      },
+      {
+        "submitted_time_ns": 1591176730000000100,
+        "signed_quantity": -10,
+        "price_cents": 100388
+      },
+      {
+        "submitted_time_ns": 1591176737000000100,
+        "signed_quantity": -10,
+        "price_cents": 100370
+      },
+      {
+        "submitted_time_ns": 1591176738000000100,
+        "signed_quantity": -10,
+        "price_cents": 100358
+      },
+      {
+        "submitted_time_ns": 1591176744000000100,
+        "signed_quantity": -10,
+        "price_cents": 100345
+      },
+      {
+        "submitted_time_ns": 1591176746000000100,
+        "signed_quantity": -10,
+        "price_cents": 100350
+      },
+      {
+        "submitted_time_ns": 1591176749000000100,
+        "signed_quantity": 10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176751000000100,
+        "signed_quantity": -10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176756000000100,
+        "signed_quantity": 10,
+        "price_cents": 100307
+      },
+      {
+        "submitted_time_ns": 1591176756000000100,
+        "signed_quantity": -10,
+        "price_cents": 100327
+      },
+      {
+        "submitted_time_ns": 1591176757000000100,
+        "signed_quantity": -10,
+        "price_cents": 100332
+      },
+      {
+        "submitted_time_ns": 1591176765000000100,
+        "signed_quantity": 10,
+        "price_cents": 100308
+      },
+      {
+        "submitted_time_ns": 1591176773000000100,
+        "signed_quantity": 10,
+        "price_cents": 100318
+      },
+      {
+        "submitted_time_ns": 1591176774000000100,
+        "signed_quantity": -10,
+        "price_cents": 100329
+      },
+      {
+        "submitted_time_ns": 1591176775000000100,
+        "signed_quantity": -10,
+        "price_cents": 100328
+      },
+      {
+        "submitted_time_ns": 1591176776000000100,
+        "signed_quantity": -10,
+        "price_cents": 100324
+      },
+      {
+        "submitted_time_ns": 1591176780000000100,
+        "signed_quantity": 10,
+        "price_cents": 100297
+      },
+      {
+        "submitted_time_ns": 1591176781000000100,
+        "signed_quantity": 10,
+        "price_cents": 100306
+      },
+      {
+        "submitted_time_ns": 1591176781000000100,
+        "signed_quantity": -10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176784000000100,
+        "signed_quantity": -10,
+        "price_cents": 100313
+      },
+      {
+        "submitted_time_ns": 1591176791000000100,
+        "signed_quantity": -10,
+        "price_cents": 100332
+      },
+      {
+        "submitted_time_ns": 1591176797000000100,
+        "signed_quantity": -10,
+        "price_cents": 100322
+      },
+      {
+        "submitted_time_ns": 1591176799000000100,
+        "signed_quantity": 10,
+        "price_cents": 100302
+      },
+      {
+        "submitted_time_ns": 1591176800000000100,
+        "signed_quantity": -10,
+        "price_cents": 100329
+      },
+      {
+        "submitted_time_ns": 1591176808000000100,
+        "signed_quantity": 10,
+        "price_cents": 100279
+      },
+      {
+        "submitted_time_ns": 1591176808000000100,
+        "signed_quantity": -10,
+        "price_cents": 100304
+      },
+      {
+        "submitted_time_ns": 1591176809000000100,
+        "signed_quantity": 10,
+        "price_cents": 100276
+      },
+      {
+        "submitted_time_ns": 1591176815000000100,
+        "signed_quantity": -10,
+        "price_cents": 100277
+      },
+      {
+        "submitted_time_ns": 1591176816000000100,
+        "signed_quantity": 10,
+        "price_cents": 100262
+      },
+      {
+        "submitted_time_ns": 1591176816000000100,
+        "signed_quantity": -10,
+        "price_cents": 100282
+      },
+      {
+        "submitted_time_ns": 1591176817000000100,
+        "signed_quantity": 10,
+        "price_cents": 100267
+      },
+      {
+        "submitted_time_ns": 1591176820000000100,
+        "signed_quantity": 10,
+        "price_cents": 100265
+      },
+      {
+        "submitted_time_ns": 1591176827000000100,
+        "signed_quantity": 10,
+        "price_cents": 100235
+      },
+      {
+        "submitted_time_ns": 1591176829000000100,
+        "signed_quantity": -10,
+        "price_cents": 100243
+      },
+      {
+        "submitted_time_ns": 1591176833000000100,
+        "signed_quantity": 10,
+        "price_cents": 100203
+      },
+      {
+        "submitted_time_ns": 1591176833000000100,
+        "signed_quantity": -10,
+        "price_cents": 100236
+      },
+      {
+        "submitted_time_ns": 1591176835000000100,
+        "signed_quantity": -10,
+        "price_cents": 100218
+      },
+      {
+        "submitted_time_ns": 1591176837000000100,
+        "signed_quantity": 10,
+        "price_cents": 100180
+      },
+      {
+        "submitted_time_ns": 1591176839000000100,
+        "signed_quantity": 10,
+        "price_cents": 100166
+      },
+      {
+        "submitted_time_ns": 1591176839000000100,
+        "signed_quantity": -10,
+        "price_cents": 100186
+      },
+      {
+        "submitted_time_ns": 1591176840000000100,
+        "signed_quantity": 10,
+        "price_cents": 100172
+      },
+      {
+        "submitted_time_ns": 1591176857000000100,
+        "signed_quantity": -10,
+        "price_cents": 100189
+      },
+      {
+        "submitted_time_ns": 1591176859000000100,
+        "signed_quantity": 10,
+        "price_cents": 100157
+      },
+      {
+        "submitted_time_ns": 1591176863000000100,
+        "signed_quantity": -10,
+        "price_cents": 100190
+      },
+      {
+        "submitted_time_ns": 1591176865000000100,
+        "signed_quantity": 10,
+        "price_cents": 100159
+      },
+      {
+        "submitted_time_ns": 1591176879000000100,
+        "signed_quantity": -10,
+        "price_cents": 100178
+      },
+      {
+        "submitted_time_ns": 1591176883000000100,
+        "signed_quantity": 10,
+        "price_cents": 100147
+      },
+      {
+        "submitted_time_ns": 1591176884000000100,
+        "signed_quantity": -10,
+        "price_cents": 100173
+      },
+      {
+        "submitted_time_ns": 1591176885000000100,
+        "signed_quantity": 10,
+        "price_cents": 100147
+      },
+      {
+        "submitted_time_ns": 1591176886000000100,
+        "signed_quantity": -10,
+        "price_cents": 100168
+      },
+      {
+        "submitted_time_ns": 1591176889000000100,
+        "signed_quantity": -10,
+        "price_cents": 100187
+      },
+      {
+        "submitted_time_ns": 1591176890000000100,
+        "signed_quantity": -10,
+        "price_cents": 100186
+      },
+      {
+        "submitted_time_ns": 1591176893000000100,
+        "signed_quantity": -10,
+        "price_cents": 100199
+      },
+      {
+        "submitted_time_ns": 1591176894000000100,
+        "signed_quantity": 10,
+        "price_cents": 100186
+      },
+      {
+        "submitted_time_ns": 1591176895000000100,
+        "signed_quantity": -10,
+        "price_cents": 100195
+      },
+      {
+        "submitted_time_ns": 1591176897000000100,
+        "signed_quantity": 10,
+        "price_cents": 100179
+      },
+      {
+        "submitted_time_ns": 1591176899000000100,
+        "signed_quantity": 10,
+        "price_cents": 100190
+      },
+      {
+        "submitted_time_ns": 1591176900000000100,
+        "signed_quantity": 10,
+        "price_cents": 100187
+      },
+      {
+        "submitted_time_ns": 1591176901000000100,
+        "signed_quantity": -10,
+        "price_cents": 100208
+      },
+      {
+        "submitted_time_ns": 1591176902000000100,
+        "signed_quantity": 10,
+        "price_cents": 100198
+      },
+      {
+        "submitted_time_ns": 1591176904000000100,
+        "signed_quantity": -10,
+        "price_cents": 100230
+      },
+      {
+        "submitted_time_ns": 1591176905000000100,
+        "signed_quantity": -10,
+        "price_cents": 100234
+      },
+      {
+        "submitted_time_ns": 1591176909000000100,
+        "signed_quantity": -10,
+        "price_cents": 100234
+      },
+      {
+        "submitted_time_ns": 1591176910000000100,
+        "signed_quantity": -10,
+        "price_cents": 100226
+      },
+      {
+        "submitted_time_ns": 1591176913000000100,
+        "signed_quantity": -10,
+        "price_cents": 100241
+      },
+      {
+        "submitted_time_ns": 1591176914000000100,
+        "signed_quantity": -10,
+        "price_cents": 100248
+      },
+      {
+        "submitted_time_ns": 1591176919000000100,
+        "signed_quantity": -10,
+        "price_cents": 100252
+      },
+      {
+        "submitted_time_ns": 1591176921000000100,
+        "signed_quantity": -10,
+        "price_cents": 100260
+      },
+      {
+        "submitted_time_ns": 1591176922000000100,
+        "signed_quantity": -10,
+        "price_cents": 100271
+      },
+      {
+        "submitted_time_ns": 1591176924000000100,
+        "signed_quantity": 10,
+        "price_cents": 100262
+      },
+      {
+        "submitted_time_ns": 1591176927000000100,
+        "signed_quantity": -10,
+        "price_cents": 100295
+      },
+      {
+        "submitted_time_ns": 1591176928000000100,
+        "signed_quantity": -10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176929000000100,
+        "signed_quantity": -10,
+        "price_cents": 100299
+      },
+      {
+        "submitted_time_ns": 1591176930000000100,
+        "signed_quantity": -10,
+        "price_cents": 100300
+      },
+      {
+        "submitted_time_ns": 1591176931000000100,
+        "signed_quantity": -10,
+        "price_cents": 100310
+      },
+      {
+        "submitted_time_ns": 1591176932000000100,
+        "signed_quantity": -10,
+        "price_cents": 100313
+      },
+      {
+        "submitted_time_ns": 1591176933000000100,
+        "signed_quantity": -10,
+        "price_cents": 100313
+      },
+      {
+        "submitted_time_ns": 1591176934000000100,
+        "signed_quantity": -10,
+        "price_cents": 100323
+      },
+      {
+        "submitted_time_ns": 1591176936000000100,
+        "signed_quantity": -10,
+        "price_cents": 100324
+      },
+      {
+        "submitted_time_ns": 1591176937000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176941000000100,
+        "signed_quantity": 10,
+        "price_cents": 100301
+      },
+      {
+        "submitted_time_ns": 1591176941000000100,
+        "signed_quantity": -10,
+        "price_cents": 100331
+      },
+      {
+        "submitted_time_ns": 1591176942000000100,
+        "signed_quantity": -10,
+        "price_cents": 100331
+      },
+      {
+        "submitted_time_ns": 1591176943000000100,
+        "signed_quantity": -10,
+        "price_cents": 100333
+      },
+      {
+        "submitted_time_ns": 1591176945000000100,
+        "signed_quantity": 10,
+        "price_cents": 100312
+      },
+      {
+        "submitted_time_ns": 1591176952000000100,
+        "signed_quantity": -10,
+        "price_cents": 100329
+      },
+      {
+        "submitted_time_ns": 1591176953000000100,
+        "signed_quantity": -10,
+        "price_cents": 100333
+      },
+      {
+        "submitted_time_ns": 1591176954000000100,
+        "signed_quantity": 10,
+        "price_cents": 100315
+      },
+      {
+        "submitted_time_ns": 1591176957000000100,
+        "signed_quantity": -10,
+        "price_cents": 100339
+      },
+      {
+        "submitted_time_ns": 1591176958000000100,
+        "signed_quantity": -10,
+        "price_cents": 100343
+      },
+      {
+        "submitted_time_ns": 1591176961000000100,
+        "signed_quantity": 10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176966000000100,
+        "signed_quantity": -10,
+        "price_cents": 100358
+      },
+      {
+        "submitted_time_ns": 1591176967000000100,
+        "signed_quantity": -10,
+        "price_cents": 100373
+      },
+      {
+        "submitted_time_ns": 1591176968000000100,
+        "signed_quantity": -10,
+        "price_cents": 100379
+      },
+      {
+        "submitted_time_ns": 1591176970000000100,
+        "signed_quantity": -10,
+        "price_cents": 100379
+      },
+      {
+        "submitted_time_ns": 1591176972000000100,
+        "signed_quantity": -10,
+        "price_cents": 100369
+      },
+      {
+        "submitted_time_ns": 1591176973000000100,
+        "signed_quantity": -10,
+        "price_cents": 100373
+      },
+      {
+        "submitted_time_ns": 1591176974000000100,
+        "signed_quantity": -10,
+        "price_cents": 100375
+      },
+      {
+        "submitted_time_ns": 1591176978000000100,
+        "signed_quantity": -10,
+        "price_cents": 100373
+      },
+      {
+        "submitted_time_ns": 1591176981000000100,
+        "signed_quantity": -10,
+        "price_cents": 100373
+      },
+      {
+        "submitted_time_ns": 1591176982000000100,
+        "signed_quantity": -10,
+        "price_cents": 100367
+      },
+      {
+        "submitted_time_ns": 1591176983000000100,
+        "signed_quantity": -10,
+        "price_cents": 100369
+      },
+      {
+        "submitted_time_ns": 1591176984000000100,
+        "signed_quantity": -10,
+        "price_cents": 100369
+      },
+      {
+        "submitted_time_ns": 1591176986000000100,
+        "signed_quantity": 10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176988000000100,
+        "signed_quantity": 10,
+        "price_cents": 100348
+      },
+      {
+        "submitted_time_ns": 1591176994000000100,
+        "signed_quantity": 10,
+        "price_cents": 100287
+      },
+      {
+        "submitted_time_ns": 1591176996000000100,
+        "signed_quantity": -10,
+        "price_cents": 100302
+      },
+      {
+        "submitted_time_ns": 1591176998000000100,
+        "signed_quantity": 10,
+        "price_cents": 100255
+      },
+      {
+        "submitted_time_ns": 1591176999000000100,
+        "signed_quantity": -10,
+        "price_cents": 100279
+      },
+      {
+        "submitted_time_ns": 1591177011000000100,
+        "signed_quantity": -10,
+        "price_cents": 100208
+      },
+      {
+        "submitted_time_ns": 1591177016000000100,
+        "signed_quantity": 10,
+        "price_cents": 100146
+      },
+      {
+        "submitted_time_ns": 1591177018000000100,
+        "signed_quantity": 10,
+        "price_cents": 100123
+      },
+      {
+        "submitted_time_ns": 1591177029000000100,
+        "signed_quantity": 10,
+        "price_cents": 100056
+      },
+      {
+        "submitted_time_ns": 1591177030000000100,
+        "signed_quantity": -10,
+        "price_cents": 100056
+      },
+      {
+        "submitted_time_ns": 1591177034000000100,
+        "signed_quantity": 10,
+        "price_cents": 100029
+      },
+      {
+        "submitted_time_ns": 1591177038000000100,
+        "signed_quantity": 10,
+        "price_cents": 99971
+      },
+      {
+        "submitted_time_ns": 1591177038000000100,
+        "signed_quantity": -10,
+        "price_cents": 99996
+      },
+      {
+        "submitted_time_ns": 1591177039000000100,
+        "signed_quantity": -10,
+        "price_cents": 99995
+      },
+      {
+        "submitted_time_ns": 1591177041000000100,
+        "signed_quantity": 10,
+        "price_cents": 99970
+      },
+      {
+        "submitted_time_ns": 1591177044000000100,
+        "signed_quantity": -10,
+        "price_cents": 100000
+      },
+      {
+        "submitted_time_ns": 1591177049000000100,
+        "signed_quantity": 10,
+        "price_cents": 99963
+      },
+      {
+        "submitted_time_ns": 1591177050000000100,
+        "signed_quantity": 10,
+        "price_cents": 99946
+      },
+      {
+        "submitted_time_ns": 1591177050000000100,
+        "signed_quantity": -10,
+        "price_cents": 99966
+      },
+      {
+        "submitted_time_ns": 1591177052000000100,
+        "signed_quantity": -10,
+        "price_cents": 99971
+      },
+      {
+        "submitted_time_ns": 1591177053000000100,
+        "signed_quantity": -10,
+        "price_cents": 99963
+      },
+      {
+        "submitted_time_ns": 1591177054000000100,
+        "signed_quantity": -10,
+        "price_cents": 99968
+      },
+      {
+        "submitted_time_ns": 1591177057000000100,
+        "signed_quantity": -10,
+        "price_cents": 99942
+      },
+      {
+        "submitted_time_ns": 1591177058000000100,
+        "signed_quantity": 10,
+        "price_cents": 99911
+      },
+      {
+        "submitted_time_ns": 1591177060000000100,
+        "signed_quantity": -10,
+        "price_cents": 99931
+      },
+      {
+        "submitted_time_ns": 1591177063000000100,
+        "signed_quantity": -10,
+        "price_cents": 99932
+      },
+      {
+        "submitted_time_ns": 1591177070000000100,
+        "signed_quantity": 10,
+        "price_cents": 99907
+      },
+      {
+        "submitted_time_ns": 1591177072000000100,
+        "signed_quantity": 10,
+        "price_cents": 99909
+      },
+      {
+        "submitted_time_ns": 1591177077000000100,
+        "signed_quantity": -10,
+        "price_cents": 99937
+      },
+      {
+        "submitted_time_ns": 1591177078000000100,
+        "signed_quantity": 10,
+        "price_cents": 99918
+      },
+      {
+        "submitted_time_ns": 1591177085000000100,
+        "signed_quantity": -10,
+        "price_cents": 99933
+      },
+      {
+        "submitted_time_ns": 1591177088000000100,
+        "signed_quantity": -10,
+        "price_cents": 99920
+      },
+      {
+        "submitted_time_ns": 1591177089000000100,
+        "signed_quantity": 10,
+        "price_cents": 99889
+      },
+      {
+        "submitted_time_ns": 1591177090000000100,
+        "signed_quantity": -10,
+        "price_cents": 99899
+      },
+      {
+        "submitted_time_ns": 1591177091000000100,
+        "signed_quantity": 10,
+        "price_cents": 99881
+      },
+      {
+        "submitted_time_ns": 1591177093000000100,
+        "signed_quantity": 10,
+        "price_cents": 99893
+      },
+      {
+        "submitted_time_ns": 1591177093000000100,
+        "signed_quantity": -10,
+        "price_cents": 99905
+      },
+      {
+        "submitted_time_ns": 1591177096000000100,
+        "signed_quantity": 10,
+        "price_cents": 99862
+      },
+      {
+        "submitted_time_ns": 1591177098000000100,
+        "signed_quantity": 10,
+        "price_cents": 99854
+      },
+      {
+        "submitted_time_ns": 1591177101000000100,
+        "signed_quantity": 10,
+        "price_cents": 99848
+      },
+      {
+        "submitted_time_ns": 1591177102000000100,
+        "signed_quantity": 10,
+        "price_cents": 99848
+      },
+      {
+        "submitted_time_ns": 1591177103000000100,
+        "signed_quantity": -10,
+        "price_cents": 99872
+      },
+      {
+        "submitted_time_ns": 1591177104000000100,
+        "signed_quantity": 10,
+        "price_cents": 99853
+      },
+      {
+        "submitted_time_ns": 1591177109000000100,
+        "signed_quantity": -10,
+        "price_cents": 99868
+      },
+      {
+        "submitted_time_ns": 1591177113000000100,
+        "signed_quantity": -10,
+        "price_cents": 99874
+      },
+      {
+        "submitted_time_ns": 1591177114000000100,
+        "signed_quantity": -10,
+        "price_cents": 99870
+      },
+      {
+        "submitted_time_ns": 1591177117000000100,
+        "signed_quantity": -10,
+        "price_cents": 99874
+      },
+      {
+        "submitted_time_ns": 1591177120000000100,
+        "signed_quantity": -10,
+        "price_cents": 99865
+      },
+      {
+        "submitted_time_ns": 1591177122000000100,
+        "signed_quantity": 10,
+        "price_cents": 99854
+      },
+      {
+        "submitted_time_ns": 1591177124000000100,
+        "signed_quantity": -10,
+        "price_cents": 99870
+      },
+      {
+        "submitted_time_ns": 1591177125000000100,
+        "signed_quantity": -10,
+        "price_cents": 99859
+      },
+      {
+        "submitted_time_ns": 1591177128000000100,
+        "signed_quantity": -10,
+        "price_cents": 99850
+      },
+      {
+        "submitted_time_ns": 1591177130000000100,
+        "signed_quantity": 10,
+        "price_cents": 99824
+      },
+      {
+        "submitted_time_ns": 1591177131000000100,
+        "signed_quantity": 10,
+        "price_cents": 99836
+      },
+      {
+        "submitted_time_ns": 1591177132000000100,
+        "signed_quantity": -10,
+        "price_cents": 99837
+      },
+      {
+        "submitted_time_ns": 1591177133000000100,
+        "signed_quantity": 10,
+        "price_cents": 99808
+      },
+      {
+        "submitted_time_ns": 1591177133000000100,
+        "signed_quantity": -10,
+        "price_cents": 99837
+      },
+      {
+        "submitted_time_ns": 1591177134000000100,
+        "signed_quantity": 10,
+        "price_cents": 99797
+      },
+      {
+        "submitted_time_ns": 1591177135000000100,
+        "signed_quantity": -10,
+        "price_cents": 99819
+      },
+      {
+        "submitted_time_ns": 1591177141000000100,
+        "signed_quantity": 10,
+        "price_cents": 99771
+      },
+      {
+        "submitted_time_ns": 1591177142000000100,
+        "signed_quantity": 10,
+        "price_cents": 99757
+      },
+      {
+        "submitted_time_ns": 1591177143000000100,
+        "signed_quantity": 10,
+        "price_cents": 99749
+      },
+      {
+        "submitted_time_ns": 1591177149000000100,
+        "signed_quantity": -10,
+        "price_cents": 99752
+      },
+      {
+        "submitted_time_ns": 1591177150000000100,
+        "signed_quantity": 10,
+        "price_cents": 99719
+      },
+      {
+        "submitted_time_ns": 1591177150000000100,
+        "signed_quantity": -10,
+        "price_cents": 99741
+      },
+      {
+        "submitted_time_ns": 1591177153000000100,
+        "signed_quantity": 10,
+        "price_cents": 99684
+      },
+      {
+        "submitted_time_ns": 1591177154000000100,
+        "signed_quantity": -10,
+        "price_cents": 99703
+      },
+      {
+        "submitted_time_ns": 1591177156000000100,
+        "signed_quantity": -10,
+        "price_cents": 99702
+      },
+      {
+        "submitted_time_ns": 1591177162000000100,
+        "signed_quantity": 10,
+        "price_cents": 99691
+      },
+      {
+        "submitted_time_ns": 1591177165000000100,
+        "signed_quantity": 10,
+        "price_cents": 99685
+      },
+      {
+        "submitted_time_ns": 1591177167000000100,
+        "signed_quantity": -10,
+        "price_cents": 99692
+      },
+      {
+        "submitted_time_ns": 1591177171000000100,
+        "signed_quantity": -10,
+        "price_cents": 99695
+      },
+      {
+        "submitted_time_ns": 1591177181000000100,
+        "signed_quantity": 10,
+        "price_cents": 99664
+      },
+      {
+        "submitted_time_ns": 1591177182000000100,
+        "signed_quantity": 10,
+        "price_cents": 99655
+      },
+      {
+        "submitted_time_ns": 1591177189000000100,
+        "signed_quantity": 10,
+        "price_cents": 99630
+      },
+      {
+        "submitted_time_ns": 1591177190000000100,
+        "signed_quantity": 10,
+        "price_cents": 99630
+      },
+      {
+        "submitted_time_ns": 1591177190000000100,
+        "signed_quantity": -10,
+        "price_cents": 99655
+      },
+      {
+        "submitted_time_ns": 1591177191000000100,
+        "signed_quantity": -10,
+        "price_cents": 99656
+      },
+      {
+        "submitted_time_ns": 1591177192000000100,
+        "signed_quantity": 10,
+        "price_cents": 99635
+      },
+      {
+        "submitted_time_ns": 1591177193000000100,
+        "signed_quantity": -10,
+        "price_cents": 99660
+      },
+      {
+        "submitted_time_ns": 1591177194000000100,
+        "signed_quantity": -10,
+        "price_cents": 99659
+      },
+      {
+        "submitted_time_ns": 1591177196000000100,
+        "signed_quantity": -10,
+        "price_cents": 99663
+      },
+      {
+        "submitted_time_ns": 1591177197000000100,
+        "signed_quantity": -10,
+        "price_cents": 99654
+      },
+      {
+        "submitted_time_ns": 1591177199000000100,
+        "signed_quantity": -10,
+        "price_cents": 99651
+      }
+    ],
+    "mm_1": [
+      {
+        "submitted_time_ns": 1591176601000000100,
+        "signed_quantity": 10,
+        "price_cents": 100012
+      },
+      {
+        "submitted_time_ns": 1591176602000000100,
+        "signed_quantity": 10,
+        "price_cents": 100019
+      },
+      {
+        "submitted_time_ns": 1591176604000000100,
+        "signed_quantity": 10,
+        "price_cents": 100121
+      },
+      {
+        "submitted_time_ns": 1591176605000000100,
+        "signed_quantity": 10,
+        "price_cents": 100044
+      },
+      {
+        "submitted_time_ns": 1591176606000000100,
+        "signed_quantity": 10,
+        "price_cents": 100117
+      },
+      {
+        "submitted_time_ns": 1591176606000000100,
+        "signed_quantity": -10,
+        "price_cents": 100136
+      },
+      {
+        "submitted_time_ns": 1591176607000000100,
+        "signed_quantity": 10,
+        "price_cents": 100108
+      },
+      {
+        "submitted_time_ns": 1591176608000000100,
+        "signed_quantity": -10,
+        "price_cents": 100125
+      },
+      {
+        "submitted_time_ns": 1591176610000000100,
+        "signed_quantity": 10,
+        "price_cents": 100103
+      },
+      {
+        "submitted_time_ns": 1591176611000000100,
+        "signed_quantity": 10,
+        "price_cents": 100090
+      },
+      {
+        "submitted_time_ns": 1591176612000000100,
+        "signed_quantity": 10,
+        "price_cents": 100087
+      },
+      {
+        "submitted_time_ns": 1591176614000000100,
+        "signed_quantity": 10,
+        "price_cents": 100091
+      },
+      {
+        "submitted_time_ns": 1591176615000000100,
+        "signed_quantity": 10,
+        "price_cents": 100101
+      },
+      {
+        "submitted_time_ns": 1591176617000000100,
+        "signed_quantity": 10,
+        "price_cents": 100100
+      },
+      {
+        "submitted_time_ns": 1591176618000000100,
+        "signed_quantity": 10,
+        "price_cents": 100085
+      },
+      {
+        "submitted_time_ns": 1591176619000000100,
+        "signed_quantity": 10,
+        "price_cents": 100092
+      },
+      {
+        "submitted_time_ns": 1591176619000000100,
+        "signed_quantity": -10,
+        "price_cents": 100111
+      },
+      {
+        "submitted_time_ns": 1591176621000000100,
+        "signed_quantity": 10,
+        "price_cents": 100101
+      },
+      {
+        "submitted_time_ns": 1591176622000000100,
+        "signed_quantity": 10,
+        "price_cents": 100094
+      },
+      {
+        "submitted_time_ns": 1591176623000000100,
+        "signed_quantity": 10,
+        "price_cents": 100097
+      },
+      {
+        "submitted_time_ns": 1591176623000000100,
+        "signed_quantity": -10,
+        "price_cents": 100122
+      },
+      {
+        "submitted_time_ns": 1591176624000000100,
+        "signed_quantity": 10,
+        "price_cents": 100103
+      },
+      {
+        "submitted_time_ns": 1591176625000000100,
+        "signed_quantity": 10,
+        "price_cents": 100107
+      },
+      {
+        "submitted_time_ns": 1591176626000000100,
+        "signed_quantity": 10,
+        "price_cents": 100120
+      },
+      {
+        "submitted_time_ns": 1591176627000000100,
+        "signed_quantity": -10,
+        "price_cents": 100130
+      },
+      {
+        "submitted_time_ns": 1591176628000000100,
+        "signed_quantity": 10,
+        "price_cents": 100125
+      },
+      {
+        "submitted_time_ns": 1591176628000000100,
+        "signed_quantity": -10,
+        "price_cents": 100131
+      },
+      {
+        "submitted_time_ns": 1591176631000000100,
+        "signed_quantity": 10,
+        "price_cents": 100124
+      },
+      {
+        "submitted_time_ns": 1591176631000000100,
+        "signed_quantity": -10,
+        "price_cents": 100141
+      },
+      {
+        "submitted_time_ns": 1591176632000000100,
+        "signed_quantity": 10,
+        "price_cents": 100152
+      },
+      {
+        "submitted_time_ns": 1591176633000000100,
+        "signed_quantity": 10,
+        "price_cents": 100147
+      },
+      {
+        "submitted_time_ns": 1591176633000000100,
+        "signed_quantity": -10,
+        "price_cents": 100162
+      },
+      {
+        "submitted_time_ns": 1591176634000000100,
+        "signed_quantity": 10,
+        "price_cents": 100157
+      },
+      {
+        "submitted_time_ns": 1591176634000000100,
+        "signed_quantity": -10,
+        "price_cents": 100162
+      },
+      {
+        "submitted_time_ns": 1591176635000000100,
+        "signed_quantity": 10,
+        "price_cents": 100160
+      },
+      {
+        "submitted_time_ns": 1591176637000000100,
+        "signed_quantity": 10,
+        "price_cents": 100156
+      },
+      {
+        "submitted_time_ns": 1591176638000000100,
+        "signed_quantity": -10,
+        "price_cents": 100166
+      },
+      {
+        "submitted_time_ns": 1591176639000000100,
+        "signed_quantity": 10,
+        "price_cents": 100161
+      },
+      {
+        "submitted_time_ns": 1591176639000000100,
+        "signed_quantity": -10,
+        "price_cents": 100164
+      },
+      {
+        "submitted_time_ns": 1591176641000000100,
+        "signed_quantity": 10,
+        "price_cents": 100161
+      },
+      {
+        "submitted_time_ns": 1591176641000000100,
+        "signed_quantity": -10,
+        "price_cents": 100178
+      },
+      {
+        "submitted_time_ns": 1591176642000000100,
+        "signed_quantity": 10,
+        "price_cents": 100158
+      },
+      {
+        "submitted_time_ns": 1591176643000000100,
+        "signed_quantity": 10,
+        "price_cents": 100161
+      },
+      {
+        "submitted_time_ns": 1591176644000000100,
+        "signed_quantity": 10,
+        "price_cents": 100161
+      },
+      {
+        "submitted_time_ns": 1591176645000000100,
+        "signed_quantity": 10,
+        "price_cents": 100161
+      },
+      {
+        "submitted_time_ns": 1591176646000000100,
+        "signed_quantity": 10,
+        "price_cents": 100165
+      },
+      {
+        "submitted_time_ns": 1591176646000000100,
+        "signed_quantity": -10,
+        "price_cents": 100168
+      },
+      {
+        "submitted_time_ns": 1591176648000000100,
+        "signed_quantity": 10,
+        "price_cents": 100164
+      },
+      {
+        "submitted_time_ns": 1591176648000000100,
+        "signed_quantity": -10,
+        "price_cents": 100173
+      },
+      {
+        "submitted_time_ns": 1591176649000000100,
+        "signed_quantity": 10,
+        "price_cents": 100158
+      },
+      {
+        "submitted_time_ns": 1591176650000000100,
+        "signed_quantity": 10,
+        "price_cents": 100154
+      },
+      {
+        "submitted_time_ns": 1591176650000000100,
+        "signed_quantity": -10,
+        "price_cents": 100187
+      },
+      {
+        "submitted_time_ns": 1591176651000000100,
+        "signed_quantity": 10,
+        "price_cents": 100170
+      },
+      {
+        "submitted_time_ns": 1591176652000000100,
+        "signed_quantity": 10,
+        "price_cents": 100168
+      },
+      {
+        "submitted_time_ns": 1591176653000000100,
+        "signed_quantity": 10,
+        "price_cents": 100175
+      },
+      {
+        "submitted_time_ns": 1591176654000000100,
+        "signed_quantity": -10,
+        "price_cents": 100178
+      },
+      {
+        "submitted_time_ns": 1591176655000000100,
+        "signed_quantity": 10,
+        "price_cents": 100171
+      },
+      {
+        "submitted_time_ns": 1591176655000000100,
+        "signed_quantity": -10,
+        "price_cents": 100185
+      },
+      {
+        "submitted_time_ns": 1591176656000000100,
+        "signed_quantity": 10,
+        "price_cents": 100180
+      },
+      {
+        "submitted_time_ns": 1591176657000000100,
+        "signed_quantity": 10,
+        "price_cents": 100176
+      },
+      {
+        "submitted_time_ns": 1591176658000000100,
+        "signed_quantity": 10,
+        "price_cents": 100176
+      },
+      {
+        "submitted_time_ns": 1591176658000000100,
+        "signed_quantity": -10,
+        "price_cents": 100187
+      },
+      {
+        "submitted_time_ns": 1591176659000000100,
+        "signed_quantity": 10,
+        "price_cents": 100179
+      },
+      {
+        "submitted_time_ns": 1591176660000000100,
+        "signed_quantity": -10,
+        "price_cents": 100188
+      },
+      {
+        "submitted_time_ns": 1591176661000000100,
+        "signed_quantity": 10,
+        "price_cents": 100182
+      },
+      {
+        "submitted_time_ns": 1591176662000000100,
+        "signed_quantity": 10,
+        "price_cents": 100178
+      },
+      {
+        "submitted_time_ns": 1591176664000000100,
+        "signed_quantity": -10,
+        "price_cents": 100201
+      },
+      {
+        "submitted_time_ns": 1591176665000000100,
+        "signed_quantity": 10,
+        "price_cents": 100199
+      },
+      {
+        "submitted_time_ns": 1591176665000000100,
+        "signed_quantity": -10,
+        "price_cents": 100204
+      },
+      {
+        "submitted_time_ns": 1591176666000000100,
+        "signed_quantity": 10,
+        "price_cents": 100191
+      },
+      {
+        "submitted_time_ns": 1591176667000000100,
+        "signed_quantity": 10,
+        "price_cents": 100213
+      },
+      {
+        "submitted_time_ns": 1591176668000000100,
+        "signed_quantity": 10,
+        "price_cents": 100227
+      },
+      {
+        "submitted_time_ns": 1591176669000000100,
+        "signed_quantity": -10,
+        "price_cents": 100243
+      },
+      {
+        "submitted_time_ns": 1591176670000000100,
+        "signed_quantity": 10,
+        "price_cents": 100235
+      },
+      {
+        "submitted_time_ns": 1591176671000000100,
+        "signed_quantity": 10,
+        "price_cents": 100258
+      },
+      {
+        "submitted_time_ns": 1591176673000000100,
+        "signed_quantity": 10,
+        "price_cents": 100287
+      },
+      {
+        "submitted_time_ns": 1591176675000000100,
+        "signed_quantity": -10,
+        "price_cents": 100312
+      },
+      {
+        "submitted_time_ns": 1591176676000000100,
+        "signed_quantity": 10,
+        "price_cents": 100295
+      },
+      {
+        "submitted_time_ns": 1591176677000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176678000000100,
+        "signed_quantity": 10,
+        "price_cents": 100318
+      },
+      {
+        "submitted_time_ns": 1591176680000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176680000000100,
+        "signed_quantity": -10,
+        "price_cents": 100325
+      },
+      {
+        "submitted_time_ns": 1591176681000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176682000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176683000000100,
+        "signed_quantity": 10,
+        "price_cents": 100308
+      },
+      {
+        "submitted_time_ns": 1591176684000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176686000000100,
+        "signed_quantity": -10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176688000000100,
+        "signed_quantity": 10,
+        "price_cents": 100323
+      },
+      {
+        "submitted_time_ns": 1591176692000000100,
+        "signed_quantity": -10,
+        "price_cents": 100329
+      },
+      {
+        "submitted_time_ns": 1591176693000000100,
+        "signed_quantity": 10,
+        "price_cents": 100313
+      },
+      {
+        "submitted_time_ns": 1591176694000000100,
+        "signed_quantity": -10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176695000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176696000000100,
+        "signed_quantity": -10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176697000000100,
+        "signed_quantity": 10,
+        "price_cents": 100319
+      },
+      {
+        "submitted_time_ns": 1591176698000000100,
+        "signed_quantity": 10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176699000000100,
+        "signed_quantity": 10,
+        "price_cents": 100309
+      },
+      {
+        "submitted_time_ns": 1591176700000000100,
+        "signed_quantity": 10,
+        "price_cents": 100320
+      },
+      {
+        "submitted_time_ns": 1591176703000000100,
+        "signed_quantity": 10,
+        "price_cents": 100329
+      },
+      {
+        "submitted_time_ns": 1591176704000000100,
+        "signed_quantity": 10,
+        "price_cents": 100341
+      },
+      {
+        "submitted_time_ns": 1591176705000000100,
+        "signed_quantity": 10,
+        "price_cents": 100328
+      },
+      {
+        "submitted_time_ns": 1591176706000000100,
+        "signed_quantity": 10,
+        "price_cents": 100349
+      },
+      {
+        "submitted_time_ns": 1591176707000000100,
+        "signed_quantity": -10,
+        "price_cents": 100382
+      },
+      {
+        "submitted_time_ns": 1591176708000000100,
+        "signed_quantity": 10,
+        "price_cents": 100376
+      },
+      {
+        "submitted_time_ns": 1591176709000000100,
+        "signed_quantity": 10,
+        "price_cents": 100368
+      },
+      {
+        "submitted_time_ns": 1591176709000000100,
+        "signed_quantity": -10,
+        "price_cents": 100388
+      },
+      {
+        "submitted_time_ns": 1591176710000000100,
+        "signed_quantity": 10,
+        "price_cents": 100379
+      },
+      {
+        "submitted_time_ns": 1591176711000000100,
+        "signed_quantity": 10,
+        "price_cents": 100385
+      },
+      {
+        "submitted_time_ns": 1591176712000000100,
+        "signed_quantity": 10,
+        "price_cents": 100378
+      },
+      {
+        "submitted_time_ns": 1591176712000000100,
+        "signed_quantity": -10,
+        "price_cents": 100398
+      },
+      {
+        "submitted_time_ns": 1591176715000000100,
+        "signed_quantity": 10,
+        "price_cents": 100394
+      },
+      {
+        "submitted_time_ns": 1591176717000000100,
+        "signed_quantity": -10,
+        "price_cents": 100413
+      },
+      {
+        "submitted_time_ns": 1591176719000000100,
+        "signed_quantity": 10,
+        "price_cents": 100395
+      },
+      {
+        "submitted_time_ns": 1591176721000000100,
+        "signed_quantity": 10,
+        "price_cents": 100394
+      },
+      {
+        "submitted_time_ns": 1591176723000000100,
+        "signed_quantity": 10,
+        "price_cents": 100378
+      },
+      {
+        "submitted_time_ns": 1591176724000000100,
+        "signed_quantity": 10,
+        "price_cents": 100373
+      },
+      {
+        "submitted_time_ns": 1591176725000000100,
+        "signed_quantity": 10,
+        "price_cents": 100375
+      },
+      {
+        "submitted_time_ns": 1591176725000000100,
+        "signed_quantity": -10,
+        "price_cents": 100394
+      },
+      {
+        "submitted_time_ns": 1591176727000000100,
+        "signed_quantity": -10,
+        "price_cents": 100401
+      },
+      {
+        "submitted_time_ns": 1591176728000000100,
+        "signed_quantity": -10,
+        "price_cents": 100388
+      },
+      {
+        "submitted_time_ns": 1591176729000000100,
+        "signed_quantity": 10,
+        "price_cents": 100378
+      },
+      {
+        "submitted_time_ns": 1591176729000000100,
+        "signed_quantity": -10,
+        "price_cents": 100385
+      },
+      {
+        "submitted_time_ns": 1591176730000000100,
+        "signed_quantity": 10,
+        "price_cents": 100367
+      },
+      {
+        "submitted_time_ns": 1591176732000000100,
+        "signed_quantity": 10,
+        "price_cents": 100375
+      },
+      {
+        "submitted_time_ns": 1591176732000000100,
+        "signed_quantity": -10,
+        "price_cents": 100397
+      },
+      {
+        "submitted_time_ns": 1591176735000000100,
+        "signed_quantity": 10,
+        "price_cents": 100352
+      },
+      {
+        "submitted_time_ns": 1591176735000000100,
+        "signed_quantity": -10,
+        "price_cents": 100362
+      },
+      {
+        "submitted_time_ns": 1591176736000000100,
+        "signed_quantity": 10,
+        "price_cents": 100341
+      },
+      {
+        "submitted_time_ns": 1591176736000000100,
+        "signed_quantity": -10,
+        "price_cents": 100363
+      },
+      {
+        "submitted_time_ns": 1591176737000000100,
+        "signed_quantity": 10,
+        "price_cents": 100352
+      },
+      {
+        "submitted_time_ns": 1591176738000000100,
+        "signed_quantity": 10,
+        "price_cents": 100349
+      },
+      {
+        "submitted_time_ns": 1591176738000000100,
+        "signed_quantity": -10,
+        "price_cents": 100369
+      },
+      {
+        "submitted_time_ns": 1591176739000000100,
+        "signed_quantity": -10,
+        "price_cents": 100354
+      },
+      {
+        "submitted_time_ns": 1591176740000000100,
+        "signed_quantity": -10,
+        "price_cents": 100358
+      },
+      {
+        "submitted_time_ns": 1591176744000000100,
+        "signed_quantity": 10,
+        "price_cents": 100332
+      },
+      {
+        "submitted_time_ns": 1591176745000000100,
+        "signed_quantity": -10,
+        "price_cents": 100337
+      },
+      {
+        "submitted_time_ns": 1591176746000000100,
+        "signed_quantity": -10,
+        "price_cents": 100335
+      },
+      {
+        "submitted_time_ns": 1591176747000000100,
+        "signed_quantity": 10,
+        "price_cents": 100322
+      },
+      {
+        "submitted_time_ns": 1591176747000000100,
+        "signed_quantity": -10,
+        "price_cents": 100335
+      },
+      {
+        "submitted_time_ns": 1591176748000000100,
+        "signed_quantity": 10,
+        "price_cents": 100318
+      },
+      {
+        "submitted_time_ns": 1591176749000000100,
+        "signed_quantity": -10,
+        "price_cents": 100331
+      },
+      {
+        "submitted_time_ns": 1591176750000000100,
+        "signed_quantity": 10,
+        "price_cents": 100324
+      },
+      {
+        "submitted_time_ns": 1591176751000000100,
+        "signed_quantity": -10,
+        "price_cents": 100332
+      },
+      {
+        "submitted_time_ns": 1591176752000000100,
+        "signed_quantity": 10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176752000000100,
+        "signed_quantity": -10,
+        "price_cents": 100335
+      },
+      {
+        "submitted_time_ns": 1591176754000000100,
+        "signed_quantity": 10,
+        "price_cents": 100306
+      },
+      {
+        "submitted_time_ns": 1591176755000000100,
+        "signed_quantity": 10,
+        "price_cents": 100315
+      },
+      {
+        "submitted_time_ns": 1591176757000000100,
+        "signed_quantity": 10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176758000000100,
+        "signed_quantity": 10,
+        "price_cents": 100322
+      },
+      {
+        "submitted_time_ns": 1591176759000000100,
+        "signed_quantity": -10,
+        "price_cents": 100335
+      },
+      {
+        "submitted_time_ns": 1591176760000000100,
+        "signed_quantity": 10,
+        "price_cents": 100322
+      },
+      {
+        "submitted_time_ns": 1591176760000000100,
+        "signed_quantity": -10,
+        "price_cents": 100340
+      },
+      {
+        "submitted_time_ns": 1591176761000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176761000000100,
+        "signed_quantity": -10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176762000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176762000000100,
+        "signed_quantity": -10,
+        "price_cents": 100330
+      },
+      {
+        "submitted_time_ns": 1591176763000000100,
+        "signed_quantity": 10,
+        "price_cents": 100313
+      },
+      {
+        "submitted_time_ns": 1591176763000000100,
+        "signed_quantity": -10,
+        "price_cents": 100330
+      },
+      {
+        "submitted_time_ns": 1591176764000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176765000000100,
+        "signed_quantity": 10,
+        "price_cents": 100318
+      },
+      {
+        "submitted_time_ns": 1591176765000000100,
+        "signed_quantity": -10,
+        "price_cents": 100322
+      },
+      {
+        "submitted_time_ns": 1591176768000000100,
+        "signed_quantity": 10,
+        "price_cents": 100305
+      },
+      {
+        "submitted_time_ns": 1591176769000000100,
+        "signed_quantity": 10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176770000000100,
+        "signed_quantity": 10,
+        "price_cents": 100313
+      },
+      {
+        "submitted_time_ns": 1591176771000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176771000000100,
+        "signed_quantity": -10,
+        "price_cents": 100329
+      },
+      {
+        "submitted_time_ns": 1591176772000000100,
+        "signed_quantity": 10,
+        "price_cents": 100318
+      },
+      {
+        "submitted_time_ns": 1591176772000000100,
+        "signed_quantity": -10,
+        "price_cents": 100326
+      },
+      {
+        "submitted_time_ns": 1591176773000000100,
+        "signed_quantity": 10,
+        "price_cents": 100308
+      },
+      {
+        "submitted_time_ns": 1591176773000000100,
+        "signed_quantity": -10,
+        "price_cents": 100331
+      },
+      {
+        "submitted_time_ns": 1591176774000000100,
+        "signed_quantity": -10,
+        "price_cents": 100335
+      },
+      {
+        "submitted_time_ns": 1591176776000000100,
+        "signed_quantity": 10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176777000000100,
+        "signed_quantity": 10,
+        "price_cents": 100312
+      },
+      {
+        "submitted_time_ns": 1591176777000000100,
+        "signed_quantity": -10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176778000000100,
+        "signed_quantity": 10,
+        "price_cents": 100312
+      },
+      {
+        "submitted_time_ns": 1591176779000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176779000000100,
+        "signed_quantity": -10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176781000000100,
+        "signed_quantity": -10,
+        "price_cents": 100327
+      },
+      {
+        "submitted_time_ns": 1591176782000000100,
+        "signed_quantity": 10,
+        "price_cents": 100306
+      },
+      {
+        "submitted_time_ns": 1591176783000000100,
+        "signed_quantity": -10,
+        "price_cents": 100316
+      },
+      {
+        "submitted_time_ns": 1591176785000000100,
+        "signed_quantity": 10,
+        "price_cents": 100304
+      },
+      {
+        "submitted_time_ns": 1591176785000000100,
+        "signed_quantity": -10,
+        "price_cents": 100313
+      },
+      {
+        "submitted_time_ns": 1591176786000000100,
+        "signed_quantity": -10,
+        "price_cents": 100320
+      },
+      {
+        "submitted_time_ns": 1591176787000000100,
+        "signed_quantity": 10,
+        "price_cents": 100305
+      },
+      {
+        "submitted_time_ns": 1591176788000000100,
+        "signed_quantity": 10,
+        "price_cents": 100305
+      },
+      {
+        "submitted_time_ns": 1591176789000000100,
+        "signed_quantity": 10,
+        "price_cents": 100306
+      },
+      {
+        "submitted_time_ns": 1591176789000000100,
+        "signed_quantity": -10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176790000000100,
+        "signed_quantity": 10,
+        "price_cents": 100302
+      },
+      {
+        "submitted_time_ns": 1591176792000000100,
+        "signed_quantity": 10,
+        "price_cents": 100300
+      },
+      {
+        "submitted_time_ns": 1591176793000000100,
+        "signed_quantity": 10,
+        "price_cents": 100310
+      },
+      {
+        "submitted_time_ns": 1591176794000000100,
+        "signed_quantity": 10,
+        "price_cents": 100298
+      },
+      {
+        "submitted_time_ns": 1591176795000000100,
+        "signed_quantity": -10,
+        "price_cents": 100323
+      },
+      {
+        "submitted_time_ns": 1591176796000000100,
+        "signed_quantity": -10,
+        "price_cents": 100319
+      },
+      {
+        "submitted_time_ns": 1591176797000000100,
+        "signed_quantity": -10,
+        "price_cents": 100323
+      },
+      {
+        "submitted_time_ns": 1591176799000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176799000000100,
+        "signed_quantity": -10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176800000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176800000000100,
+        "signed_quantity": -10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176801000000100,
+        "signed_quantity": 10,
+        "price_cents": 100307
+      },
+      {
+        "submitted_time_ns": 1591176803000000100,
+        "signed_quantity": 10,
+        "price_cents": 100298
+      },
+      {
+        "submitted_time_ns": 1591176804000000100,
+        "signed_quantity": 10,
+        "price_cents": 100294
+      },
+      {
+        "submitted_time_ns": 1591176805000000100,
+        "signed_quantity": 10,
+        "price_cents": 100294
+      },
+      {
+        "submitted_time_ns": 1591176807000000100,
+        "signed_quantity": 10,
+        "price_cents": 100287
+      },
+      {
+        "submitted_time_ns": 1591176808000000100,
+        "signed_quantity": 10,
+        "price_cents": 100289
+      },
+      {
+        "submitted_time_ns": 1591176809000000100,
+        "signed_quantity": 10,
+        "price_cents": 100276
+      },
+      {
+        "submitted_time_ns": 1591176811000000100,
+        "signed_quantity": 10,
+        "price_cents": 100275
+      },
+      {
+        "submitted_time_ns": 1591176813000000100,
+        "signed_quantity": 10,
+        "price_cents": 100267
+      },
+      {
+        "submitted_time_ns": 1591176813000000100,
+        "signed_quantity": -10,
+        "price_cents": 100284
+      },
+      {
+        "submitted_time_ns": 1591176815000000100,
+        "signed_quantity": 10,
+        "price_cents": 100261
+      },
+      {
+        "submitted_time_ns": 1591176816000000100,
+        "signed_quantity": -10,
+        "price_cents": 100279
+      },
+      {
+        "submitted_time_ns": 1591176817000000100,
+        "signed_quantity": 10,
+        "price_cents": 100265
+      },
+      {
+        "submitted_time_ns": 1591176817000000100,
+        "signed_quantity": -10,
+        "price_cents": 100288
+      },
+      {
+        "submitted_time_ns": 1591176818000000100,
+        "signed_quantity": 10,
+        "price_cents": 100260
+      },
+      {
+        "submitted_time_ns": 1591176818000000100,
+        "signed_quantity": -10,
+        "price_cents": 100287
+      },
+      {
+        "submitted_time_ns": 1591176819000000100,
+        "signed_quantity": 10,
+        "price_cents": 100265
+      },
+      {
+        "submitted_time_ns": 1591176820000000100,
+        "signed_quantity": 10,
+        "price_cents": 100264
+      },
+      {
+        "submitted_time_ns": 1591176821000000100,
+        "signed_quantity": 10,
+        "price_cents": 100253
+      },
+      {
+        "submitted_time_ns": 1591176822000000100,
+        "signed_quantity": 10,
+        "price_cents": 100266
+      },
+      {
+        "submitted_time_ns": 1591176822000000100,
+        "signed_quantity": -10,
+        "price_cents": 100271
+      },
+      {
+        "submitted_time_ns": 1591176824000000100,
+        "signed_quantity": 10,
+        "price_cents": 100263
+      },
+      {
+        "submitted_time_ns": 1591176826000000100,
+        "signed_quantity": 10,
+        "price_cents": 100260
+      },
+      {
+        "submitted_time_ns": 1591176827000000100,
+        "signed_quantity": 10,
+        "price_cents": 100240
+      },
+      {
+        "submitted_time_ns": 1591176829000000100,
+        "signed_quantity": 10,
+        "price_cents": 100227
+      },
+      {
+        "submitted_time_ns": 1591176832000000100,
+        "signed_quantity": 10,
+        "price_cents": 100218
+      },
+      {
+        "submitted_time_ns": 1591176832000000100,
+        "signed_quantity": -10,
+        "price_cents": 100221
+      },
+      {
+        "submitted_time_ns": 1591176833000000100,
+        "signed_quantity": 10,
+        "price_cents": 100213
+      },
+      {
+        "submitted_time_ns": 1591176833000000100,
+        "signed_quantity": -10,
+        "price_cents": 100232
+      },
+      {
+        "submitted_time_ns": 1591176835000000100,
+        "signed_quantity": 10,
+        "price_cents": 100188
+      },
+      {
+        "submitted_time_ns": 1591176835000000100,
+        "signed_quantity": -10,
+        "price_cents": 100221
+      },
+      {
+        "submitted_time_ns": 1591176836000000100,
+        "signed_quantity": 10,
+        "price_cents": 100185
+      },
+      {
+        "submitted_time_ns": 1591176837000000100,
+        "signed_quantity": 10,
+        "price_cents": 100175
+      },
+      {
+        "submitted_time_ns": 1591176837000000100,
+        "signed_quantity": -10,
+        "price_cents": 100198
+      },
+      {
+        "submitted_time_ns": 1591176839000000100,
+        "signed_quantity": 10,
+        "price_cents": 100178
+      },
+      {
+        "submitted_time_ns": 1591176839000000100,
+        "signed_quantity": -10,
+        "price_cents": 100193
+      },
+      {
+        "submitted_time_ns": 1591176840000000100,
+        "signed_quantity": -10,
+        "price_cents": 100184
+      },
+      {
+        "submitted_time_ns": 1591176841000000100,
+        "signed_quantity": 10,
+        "price_cents": 100178
+      },
+      {
+        "submitted_time_ns": 1591176843000000100,
+        "signed_quantity": 10,
+        "price_cents": 100175
+      },
+      {
+        "submitted_time_ns": 1591176844000000100,
+        "signed_quantity": 10,
+        "price_cents": 100177
+      },
+      {
+        "submitted_time_ns": 1591176845000000100,
+        "signed_quantity": 10,
+        "price_cents": 100176
+      },
+      {
+        "submitted_time_ns": 1591176847000000100,
+        "signed_quantity": -10,
+        "price_cents": 100178
+      },
+      {
+        "submitted_time_ns": 1591176850000000100,
+        "signed_quantity": 10,
+        "price_cents": 100169
+      },
+      {
+        "submitted_time_ns": 1591176850000000100,
+        "signed_quantity": -10,
+        "price_cents": 100174
+      },
+      {
+        "submitted_time_ns": 1591176851000000100,
+        "signed_quantity": 10,
+        "price_cents": 100159
+      },
+      {
+        "submitted_time_ns": 1591176851000000100,
+        "signed_quantity": -10,
+        "price_cents": 100180
+      },
+      {
+        "submitted_time_ns": 1591176852000000100,
+        "signed_quantity": -10,
+        "price_cents": 100183
+      },
+      {
+        "submitted_time_ns": 1591176853000000100,
+        "signed_quantity": -10,
+        "price_cents": 100180
+      },
+      {
+        "submitted_time_ns": 1591176855000000100,
+        "signed_quantity": 10,
+        "price_cents": 100162
+      },
+      {
+        "submitted_time_ns": 1591176856000000100,
+        "signed_quantity": 10,
+        "price_cents": 100171
+      },
+      {
+        "submitted_time_ns": 1591176857000000100,
+        "signed_quantity": 10,
+        "price_cents": 100170
+      },
+      {
+        "submitted_time_ns": 1591176859000000100,
+        "signed_quantity": 10,
+        "price_cents": 100167
+      },
+      {
+        "submitted_time_ns": 1591176859000000100,
+        "signed_quantity": -10,
+        "price_cents": 100175
+      },
+      {
+        "submitted_time_ns": 1591176860000000100,
+        "signed_quantity": 10,
+        "price_cents": 100168
+      },
+      {
+        "submitted_time_ns": 1591176861000000100,
+        "signed_quantity": -10,
+        "price_cents": 100176
+      },
+      {
+        "submitted_time_ns": 1591176864000000100,
+        "signed_quantity": 10,
+        "price_cents": 100167
+      },
+      {
+        "submitted_time_ns": 1591176864000000100,
+        "signed_quantity": -10,
+        "price_cents": 100182
+      },
+      {
+        "submitted_time_ns": 1591176865000000100,
+        "signed_quantity": 10,
+        "price_cents": 100173
+      },
+      {
+        "submitted_time_ns": 1591176866000000100,
+        "signed_quantity": 10,
+        "price_cents": 100174
+      },
+      {
+        "submitted_time_ns": 1591176866000000100,
+        "signed_quantity": -10,
+        "price_cents": 100189
+      },
+      {
+        "submitted_time_ns": 1591176867000000100,
+        "signed_quantity": 10,
+        "price_cents": 100173
+      },
+      {
+        "submitted_time_ns": 1591176868000000100,
+        "signed_quantity": 10,
+        "price_cents": 100171
+      },
+      {
+        "submitted_time_ns": 1591176870000000100,
+        "signed_quantity": 10,
+        "price_cents": 100164
+      },
+      {
+        "submitted_time_ns": 1591176870000000100,
+        "signed_quantity": -10,
+        "price_cents": 100177
+      },
+      {
+        "submitted_time_ns": 1591176871000000100,
+        "signed_quantity": -10,
+        "price_cents": 100177
+      },
+      {
+        "submitted_time_ns": 1591176872000000100,
+        "signed_quantity": 10,
+        "price_cents": 100167
+      },
+      {
+        "submitted_time_ns": 1591176874000000100,
+        "signed_quantity": 10,
+        "price_cents": 100158
+      },
+      {
+        "submitted_time_ns": 1591176876000000100,
+        "signed_quantity": 10,
+        "price_cents": 100172
+      },
+      {
+        "submitted_time_ns": 1591176877000000100,
+        "signed_quantity": 10,
+        "price_cents": 100166
+      },
+      {
+        "submitted_time_ns": 1591176878000000100,
+        "signed_quantity": 10,
+        "price_cents": 100157
+      },
+      {
+        "submitted_time_ns": 1591176879000000100,
+        "signed_quantity": 10,
+        "price_cents": 100162
+      },
+      {
+        "submitted_time_ns": 1591176879000000100,
+        "signed_quantity": -10,
+        "price_cents": 100173
+      },
+      {
+        "submitted_time_ns": 1591176880000000100,
+        "signed_quantity": 10,
+        "price_cents": 100167
+      },
+      {
+        "submitted_time_ns": 1591176880000000100,
+        "signed_quantity": -10,
+        "price_cents": 100183
+      },
+      {
+        "submitted_time_ns": 1591176881000000100,
+        "signed_quantity": 10,
+        "price_cents": 100171
+      },
+      {
+        "submitted_time_ns": 1591176881000000100,
+        "signed_quantity": -10,
+        "price_cents": 100179
+      },
+      {
+        "submitted_time_ns": 1591176882000000100,
+        "signed_quantity": 10,
+        "price_cents": 100160
+      },
+      {
+        "submitted_time_ns": 1591176883000000100,
+        "signed_quantity": 10,
+        "price_cents": 100159
+      },
+      {
+        "submitted_time_ns": 1591176886000000100,
+        "signed_quantity": -10,
+        "price_cents": 100170
+      },
+      {
+        "submitted_time_ns": 1591176887000000100,
+        "signed_quantity": 10,
+        "price_cents": 100160
+      },
+      {
+        "submitted_time_ns": 1591176888000000100,
+        "signed_quantity": 10,
+        "price_cents": 100168
+      },
+      {
+        "submitted_time_ns": 1591176889000000100,
+        "signed_quantity": 10,
+        "price_cents": 100155
+      },
+      {
+        "submitted_time_ns": 1591176891000000100,
+        "signed_quantity": 10,
+        "price_cents": 100164
+      },
+      {
+        "submitted_time_ns": 1591176892000000100,
+        "signed_quantity": 10,
+        "price_cents": 100172
+      },
+      {
+        "submitted_time_ns": 1591176893000000100,
+        "signed_quantity": 10,
+        "price_cents": 100182
+      },
+      {
+        "submitted_time_ns": 1591176894000000100,
+        "signed_quantity": 10,
+        "price_cents": 100186
+      },
+      {
+        "submitted_time_ns": 1591176894000000100,
+        "signed_quantity": -10,
+        "price_cents": 100193
+      },
+      {
+        "submitted_time_ns": 1591176896000000100,
+        "signed_quantity": 10,
+        "price_cents": 100190
+      },
+      {
+        "submitted_time_ns": 1591176898000000100,
+        "signed_quantity": 10,
+        "price_cents": 100188
+      },
+      {
+        "submitted_time_ns": 1591176899000000100,
+        "signed_quantity": 10,
+        "price_cents": 100186
+      },
+      {
+        "submitted_time_ns": 1591176900000000100,
+        "signed_quantity": -10,
+        "price_cents": 100205
+      },
+      {
+        "submitted_time_ns": 1591176901000000100,
+        "signed_quantity": 10,
+        "price_cents": 100201
+      },
+      {
+        "submitted_time_ns": 1591176901000000100,
+        "signed_quantity": -10,
+        "price_cents": 100207
+      },
+      {
+        "submitted_time_ns": 1591176903000000100,
+        "signed_quantity": 10,
+        "price_cents": 100196
+      },
+      {
+        "submitted_time_ns": 1591176904000000100,
+        "signed_quantity": 10,
+        "price_cents": 100211
+      },
+      {
+        "submitted_time_ns": 1591176905000000100,
+        "signed_quantity": 10,
+        "price_cents": 100216
+      },
+      {
+        "submitted_time_ns": 1591176906000000100,
+        "signed_quantity": 10,
+        "price_cents": 100218
+      },
+      {
+        "submitted_time_ns": 1591176909000000100,
+        "signed_quantity": 10,
+        "price_cents": 100209
+      },
+      {
+        "submitted_time_ns": 1591176910000000100,
+        "signed_quantity": 10,
+        "price_cents": 100208
+      },
+      {
+        "submitted_time_ns": 1591176911000000100,
+        "signed_quantity": 10,
+        "price_cents": 100223
+      },
+      {
+        "submitted_time_ns": 1591176911000000100,
+        "signed_quantity": -10,
+        "price_cents": 100241
+      },
+      {
+        "submitted_time_ns": 1591176912000000100,
+        "signed_quantity": 10,
+        "price_cents": 100214
+      },
+      {
+        "submitted_time_ns": 1591176912000000100,
+        "signed_quantity": -10,
+        "price_cents": 100233
+      },
+      {
+        "submitted_time_ns": 1591176913000000100,
+        "signed_quantity": -10,
+        "price_cents": 100234
+      },
+      {
+        "submitted_time_ns": 1591176915000000100,
+        "signed_quantity": 10,
+        "price_cents": 100232
+      },
+      {
+        "submitted_time_ns": 1591176915000000100,
+        "signed_quantity": -10,
+        "price_cents": 100237
+      },
+      {
+        "submitted_time_ns": 1591176916000000100,
+        "signed_quantity": 10,
+        "price_cents": 100235
+      },
+      {
+        "submitted_time_ns": 1591176917000000100,
+        "signed_quantity": 10,
+        "price_cents": 100225
+      },
+      {
+        "submitted_time_ns": 1591176918000000100,
+        "signed_quantity": 10,
+        "price_cents": 100241
+      },
+      {
+        "submitted_time_ns": 1591176919000000100,
+        "signed_quantity": 10,
+        "price_cents": 100242
+      },
+      {
+        "submitted_time_ns": 1591176920000000100,
+        "signed_quantity": 10,
+        "price_cents": 100234
+      },
+      {
+        "submitted_time_ns": 1591176920000000100,
+        "signed_quantity": -10,
+        "price_cents": 100267
+      },
+      {
+        "submitted_time_ns": 1591176921000000100,
+        "signed_quantity": -10,
+        "price_cents": 100258
+      },
+      {
+        "submitted_time_ns": 1591176922000000100,
+        "signed_quantity": 10,
+        "price_cents": 100250
+      },
+      {
+        "submitted_time_ns": 1591176922000000100,
+        "signed_quantity": -10,
+        "price_cents": 100272
+      },
+      {
+        "submitted_time_ns": 1591176925000000100,
+        "signed_quantity": 10,
+        "price_cents": 100271
+      },
+      {
+        "submitted_time_ns": 1591176925000000100,
+        "signed_quantity": -10,
+        "price_cents": 100291
+      },
+      {
+        "submitted_time_ns": 1591176926000000100,
+        "signed_quantity": 10,
+        "price_cents": 100275
+      },
+      {
+        "submitted_time_ns": 1591176926000000100,
+        "signed_quantity": -10,
+        "price_cents": 100282
+      },
+      {
+        "submitted_time_ns": 1591176927000000100,
+        "signed_quantity": -10,
+        "price_cents": 100285
+      },
+      {
+        "submitted_time_ns": 1591176928000000100,
+        "signed_quantity": 10,
+        "price_cents": 100284
+      },
+      {
+        "submitted_time_ns": 1591176929000000100,
+        "signed_quantity": 10,
+        "price_cents": 100277
+      },
+      {
+        "submitted_time_ns": 1591176930000000100,
+        "signed_quantity": 10,
+        "price_cents": 100287
+      },
+      {
+        "submitted_time_ns": 1591176930000000100,
+        "signed_quantity": -10,
+        "price_cents": 100290
+      },
+      {
+        "submitted_time_ns": 1591176931000000100,
+        "signed_quantity": -10,
+        "price_cents": 100308
+      },
+      {
+        "submitted_time_ns": 1591176932000000100,
+        "signed_quantity": 10,
+        "price_cents": 100296
+      },
+      {
+        "submitted_time_ns": 1591176933000000100,
+        "signed_quantity": -10,
+        "price_cents": 100308
+      },
+      {
+        "submitted_time_ns": 1591176934000000100,
+        "signed_quantity": 10,
+        "price_cents": 100302
+      },
+      {
+        "submitted_time_ns": 1591176936000000100,
+        "signed_quantity": 10,
+        "price_cents": 100307
+      },
+      {
+        "submitted_time_ns": 1591176937000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176937000000100,
+        "signed_quantity": -10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176938000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176940000000100,
+        "signed_quantity": 10,
+        "price_cents": 100308
+      },
+      {
+        "submitted_time_ns": 1591176942000000100,
+        "signed_quantity": -10,
+        "price_cents": 100324
+      },
+      {
+        "submitted_time_ns": 1591176944000000100,
+        "signed_quantity": 10,
+        "price_cents": 100317
+      },
+      {
+        "submitted_time_ns": 1591176944000000100,
+        "signed_quantity": -10,
+        "price_cents": 100331
+      },
+      {
+        "submitted_time_ns": 1591176945000000100,
+        "signed_quantity": 10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176947000000100,
+        "signed_quantity": 10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176948000000100,
+        "signed_quantity": 10,
+        "price_cents": 100307
+      },
+      {
+        "submitted_time_ns": 1591176949000000100,
+        "signed_quantity": 10,
+        "price_cents": 100307
+      },
+      {
+        "submitted_time_ns": 1591176950000000100,
+        "signed_quantity": 10,
+        "price_cents": 100314
+      },
+      {
+        "submitted_time_ns": 1591176951000000100,
+        "signed_quantity": 10,
+        "price_cents": 100311
+      },
+      {
+        "submitted_time_ns": 1591176952000000100,
+        "signed_quantity": 10,
+        "price_cents": 100315
+      },
+      {
+        "submitted_time_ns": 1591176952000000100,
+        "signed_quantity": -10,
+        "price_cents": 100318
+      },
+      {
+        "submitted_time_ns": 1591176953000000100,
+        "signed_quantity": 10,
+        "price_cents": 100309
+      },
+      {
+        "submitted_time_ns": 1591176955000000100,
+        "signed_quantity": 10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176955000000100,
+        "signed_quantity": -10,
+        "price_cents": 100321
+      },
+      {
+        "submitted_time_ns": 1591176956000000100,
+        "signed_quantity": 10,
+        "price_cents": 100318
+      },
+      {
+        "submitted_time_ns": 1591176956000000100,
+        "signed_quantity": -10,
+        "price_cents": 100324
+      },
+      {
+        "submitted_time_ns": 1591176959000000100,
+        "signed_quantity": 10,
+        "price_cents": 100323
+      },
+      {
+        "submitted_time_ns": 1591176960000000100,
+        "signed_quantity": 10,
+        "price_cents": 100335
+      },
+      {
+        "submitted_time_ns": 1591176961000000100,
+        "signed_quantity": 10,
+        "price_cents": 100346
+      },
+      {
+        "submitted_time_ns": 1591176961000000100,
+        "signed_quantity": -10,
+        "price_cents": 100349
+      },
+      {
+        "submitted_time_ns": 1591176962000000100,
+        "signed_quantity": 10,
+        "price_cents": 100340
+      },
+      {
+        "submitted_time_ns": 1591176962000000100,
+        "signed_quantity": -10,
+        "price_cents": 100358
+      },
+      {
+        "submitted_time_ns": 1591176963000000100,
+        "signed_quantity": 10,
+        "price_cents": 100341
+      },
+      {
+        "submitted_time_ns": 1591176963000000100,
+        "signed_quantity": -10,
+        "price_cents": 100346
+      },
+      {
+        "submitted_time_ns": 1591176964000000100,
+        "signed_quantity": 10,
+        "price_cents": 100336
+      },
+      {
+        "submitted_time_ns": 1591176966000000100,
+        "signed_quantity": -10,
+        "price_cents": 100364
+      },
+      {
+        "submitted_time_ns": 1591176967000000100,
+        "signed_quantity": -10,
+        "price_cents": 100372
+      },
+      {
+        "submitted_time_ns": 1591176968000000100,
+        "signed_quantity": -10,
+        "price_cents": 100366
+      },
+      {
+        "submitted_time_ns": 1591176970000000100,
+        "signed_quantity": 10,
+        "price_cents": 100348
+      },
+      {
+        "submitted_time_ns": 1591176971000000100,
+        "signed_quantity": 10,
+        "price_cents": 100361
+      },
+      {
+        "submitted_time_ns": 1591176973000000100,
+        "signed_quantity": 10,
+        "price_cents": 100347
+      },
+      {
+        "submitted_time_ns": 1591176973000000100,
+        "signed_quantity": -10,
+        "price_cents": 100376
+      },
+      {
+        "submitted_time_ns": 1591176974000000100,
+        "signed_quantity": -10,
+        "price_cents": 100368
+      },
+      {
+        "submitted_time_ns": 1591176975000000100,
+        "signed_quantity": -10,
+        "price_cents": 100368
+      },
+      {
+        "submitted_time_ns": 1591176977000000100,
+        "signed_quantity": -10,
+        "price_cents": 100359
+      },
+      {
+        "submitted_time_ns": 1591176978000000100,
+        "signed_quantity": 10,
+        "price_cents": 100346
+      },
+      {
+        "submitted_time_ns": 1591176978000000100,
+        "signed_quantity": -10,
+        "price_cents": 100365
+      },
+      {
+        "submitted_time_ns": 1591176981000000100,
+        "signed_quantity": 10,
+        "price_cents": 100347
+      },
+      {
+        "submitted_time_ns": 1591176982000000100,
+        "signed_quantity": 10,
+        "price_cents": 100346
+      },
+      {
+        "submitted_time_ns": 1591176984000000100,
+        "signed_quantity": 10,
+        "price_cents": 100342
+      },
+      {
+        "submitted_time_ns": 1591176985000000100,
+        "signed_quantity": -10,
+        "price_cents": 100358
+      },
+      {
+        "submitted_time_ns": 1591176986000000100,
+        "signed_quantity": 10,
+        "price_cents": 100342
+      },
+      {
+        "submitted_time_ns": 1591176988000000100,
+        "signed_quantity": 10,
+        "price_cents": 100339
+      },
+      {
+        "submitted_time_ns": 1591176989000000100,
+        "signed_quantity": -10,
+        "price_cents": 100349
+      },
+      {
+        "submitted_time_ns": 1591176990000000100,
+        "signed_quantity": -10,
+        "price_cents": 100360
+      },
+      {
+        "submitted_time_ns": 1591176991000000100,
+        "signed_quantity": -10,
+        "price_cents": 100354
+      },
+      {
+        "submitted_time_ns": 1591176993000000100,
+        "signed_quantity": -10,
+        "price_cents": 100310
+      },
+      {
+        "submitted_time_ns": 1591176994000000100,
+        "signed_quantity": 10,
+        "price_cents": 100297
+      },
+      {
+        "submitted_time_ns": 1591176995000000100,
+        "signed_quantity": 10,
+        "price_cents": 100275
+      },
+      {
+        "submitted_time_ns": 1591176996000000100,
+        "signed_quantity": 10,
+        "price_cents": 100271
+      },
+      {
+        "submitted_time_ns": 1591176996000000100,
+        "signed_quantity": -10,
+        "price_cents": 100293
+      },
+      {
+        "submitted_time_ns": 1591176997000000100,
+        "signed_quantity": -10,
+        "price_cents": 100303
+      },
+      {
+        "submitted_time_ns": 1591176999000000100,
+        "signed_quantity": 10,
+        "price_cents": 100270
+      },
+      {
+        "submitted_time_ns": 1591177001000000100,
+        "signed_quantity": 10,
+        "price_cents": 100256
+      },
+      {
+        "submitted_time_ns": 1591177002000000100,
+        "signed_quantity": 10,
+        "price_cents": 100251
+      },
+      {
+        "submitted_time_ns": 1591177003000000100,
+        "signed_quantity": 10,
+        "price_cents": 100250
+      },
+      {
+        "submitted_time_ns": 1591177007000000100,
+        "signed_quantity": -10,
+        "price_cents": 100213
+      },
+      {
+        "submitted_time_ns": 1591177008000000100,
+        "signed_quantity": 10,
+        "price_cents": 100203
+      },
+      {
+        "submitted_time_ns": 1591177009000000100,
+        "signed_quantity": 10,
+        "price_cents": 100190
+      },
+      {
+        "submitted_time_ns": 1591177011000000100,
+        "signed_quantity": 10,
+        "price_cents": 100184
+      },
+      {
+        "submitted_time_ns": 1591177012000000100,
+        "signed_quantity": -10,
+        "price_cents": 100184
+      },
+      {
+        "submitted_time_ns": 1591177013000000100,
+        "signed_quantity": 10,
+        "price_cents": 100166
+      },
+      {
+        "submitted_time_ns": 1591177013000000100,
+        "signed_quantity": -10,
+        "price_cents": 100198
+      },
+      {
+        "submitted_time_ns": 1591177014000000100,
+        "signed_quantity": 10,
+        "price_cents": 100161
+      },
+      {
+        "submitted_time_ns": 1591177015000000100,
+        "signed_quantity": -10,
+        "price_cents": 100185
+      },
+      {
+        "submitted_time_ns": 1591177017000000100,
+        "signed_quantity": 10,
+        "price_cents": 100153
+      },
+      {
+        "submitted_time_ns": 1591177019000000100,
+        "signed_quantity": -10,
+        "price_cents": 100137
+      },
+      {
+        "submitted_time_ns": 1591177020000000100,
+        "signed_quantity": 10,
+        "price_cents": 100129
+      },
+      {
+        "submitted_time_ns": 1591177020000000100,
+        "signed_quantity": -10,
+        "price_cents": 100138
+      },
+      {
+        "submitted_time_ns": 1591177021000000100,
+        "signed_quantity": 10,
+        "price_cents": 100128
+      },
+      {
+        "submitted_time_ns": 1591177022000000100,
+        "signed_quantity": 10,
+        "price_cents": 100123
+      },
+      {
+        "submitted_time_ns": 1591177023000000100,
+        "signed_quantity": -10,
+        "price_cents": 100134
+      },
+      {
+        "submitted_time_ns": 1591177024000000100,
+        "signed_quantity": 10,
+        "price_cents": 100111
+      },
+      {
+        "submitted_time_ns": 1591177025000000100,
+        "signed_quantity": 10,
+        "price_cents": 100116
+      },
+      {
+        "submitted_time_ns": 1591177026000000100,
+        "signed_quantity": 10,
+        "price_cents": 100094
+      },
+      {
+        "submitted_time_ns": 1591177030000000100,
+        "signed_quantity": 10,
+        "price_cents": 100050
+      },
+      {
+        "submitted_time_ns": 1591177032000000100,
+        "signed_quantity": 10,
+        "price_cents": 100024
+      },
+      {
+        "submitted_time_ns": 1591177032000000100,
+        "signed_quantity": -10,
+        "price_cents": 100030
+      },
+      {
+        "submitted_time_ns": 1591177033000000100,
+        "signed_quantity": 10,
+        "price_cents": 100013
+      },
+      {
+        "submitted_time_ns": 1591177034000000100,
+        "signed_quantity": 10,
+        "price_cents": 100025
+      },
+      {
+        "submitted_time_ns": 1591177035000000100,
+        "signed_quantity": -10,
+        "price_cents": 100041
+      },
+      {
+        "submitted_time_ns": 1591177037000000100,
+        "signed_quantity": 10,
+        "price_cents": 100018
+      },
+      {
+        "submitted_time_ns": 1591177038000000100,
+        "signed_quantity": -10,
+        "price_cents": 99997
+      },
+      {
+        "submitted_time_ns": 1591177039000000100,
+        "signed_quantity": 10,
+        "price_cents": 99978
+      },
+      {
+        "submitted_time_ns": 1591177040000000100,
+        "signed_quantity": 10,
+        "price_cents": 99983
+      },
+      {
+        "submitted_time_ns": 1591177041000000100,
+        "signed_quantity": 10,
+        "price_cents": 99970
+      },
+      {
+        "submitted_time_ns": 1591177042000000100,
+        "signed_quantity": 10,
+        "price_cents": 99983
+      },
+      {
+        "submitted_time_ns": 1591177044000000100,
+        "signed_quantity": -10,
+        "price_cents": 99998
+      },
+      {
+        "submitted_time_ns": 1591177045000000100,
+        "signed_quantity": 10,
+        "price_cents": 99980
+      },
+      {
+        "submitted_time_ns": 1591177046000000100,
+        "signed_quantity": 10,
+        "price_cents": 99977
+      },
+      {
+        "submitted_time_ns": 1591177046000000100,
+        "signed_quantity": -10,
+        "price_cents": 99982
+      },
+      {
+        "submitted_time_ns": 1591177047000000100,
+        "signed_quantity": -10,
+        "price_cents": 99983
+      },
+      {
+        "submitted_time_ns": 1591177048000000100,
+        "signed_quantity": 10,
+        "price_cents": 99966
+      },
+      {
+        "submitted_time_ns": 1591177049000000100,
+        "signed_quantity": -10,
+        "price_cents": 99985
+      },
+      {
+        "submitted_time_ns": 1591177050000000100,
+        "signed_quantity": -10,
+        "price_cents": 99979
+      },
+      {
+        "submitted_time_ns": 1591177051000000100,
+        "signed_quantity": -10,
+        "price_cents": 99964
+      },
+      {
+        "submitted_time_ns": 1591177052000000100,
+        "signed_quantity": 10,
+        "price_cents": 99955
+      },
+      {
+        "submitted_time_ns": 1591177055000000100,
+        "signed_quantity": -10,
+        "price_cents": 99954
+      },
+      {
+        "submitted_time_ns": 1591177056000000100,
+        "signed_quantity": 10,
+        "price_cents": 99928
+      },
+      {
+        "submitted_time_ns": 1591177056000000100,
+        "signed_quantity": -10,
+        "price_cents": 99954
+      },
+      {
+        "submitted_time_ns": 1591177058000000100,
+        "signed_quantity": 10,
+        "price_cents": 99915
+      },
+      {
+        "submitted_time_ns": 1591177059000000100,
+        "signed_quantity": 10,
+        "price_cents": 99925
+      },
+      {
+        "submitted_time_ns": 1591177061000000100,
+        "signed_quantity": -10,
+        "price_cents": 99927
+      },
+      {
+        "submitted_time_ns": 1591177062000000100,
+        "signed_quantity": -10,
+        "price_cents": 99937
+      },
+      {
+        "submitted_time_ns": 1591177063000000100,
+        "signed_quantity": 10,
+        "price_cents": 99922
+      },
+      {
+        "submitted_time_ns": 1591177065000000100,
+        "signed_quantity": 10,
+        "price_cents": 99923
+      },
+      {
+        "submitted_time_ns": 1591177065000000100,
+        "signed_quantity": -10,
+        "price_cents": 99940
+      },
+      {
+        "submitted_time_ns": 1591177066000000100,
+        "signed_quantity": 10,
+        "price_cents": 99907
+      },
+      {
+        "submitted_time_ns": 1591177067000000100,
+        "signed_quantity": 10,
+        "price_cents": 99907
+      },
+      {
+        "submitted_time_ns": 1591177067000000100,
+        "signed_quantity": -10,
+        "price_cents": 99933
+      },
+      {
+        "submitted_time_ns": 1591177068000000100,
+        "signed_quantity": 10,
+        "price_cents": 99911
+      },
+      {
+        "submitted_time_ns": 1591177069000000100,
+        "signed_quantity": 10,
+        "price_cents": 99911
+      },
+      {
+        "submitted_time_ns": 1591177070000000100,
+        "signed_quantity": 10,
+        "price_cents": 99914
+      },
+      {
+        "submitted_time_ns": 1591177072000000100,
+        "signed_quantity": 10,
+        "price_cents": 99911
+      },
+      {
+        "submitted_time_ns": 1591177073000000100,
+        "signed_quantity": 10,
+        "price_cents": 99916
+      },
+      {
+        "submitted_time_ns": 1591177073000000100,
+        "signed_quantity": -10,
+        "price_cents": 99931
+      },
+      {
+        "submitted_time_ns": 1591177074000000100,
+        "signed_quantity": 10,
+        "price_cents": 99925
+      },
+      {
+        "submitted_time_ns": 1591177075000000100,
+        "signed_quantity": 10,
+        "price_cents": 99914
+      },
+      {
+        "submitted_time_ns": 1591177075000000100,
+        "signed_quantity": -10,
+        "price_cents": 99942
+      },
+      {
+        "submitted_time_ns": 1591177076000000100,
+        "signed_quantity": 10,
+        "price_cents": 99930
+      },
+      {
+        "submitted_time_ns": 1591177077000000100,
+        "signed_quantity": 10,
+        "price_cents": 99925
+      },
+      {
+        "submitted_time_ns": 1591177078000000100,
+        "signed_quantity": 10,
+        "price_cents": 99933
+      },
+      {
+        "submitted_time_ns": 1591177080000000100,
+        "signed_quantity": 10,
+        "price_cents": 99926
+      },
+      {
+        "submitted_time_ns": 1591177081000000100,
+        "signed_quantity": 10,
+        "price_cents": 99919
+      },
+      {
+        "submitted_time_ns": 1591177082000000100,
+        "signed_quantity": 10,
+        "price_cents": 99917
+      },
+      {
+        "submitted_time_ns": 1591177084000000100,
+        "signed_quantity": -10,
+        "price_cents": 99933
+      },
+      {
+        "submitted_time_ns": 1591177086000000100,
+        "signed_quantity": 10,
+        "price_cents": 99913
+      },
+      {
+        "submitted_time_ns": 1591177088000000100,
+        "signed_quantity": 10,
+        "price_cents": 99903
+      },
+      {
+        "submitted_time_ns": 1591177089000000100,
+        "signed_quantity": 10,
+        "price_cents": 99893
+      },
+      {
+        "submitted_time_ns": 1591177090000000100,
+        "signed_quantity": -10,
+        "price_cents": 99905
+      },
+      {
+        "submitted_time_ns": 1591177091000000100,
+        "signed_quantity": 10,
+        "price_cents": 99892
+      },
+      {
+        "submitted_time_ns": 1591177092000000100,
+        "signed_quantity": -10,
+        "price_cents": 99907
+      },
+      {
+        "submitted_time_ns": 1591177093000000100,
+        "signed_quantity": -10,
+        "price_cents": 99895
+      },
+      {
+        "submitted_time_ns": 1591177094000000100,
+        "signed_quantity": 10,
+        "price_cents": 99883
+      },
+      {
+        "submitted_time_ns": 1591177094000000100,
+        "signed_quantity": -10,
+        "price_cents": 99899
+      },
+      {
+        "submitted_time_ns": 1591177096000000100,
+        "signed_quantity": 10,
+        "price_cents": 99877
+      },
+      {
+        "submitted_time_ns": 1591177097000000100,
+        "signed_quantity": 10,
+        "price_cents": 99865
+      },
+      {
+        "submitted_time_ns": 1591177098000000100,
+        "signed_quantity": 10,
+        "price_cents": 99857
+      },
+      {
+        "submitted_time_ns": 1591177098000000100,
+        "signed_quantity": -10,
+        "price_cents": 99886
+      },
+      {
+        "submitted_time_ns": 1591177099000000100,
+        "signed_quantity": 10,
+        "price_cents": 99868
+      },
+      {
+        "submitted_time_ns": 1591177100000000100,
+        "signed_quantity": -10,
+        "price_cents": 99869
+      },
+      {
+        "submitted_time_ns": 1591177101000000100,
+        "signed_quantity": 10,
+        "price_cents": 99856
+      },
+      {
+        "submitted_time_ns": 1591177102000000100,
+        "signed_quantity": 10,
+        "price_cents": 99863
+      },
+      {
+        "submitted_time_ns": 1591177103000000100,
+        "signed_quantity": 10,
+        "price_cents": 99855
+      },
+      {
+        "submitted_time_ns": 1591177105000000100,
+        "signed_quantity": -10,
+        "price_cents": 99865
+      },
+      {
+        "submitted_time_ns": 1591177106000000100,
+        "signed_quantity": -10,
+        "price_cents": 99863
+      },
+      {
+        "submitted_time_ns": 1591177107000000100,
+        "signed_quantity": 10,
+        "price_cents": 99860
+      },
+      {
+        "submitted_time_ns": 1591177107000000100,
+        "signed_quantity": -10,
+        "price_cents": 99873
+      },
+      {
+        "submitted_time_ns": 1591177108000000100,
+        "signed_quantity": 10,
+        "price_cents": 99845
+      },
+      {
+        "submitted_time_ns": 1591177109000000100,
+        "signed_quantity": 10,
+        "price_cents": 99853
+      },
+      {
+        "submitted_time_ns": 1591177111000000100,
+        "signed_quantity": 10,
+        "price_cents": 99850
+      },
+      {
+        "submitted_time_ns": 1591177112000000100,
+        "signed_quantity": 10,
+        "price_cents": 99860
+      },
+      {
+        "submitted_time_ns": 1591177113000000100,
+        "signed_quantity": -10,
+        "price_cents": 99874
+      },
+      {
+        "submitted_time_ns": 1591177114000000100,
+        "signed_quantity": 10,
+        "price_cents": 99852
+      },
+      {
+        "submitted_time_ns": 1591177116000000100,
+        "signed_quantity": 10,
+        "price_cents": 99839
+      },
+      {
+        "submitted_time_ns": 1591177116000000100,
+        "signed_quantity": -10,
+        "price_cents": 99871
+      },
+      {
+        "submitted_time_ns": 1591177117000000100,
+        "signed_quantity": 10,
+        "price_cents": 99856
+      },
+      {
+        "submitted_time_ns": 1591177117000000100,
+        "signed_quantity": -10,
+        "price_cents": 99870
+      },
+      {
+        "submitted_time_ns": 1591177118000000100,
+        "signed_quantity": -10,
+        "price_cents": 99868
+      },
+      {
+        "submitted_time_ns": 1591177119000000100,
+        "signed_quantity": 10,
+        "price_cents": 99857
+      },
+      {
+        "submitted_time_ns": 1591177120000000100,
+        "signed_quantity": 10,
+        "price_cents": 99851
+      },
+      {
+        "submitted_time_ns": 1591177121000000100,
+        "signed_quantity": 10,
+        "price_cents": 99844
+      },
+      {
+        "submitted_time_ns": 1591177121000000100,
+        "signed_quantity": -10,
+        "price_cents": 99862
+      },
+      {
+        "submitted_time_ns": 1591177123000000100,
+        "signed_quantity": 10,
+        "price_cents": 99854
+      },
+      {
+        "submitted_time_ns": 1591177124000000100,
+        "signed_quantity": 10,
+        "price_cents": 99838
+      },
+      {
+        "submitted_time_ns": 1591177124000000100,
+        "signed_quantity": -10,
+        "price_cents": 99868
+      },
+      {
+        "submitted_time_ns": 1591177125000000100,
+        "signed_quantity": 10,
+        "price_cents": 99842
+      },
+      {
+        "submitted_time_ns": 1591177128000000100,
+        "signed_quantity": 10,
+        "price_cents": 99836
+      },
+      {
+        "submitted_time_ns": 1591177129000000100,
+        "signed_quantity": 10,
+        "price_cents": 99831
+      },
+      {
+        "submitted_time_ns": 1591177132000000100,
+        "signed_quantity": -10,
+        "price_cents": 99841
+      },
+      {
+        "submitted_time_ns": 1591177134000000100,
+        "signed_quantity": 10,
+        "price_cents": 99806
+      },
+      {
+        "submitted_time_ns": 1591177136000000100,
+        "signed_quantity": 10,
+        "price_cents": 99787
+      },
+      {
+        "submitted_time_ns": 1591177137000000100,
+        "signed_quantity": 10,
+        "price_cents": 99784
+      },
+      {
+        "submitted_time_ns": 1591177137000000100,
+        "signed_quantity": -10,
+        "price_cents": 99810
+      },
+      {
+        "submitted_time_ns": 1591177138000000100,
+        "signed_quantity": 10,
+        "price_cents": 99790
+      },
+      {
+        "submitted_time_ns": 1591177138000000100,
+        "signed_quantity": -10,
+        "price_cents": 99806
+      },
+      {
+        "submitted_time_ns": 1591177139000000100,
+        "signed_quantity": 10,
+        "price_cents": 99790
+      },
+      {
+        "submitted_time_ns": 1591177140000000100,
+        "signed_quantity": 10,
+        "price_cents": 99782
+      },
+      {
+        "submitted_time_ns": 1591177140000000100,
+        "signed_quantity": -10,
+        "price_cents": 99797
+      },
+      {
+        "submitted_time_ns": 1591177142000000100,
+        "signed_quantity": 10,
+        "price_cents": 99766
+      },
+      {
+        "submitted_time_ns": 1591177142000000100,
+        "signed_quantity": -10,
+        "price_cents": 99768
+      },
+      {
+        "submitted_time_ns": 1591177143000000100,
+        "signed_quantity": 10,
+        "price_cents": 99764
+      },
+      {
+        "submitted_time_ns": 1591177143000000100,
+        "signed_quantity": -10,
+        "price_cents": 99766
+      },
+      {
+        "submitted_time_ns": 1591177145000000100,
+        "signed_quantity": 10,
+        "price_cents": 99746
+      },
+      {
+        "submitted_time_ns": 1591177145000000100,
+        "signed_quantity": -10,
+        "price_cents": 99772
+      },
+      {
+        "submitted_time_ns": 1591177146000000100,
+        "signed_quantity": -10,
+        "price_cents": 99764
+      },
+      {
+        "submitted_time_ns": 1591177147000000100,
+        "signed_quantity": 10,
+        "price_cents": 99746
+      },
+      {
+        "submitted_time_ns": 1591177148000000100,
+        "signed_quantity": 10,
+        "price_cents": 99745
+      },
+      {
+        "submitted_time_ns": 1591177148000000100,
+        "signed_quantity": -10,
+        "price_cents": 99770
+      },
+      {
+        "submitted_time_ns": 1591177149000000100,
+        "signed_quantity": 10,
+        "price_cents": 99748
+      },
+      {
+        "submitted_time_ns": 1591177150000000100,
+        "signed_quantity": 10,
+        "price_cents": 99731
+      },
+      {
+        "submitted_time_ns": 1591177153000000100,
+        "signed_quantity": 10,
+        "price_cents": 99697
+      },
+      {
+        "submitted_time_ns": 1591177154000000100,
+        "signed_quantity": 10,
+        "price_cents": 99683
+      },
+      {
+        "submitted_time_ns": 1591177155000000100,
+        "signed_quantity": 10,
+        "price_cents": 99698
+      },
+      {
+        "submitted_time_ns": 1591177156000000100,
+        "signed_quantity": 10,
+        "price_cents": 99690
+      },
+      {
+        "submitted_time_ns": 1591177157000000100,
+        "signed_quantity": 10,
+        "price_cents": 99689
+      },
+      {
+        "submitted_time_ns": 1591177157000000100,
+        "signed_quantity": -10,
+        "price_cents": 99696
+      },
+      {
+        "submitted_time_ns": 1591177158000000100,
+        "signed_quantity": 10,
+        "price_cents": 99678
+      },
+      {
+        "submitted_time_ns": 1591177160000000100,
+        "signed_quantity": 10,
+        "price_cents": 99677
+      },
+      {
+        "submitted_time_ns": 1591177161000000100,
+        "signed_quantity": 10,
+        "price_cents": 99692
+      },
+      {
+        "submitted_time_ns": 1591177161000000100,
+        "signed_quantity": -10,
+        "price_cents": 99695
+      },
+      {
+        "submitted_time_ns": 1591177162000000100,
+        "signed_quantity": 10,
+        "price_cents": 99677
+      },
+      {
+        "submitted_time_ns": 1591177162000000100,
+        "signed_quantity": -10,
+        "price_cents": 99701
+      },
+      {
+        "submitted_time_ns": 1591177164000000100,
+        "signed_quantity": 10,
+        "price_cents": 99687
+      },
+      {
+        "submitted_time_ns": 1591177164000000100,
+        "signed_quantity": -10,
+        "price_cents": 99697
+      },
+      {
+        "submitted_time_ns": 1591177165000000100,
+        "signed_quantity": -10,
+        "price_cents": 99696
+      },
+      {
+        "submitted_time_ns": 1591177166000000100,
+        "signed_quantity": 10,
+        "price_cents": 99687
+      },
+      {
+        "submitted_time_ns": 1591177169000000100,
+        "signed_quantity": 10,
+        "price_cents": 99679
+      },
+      {
+        "submitted_time_ns": 1591177169000000100,
+        "signed_quantity": -10,
+        "price_cents": 99699
+      },
+      {
+        "submitted_time_ns": 1591177171000000100,
+        "signed_quantity": 10,
+        "price_cents": 99690
+      },
+      {
+        "submitted_time_ns": 1591177171000000100,
+        "signed_quantity": -10,
+        "price_cents": 99694
+      },
+      {
+        "submitted_time_ns": 1591177172000000100,
+        "signed_quantity": 10,
+        "price_cents": 99687
+      },
+      {
+        "submitted_time_ns": 1591177172000000100,
+        "signed_quantity": -10,
+        "price_cents": 99696
+      },
+      {
+        "submitted_time_ns": 1591177173000000100,
+        "signed_quantity": 10,
+        "price_cents": 99681
+      },
+      {
+        "submitted_time_ns": 1591177174000000100,
+        "signed_quantity": -10,
+        "price_cents": 99693
+      },
+      {
+        "submitted_time_ns": 1591177175000000100,
+        "signed_quantity": 10,
+        "price_cents": 99686
+      },
+      {
+        "submitted_time_ns": 1591177176000000100,
+        "signed_quantity": 10,
+        "price_cents": 99686
+      },
+      {
+        "submitted_time_ns": 1591177177000000100,
+        "signed_quantity": 10,
+        "price_cents": 99675
+      },
+      {
+        "submitted_time_ns": 1591177177000000100,
+        "signed_quantity": -10,
+        "price_cents": 99688
+      },
+      {
+        "submitted_time_ns": 1591177178000000100,
+        "signed_quantity": 10,
+        "price_cents": 99660
+      },
+      {
+        "submitted_time_ns": 1591177178000000100,
+        "signed_quantity": -10,
+        "price_cents": 99682
+      },
+      {
+        "submitted_time_ns": 1591177179000000100,
+        "signed_quantity": 10,
+        "price_cents": 99672
+      },
+      {
+        "submitted_time_ns": 1591177179000000100,
+        "signed_quantity": -10,
+        "price_cents": 99676
+      },
+      {
+        "submitted_time_ns": 1591177180000000100,
+        "signed_quantity": 10,
+        "price_cents": 99670
+      },
+      {
+        "submitted_time_ns": 1591177181000000100,
+        "signed_quantity": 10,
+        "price_cents": 99672
+      },
+      {
+        "submitted_time_ns": 1591177181000000100,
+        "signed_quantity": -10,
+        "price_cents": 99678
+      },
+      {
+        "submitted_time_ns": 1591177182000000100,
+        "signed_quantity": -10,
+        "price_cents": 99668
+      },
+      {
+        "submitted_time_ns": 1591177183000000100,
+        "signed_quantity": 10,
+        "price_cents": 99651
+      },
+      {
+        "submitted_time_ns": 1591177184000000100,
+        "signed_quantity": 10,
+        "price_cents": 99652
+      },
+      {
+        "submitted_time_ns": 1591177185000000100,
+        "signed_quantity": 10,
+        "price_cents": 99640
+      },
+      {
+        "submitted_time_ns": 1591177186000000100,
+        "signed_quantity": 10,
+        "price_cents": 99647
+      },
+      {
+        "submitted_time_ns": 1591177186000000100,
+        "signed_quantity": -10,
+        "price_cents": 99649
+      },
+      {
+        "submitted_time_ns": 1591177187000000100,
+        "signed_quantity": 10,
+        "price_cents": 99645
+      },
+      {
+        "submitted_time_ns": 1591177190000000100,
+        "signed_quantity": 10,
+        "price_cents": 99638
+      },
+      {
+        "submitted_time_ns": 1591177191000000100,
+        "signed_quantity": 10,
+        "price_cents": 99631
+      },
+      {
+        "submitted_time_ns": 1591177192000000100,
+        "signed_quantity": 10,
+        "price_cents": 99641
+      },
+      {
+        "submitted_time_ns": 1591177193000000100,
+        "signed_quantity": 10,
+        "price_cents": 99639
+      },
+      {
+        "submitted_time_ns": 1591177193000000100,
+        "signed_quantity": -10,
+        "price_cents": 99656
+      },
+      {
+        "submitted_time_ns": 1591177194000000100,
+        "signed_quantity": 10,
+        "price_cents": 99638
+      },
+      {
+        "submitted_time_ns": 1591177194000000100,
+        "signed_quantity": -10,
+        "price_cents": 99657
+      },
+      {
+        "submitted_time_ns": 1591177195000000100,
+        "signed_quantity": 10,
+        "price_cents": 99645
+      },
+      {
+        "submitted_time_ns": 1591177195000000100,
+        "signed_quantity": -10,
+        "price_cents": 99648
+      },
+      {
+        "submitted_time_ns": 1591177197000000100,
+        "signed_quantity": 10,
+        "price_cents": 99637
+      },
+      {
+        "submitted_time_ns": 1591177198000000100,
+        "signed_quantity": -10,
+        "price_cents": 99648
+      },
+      {
+        "submitted_time_ns": 1591177199000000100,
+        "signed_quantity": 10,
+        "price_cents": 99643
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+diff --git a/abides-core/abides_core/utils.py b/abides-core/abides_core/utils.py
+index 7b078ff..f390676 100644
+--- a/abides-core/abides_core/utils.py
++++ b/abides-core/abides_core/utils.py
+@@ -94,7 +94,10 @@ def str_to_ns(string: str) -> NanosecondTime:
+         - "1min" -> 6e10 ns
+         - "00:00:30" -> 3e10 ns
+     """
+-    return pd.to_timedelta(string).to_timedelta64().astype(int)
++    # Local patch: `.to_timedelta64().astype(int)` returns the count in the
++    # inferred resolution (μs for "1s" on modern pandas), not nanoseconds.
++    # `.value` is always nanoseconds. See team README "ABIDES patch" section.
++    return pd.to_timedelta(string).value
+ 
+ 
+ def datetime_str_to_ns(string: str) -> NanosecondTime:
+diff --git a/abides-markets/abides_markets/configs/rmsc03.py b/abides-markets/abides_markets/configs/rmsc03.py
+index 078a18a..c4a7358 100644
+--- a/abides-markets/abides_markets/configs/rmsc03.py
++++ b/abides-markets/abides_markets/configs/rmsc03.py
+@@ -14,8 +14,8 @@ from abides_markets.agents import (
+     ValueAgent,
+     AdaptiveMarketMakerAgent,
+     MomentumAgent,
+-    POVExecutionAgent,
+ )
++POVExecutionAgent = None  # not present in this fork; only used when execution_agents=True
+ from abides_markets.oracles import SparseMeanRevertingOracle
+ from abides_markets.orders import Side
+ from abides_markets.utils import generate_latency_model
+@@ -247,27 +247,26 @@ def build_config(
+     pov_frequency = str_to_ns("1min")
+     pov_direction = Side.BID
+ 
+-    pov_agent = POVExecutionAgent(
+-        id=agent_count,
+-        name="POV_EXECUTION_AGENT",
+-        type="ExecutionAgent",
+-        symbol=symbol,
+-        starting_cash=starting_cash,
+-        start_time=pov_agent_start_time,
+-        end_time=pov_agent_end_time,
+-        freq=pov_frequency,
+-        lookback_period=pov_frequency,
+-        pov=pov_proportion_of_volume,
+-        direction=pov_direction,
+-        quantity=pov_quantity,
+-        trade=trade,
+-        log_orders=True,  # needed for plots so conflicts with others
+-    )
+-
+-    execution_agents = [pov_agent]
+-    agents.extend(execution_agents)
+-    agent_types.extend("ExecutionAgent")
+-    agent_count += 1
++    if execution_agents and POVExecutionAgent is not None:
++        pov_agent = POVExecutionAgent(
++            id=agent_count,
++            name="POV_EXECUTION_AGENT",
++            type="ExecutionAgent",
++            symbol=symbol,
++            starting_cash=starting_cash,
++            start_time=pov_agent_start_time,
++            end_time=pov_agent_end_time,
++            freq=pov_frequency,
++            lookback_period=pov_frequency,
++            pov=pov_proportion_of_volume,
++            direction=pov_direction,
++            quantity=pov_quantity,
++            trade=trade,
++            log_orders=True,  # needed for plots so conflicts with others
++        )
++        agents.append(pov_agent)
++        agent_types.extend("ExecutionAgent")
++        agent_count += 1
+ 
+     # extract kernel seed here to reproduce the state of random generator in old version
+     random_state_kernel = np.random.RandomState(

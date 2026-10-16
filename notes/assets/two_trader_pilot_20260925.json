@@ -1,0 +1,1351 @@
+{
+  "run": "runs/two_trader/pilot_20260925",
+  "run_meta": {
+    "status": "complete",
+    "environment_config": {
+      "n_agents": 2,
+      "starting_cash": 10000000,
+      "k": 10,
+      "max_size": 100,
+      "max_inventory": 1000,
+      "inventory_penalty": 0.0001,
+      "termination_penalty": -1.0,
+      "start_time": "09:30:00",
+      "end_time": "09:40:00",
+      "wakeup_interval": "1s",
+      "gated_actions": true,
+      "offset_span": 15,
+      "mid_rounding": "outward",
+      "agent_id_obs": true,
+      "agent_id_width": 2,
+      "include_ofi": true,
+      "latency_edge": 1.0,
+      "config_kwargs": {
+        "num_noise_agents": 2000,
+        "num_value_agents": 50,
+        "num_momentum_agents": 10
+      }
+    },
+    "args": {
+      "out_dir": "runs/two_trader/pilot_20260925",
+      "steps": 16384,
+      "seed": 7,
+      "eval_seeds": [
+        10001,
+        10002,
+        10003
+      ],
+      "episode_seconds": 600,
+      "quote_size": 10,
+      "num_value_agents": 50,
+      "num_noise_agents": 2000
+    },
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+    "git_sha": "3c5e73addb4fd5cb0c4cfbd33fd31be431938439",
+    "abides_git_sha": "f9cbe51342b7dedd9587e4e069040d68a5c6477f",
+    "versions": {
+      "numpy": "2.4.4",
+      "torch": "2.11.0",
+      "stable-baselines3": "2.8.0",
+      "gymnasium": "1.2.3"
+    },
+    "protocol": "A learns vs constant5; freeze A; B learns vs A; deterministic cross-play",
+    "limitations": [
+      "one training seed per role",
+      "short pilot budget",
+      "mark-to-mid PnL; no fees or terminal liquidation",
+      "shared background; matched seeds do not imply identical market paths"
+    ],
+    "frozen_a_verified": true,
+    "wall_seconds": 759.9388071009889,
+    "evaluation_rows": 36
+  },
+  "labels": {
+    "initial_a_vs_script": "Initial A / Script",
+    "trained_a_vs_script": "Trained A / Script",
+    "trained_a_vs_initial_b": "Trained A / Initial B",
+    "trained_a_vs_trained_b": "Trained A / Trained B",
+    "script_vs_trained_b": "Script / Trained B",
+    "inactive_a_vs_trained_b": "Inactive A / Trained B",
+    "trained_a_vs_sampled_b": "Trained A / Sampled B\u2020"
+  },
+  "sampling_diagnostic_meta": {
+    "status": "complete",
+    "parent_run": "runs/two_trader/pilot_20260925",
+    "environment_config": {
+      "n_agents": 2,
+      "starting_cash": 10000000,
+      "k": 10,
+      "max_size": 100,
+      "max_inventory": 1000,
+      "inventory_penalty": 0.0001,
+      "termination_penalty": -1.0,
+      "start_time": "09:30:00",
+      "end_time": "09:40:00",
+      "wakeup_interval": "1s",
+      "gated_actions": true,
+      "offset_span": 15,
+      "mid_rounding": "outward",
+      "agent_id_obs": true,
+      "agent_id_width": 2,
+      "include_ofi": true,
+      "latency_edge": 1.0,
+      "config_kwargs": {
+        "num_noise_agents": 2000,
+        "num_value_agents": 50,
+        "num_momentum_agents": 10
+      }
+    },
+    "sampling_seeds": {
+      "10001": 60001,
+      "10002": 60002,
+      "10003": 60003
+    },
+    "a_deterministic": true,
+    "b_deterministic": false,
+    "purpose": "exploratory diagnostic prompted by deterministic withdrawal; no retraining",
+    "diagnostic_source_sha256": "a54772c71dfc37cb9faa454edf3ae6ff3ab21344c754403e70b276f81000fa4f"
+  },
+  "scenarios": {
+    "initial_a_vs_script": {
+      "mm_0": {
+        "pnl_dollars": {
+          "mean": 9.966666666666667,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 53.0,
+            "10003": -23.1
+          }
+        },
+        "any_quote_pct": {
+          "mean": 5.008347245409015,
+          "values_by_seed": {
+            "10001": 6.3439065108514185,
+            "10002": 3.33889816360601,
+            "10003": 5.342237061769616
+          }
+        },
+        "two_sided_pct": {
+          "mean": 0.1669449081803005,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.333889816360601,
+            "10003": 0.1669449081803005
+          }
+        },
+        "gross_fills": {
+          "mean": 0.6666666666666666,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 1.0,
+            "10003": 1.0
+          }
+        },
+        "gross_shares": {
+          "mean": 5.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 5.0,
+            "10003": 10.0
+          }
+        },
+        "final_inventory": {
+          "mean": 5.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 5.0,
+            "10003": 10.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 5.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 5.0,
+            "10003": 10.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      },
+      "mm_1": {
+        "pnl_dollars": {
+          "mean": -3696.5833333333335,
+          "values_by_seed": {
+            "10001": -4991.55,
+            "10002": -5044.59,
+            "10003": -1053.61
+          }
+        },
+        "any_quote_pct": {
+          "mean": 100.0,
+          "values_by_seed": {
+            "10001": 100.0,
+            "10002": 100.0,
+            "10003": 100.0
+          }
+        },
+        "two_sided_pct": {
+          "mean": 100.0,
+          "values_by_seed": {
+            "10001": 100.0,
+            "10002": 100.0,
+            "10003": 100.0
+          }
+        },
+        "gross_fills": {
+          "mean": 124.66666666666667,
+          "values_by_seed": {
+            "10001": 123.0,
+            "10002": 123.0,
+            "10003": 128.0
+          }
+        },
+        "gross_shares": {
+          "mean": 1220.6666666666667,
+          "values_by_seed": {
+            "10001": 1229.0,
+            "10002": 1192.0,
+            "10003": 1241.0
+          }
+        },
+        "final_inventory": {
+          "mean": -680.6666666666666,
+          "values_by_seed": {
+            "10001": -829.0,
+            "10002": -912.0,
+            "10003": -301.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 800.6666666666666,
+          "values_by_seed": {
+            "10001": 919.0,
+            "10002": 912.0,
+            "10003": 571.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      }
+    },
+    "trained_a_vs_script": {
+      "mm_0": {
+        "pnl_dollars": {
+          "mean": 113.7,
+          "values_by_seed": {
+            "10001": -1204.6,
+            "10002": 792.9,
+            "10003": 752.8
+          }
+        },
+        "any_quote_pct": {
+          "mean": 87.41520005777228,
+          "values_by_seed": {
+            "10001": 95.80152671755725,
+            "10002": 80.96828046744574,
+            "10003": 85.47579298831386
+          }
+        },
+        "two_sided_pct": {
+          "mean": 51.67794500588343,
+          "values_by_seed": {
+            "10001": 56.87022900763359,
+            "10002": 50.58430717863105,
+            "10003": 47.57929883138564
+          }
+        },
+        "gross_fills": {
+          "mean": 22.0,
+          "values_by_seed": {
+            "10001": 22.0,
+            "10002": 20.0,
+            "10003": 24.0
+          }
+        },
+        "gross_shares": {
+          "mean": 210.0,
+          "values_by_seed": {
+            "10001": 220.0,
+            "10002": 200.0,
+            "10003": 210.0
+          }
+        },
+        "final_inventory": {
+          "mean": 43.333333333333336,
+          "values_by_seed": {
+            "10001": -220.0,
+            "10002": 160.0,
+            "10003": 190.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 190.0,
+          "values_by_seed": {
+            "10001": 220.0,
+            "10002": 160.0,
+            "10003": 190.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 1,
+        "steps_by_seed": {
+          "10001": 262,
+          "10002": 599,
+          "10003": 599
+        }
+      },
+      "mm_1": {
+        "pnl_dollars": {
+          "mean": -3566.403333333333,
+          "values_by_seed": {
+            "10001": -5306.7,
+            "10002": -1730.95,
+            "10003": -3661.56
+          }
+        },
+        "any_quote_pct": {
+          "mean": 100.0,
+          "values_by_seed": {
+            "10001": 100.0,
+            "10002": 100.0,
+            "10003": 100.0
+          }
+        },
+        "two_sided_pct": {
+          "mean": 100.0,
+          "values_by_seed": {
+            "10001": 100.0,
+            "10002": 100.0,
+            "10003": 100.0
+          }
+        },
+        "gross_fills": {
+          "mean": 101.33333333333333,
+          "values_by_seed": {
+            "10001": 103.0,
+            "10002": 84.0,
+            "10003": 117.0
+          }
+        },
+        "gross_shares": {
+          "mean": 992.6666666666666,
+          "values_by_seed": {
+            "10001": 1012.0,
+            "10002": 820.0,
+            "10003": 1146.0
+          }
+        },
+        "final_inventory": {
+          "mean": -834.0,
+          "values_by_seed": {
+            "10001": -1008.0,
+            "10002": -590.0,
+            "10003": -904.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 834.0,
+          "values_by_seed": {
+            "10001": 1008.0,
+            "10002": 590.0,
+            "10003": 904.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 1,
+        "steps_by_seed": {
+          "10001": 262,
+          "10002": 599,
+          "10003": 599
+        }
+      }
+    },
+    "trained_a_vs_initial_b": {
+      "mm_0": {
+        "pnl_dollars": {
+          "mean": -282.4633333333334,
+          "values_by_seed": {
+            "10001": -1659.13,
+            "10002": 1106.1,
+            "10003": -294.36
+          }
+        },
+        "any_quote_pct": {
+          "mean": 87.14524207011686,
+          "values_by_seed": {
+            "10001": 96.8280467445743,
+            "10002": 72.95492487479132,
+            "10003": 91.65275459098497
+          }
+        },
+        "two_sided_pct": {
+          "mean": 60.48970506399555,
+          "values_by_seed": {
+            "10001": 66.4440734557596,
+            "10002": 47.24540901502504,
+            "10003": 67.779632721202
+          }
+        },
+        "gross_fills": {
+          "mean": 57.0,
+          "values_by_seed": {
+            "10001": 67.0,
+            "10002": 41.0,
+            "10003": 63.0
+          }
+        },
+        "gross_shares": {
+          "mean": 556.3333333333334,
+          "values_by_seed": {
+            "10001": 660.0,
+            "10002": 400.0,
+            "10003": 609.0
+          }
+        },
+        "final_inventory": {
+          "mean": 243.0,
+          "values_by_seed": {
+            "10001": 20.0,
+            "10002": 220.0,
+            "10003": 489.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 309.6666666666667,
+          "values_by_seed": {
+            "10001": 210.0,
+            "10002": 230.0,
+            "10003": 489.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      },
+      "mm_1": {
+        "pnl_dollars": {
+          "mean": -125.45,
+          "values_by_seed": {
+            "10001": -254.8,
+            "10002": -111.65,
+            "10003": -9.9
+          }
+        },
+        "any_quote_pct": {
+          "mean": 71.73066221480245,
+          "values_by_seed": {
+            "10001": 54.09015025041736,
+            "10002": 79.29883138564274,
+            "10003": 81.80300500834724
+          }
+        },
+        "two_sided_pct": {
+          "mean": 30.550918196994996,
+          "values_by_seed": {
+            "10001": 16.86143572621035,
+            "10002": 30.550918196994992,
+            "10003": 44.24040066777963
+          }
+        },
+        "gross_fills": {
+          "mean": 17.666666666666668,
+          "values_by_seed": {
+            "10001": 11.0,
+            "10002": 29.0,
+            "10003": 13.0
+          }
+        },
+        "gross_shares": {
+          "mean": 148.66666666666666,
+          "values_by_seed": {
+            "10001": 110.0,
+            "10002": 206.0,
+            "10003": 130.0
+          }
+        },
+        "final_inventory": {
+          "mean": 41.333333333333336,
+          "values_by_seed": {
+            "10001": 50.0,
+            "10002": 44.0,
+            "10003": 30.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 54.666666666666664,
+          "values_by_seed": {
+            "10001": 50.0,
+            "10002": 54.0,
+            "10003": 60.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      }
+    },
+    "trained_a_vs_trained_b": {
+      "mm_0": {
+        "pnl_dollars": {
+          "mean": -451.84,
+          "values_by_seed": {
+            "10001": -1410.0,
+            "10002": 837.88,
+            "10003": -783.4
+          }
+        },
+        "any_quote_pct": {
+          "mean": 92.09794101279913,
+          "values_by_seed": {
+            "10001": 96.8280467445743,
+            "10002": 81.63606010016694,
+            "10003": 97.8297161936561
+          }
+        },
+        "two_sided_pct": {
+          "mean": 65.33110740122426,
+          "values_by_seed": {
+            "10001": 71.61936560934892,
+            "10002": 52.25375626043406,
+            "10003": 72.12020033388981
+          }
+        },
+        "gross_fills": {
+          "mean": 58.666666666666664,
+          "values_by_seed": {
+            "10001": 74.0,
+            "10002": 28.0,
+            "10003": 74.0
+          }
+        },
+        "gross_shares": {
+          "mean": 564.3333333333334,
+          "values_by_seed": {
+            "10001": 720.0,
+            "10002": 263.0,
+            "10003": 710.0
+          }
+        },
+        "final_inventory": {
+          "mean": 164.33333333333334,
+          "values_by_seed": {
+            "10001": 120.0,
+            "10002": 163.0,
+            "10003": 210.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 184.33333333333334,
+          "values_by_seed": {
+            "10001": 170.0,
+            "10002": 173.0,
+            "10003": 210.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      },
+      "mm_1": {
+        "pnl_dollars": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "any_quote_pct": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "two_sided_pct": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "gross_fills": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "gross_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "final_inventory": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      }
+    },
+    "script_vs_trained_b": {
+      "mm_0": {
+        "pnl_dollars": {
+          "mean": -1993.4333333333334,
+          "values_by_seed": {
+            "10001": -5070.86,
+            "10002": -319.8,
+            "10003": -589.64
+          }
+        },
+        "any_quote_pct": {
+          "mean": 100.0,
+          "values_by_seed": {
+            "10001": 100.0,
+            "10002": 100.0,
+            "10003": 100.0
+          }
+        },
+        "two_sided_pct": {
+          "mean": 100.0,
+          "values_by_seed": {
+            "10001": 100.0,
+            "10002": 100.0,
+            "10003": 100.0
+          }
+        },
+        "gross_fills": {
+          "mean": 104.0,
+          "values_by_seed": {
+            "10001": 128.0,
+            "10002": 86.0,
+            "10003": 98.0
+          }
+        },
+        "gross_shares": {
+          "mean": 1011.0,
+          "values_by_seed": {
+            "10001": 1279.0,
+            "10002": 832.0,
+            "10003": 922.0
+          }
+        },
+        "final_inventory": {
+          "mean": -443.0,
+          "values_by_seed": {
+            "10001": -839.0,
+            "10002": -222.0,
+            "10003": -268.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 540.3333333333334,
+          "values_by_seed": {
+            "10001": 969.0,
+            "10002": 232.0,
+            "10003": 420.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      },
+      "mm_1": {
+        "pnl_dollars": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "any_quote_pct": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "two_sided_pct": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "gross_fills": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "gross_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "final_inventory": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      }
+    },
+    "inactive_a_vs_trained_b": {
+      "mm_0": {
+        "pnl_dollars": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "any_quote_pct": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "two_sided_pct": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "gross_fills": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "gross_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "final_inventory": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      },
+      "mm_1": {
+        "pnl_dollars": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "any_quote_pct": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "two_sided_pct": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "gross_fills": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "gross_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "final_inventory": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      }
+    },
+    "trained_a_vs_sampled_b": {
+      "mm_0": {
+        "pnl_dollars": {
+          "mean": 328.11666666666673,
+          "values_by_seed": {
+            "10001": 223.3,
+            "10002": 524.11,
+            "10003": 236.94
+          }
+        },
+        "any_quote_pct": {
+          "mean": 88.20255982192543,
+          "values_by_seed": {
+            "10001": 88.64774624373956,
+            "10002": 90.48414023372288,
+            "10003": 85.47579298831386
+          }
+        },
+        "two_sided_pct": {
+          "mean": 61.992209237618255,
+          "values_by_seed": {
+            "10001": 62.604340567612695,
+            "10002": 63.272120200333895,
+            "10003": 60.10016694490818
+          }
+        },
+        "gross_fills": {
+          "mean": 61.0,
+          "values_by_seed": {
+            "10001": 61.0,
+            "10002": 62.0,
+            "10003": 60.0
+          }
+        },
+        "gross_shares": {
+          "mean": 580.3333333333334,
+          "values_by_seed": {
+            "10001": 586.0,
+            "10002": 591.0,
+            "10003": 564.0
+          }
+        },
+        "final_inventory": {
+          "mean": 420.3333333333333,
+          "values_by_seed": {
+            "10001": 406.0,
+            "10002": 491.0,
+            "10003": 364.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 427.0,
+          "values_by_seed": {
+            "10001": 406.0,
+            "10002": 511.0,
+            "10003": 364.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      },
+      "mm_1": {
+        "pnl_dollars": {
+          "mean": -158.70666666666668,
+          "values_by_seed": {
+            "10001": -403.62,
+            "10002": 172.7,
+            "10003": -245.2
+          }
+        },
+        "any_quote_pct": {
+          "mean": 55.59265442404006,
+          "values_by_seed": {
+            "10001": 52.92153589315526,
+            "10002": 59.933222036727884,
+            "10003": 53.923205342237054
+          }
+        },
+        "two_sided_pct": {
+          "mean": 12.35392320534224,
+          "values_by_seed": {
+            "10001": 11.686143572621036,
+            "10002": 14.357262103505844,
+            "10003": 11.018363939899833
+          }
+        },
+        "gross_fills": {
+          "mean": 36.333333333333336,
+          "values_by_seed": {
+            "10001": 36.0,
+            "10002": 34.0,
+            "10003": 39.0
+          }
+        },
+        "gross_shares": {
+          "mean": 346.0,
+          "values_by_seed": {
+            "10001": 328.0,
+            "10002": 340.0,
+            "10003": 370.0
+          }
+        },
+        "final_inventory": {
+          "mean": 66.0,
+          "values_by_seed": {
+            "10001": -32.0,
+            "10002": 200.0,
+            "10003": 30.0
+          }
+        },
+        "max_abs_inventory": {
+          "mean": 123.33333333333333,
+          "values_by_seed": {
+            "10001": 110.0,
+            "10002": 200.0,
+            "10003": 60.0
+          }
+        },
+        "direct_pair_matches": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "direct_pair_shares": {
+          "mean": 0.0,
+          "values_by_seed": {
+            "10001": 0.0,
+            "10002": 0.0,
+            "10003": 0.0
+          }
+        },
+        "risk_terminated_episodes": 0,
+        "steps_by_seed": {
+          "10001": 599,
+          "10002": 599,
+          "10003": 599
+        }
+      }
+    }
+  },
+  "paired_descriptive_contrasts": {
+    "a_training": {
+      "pnl_dollars": {
+        "mean_difference": 103.73333333333335,
+        "differences_by_seed": {
+          "10001": -1204.6,
+          "10002": 739.9,
+          "10003": 775.9
+        }
+      },
+      "any_quote_pct": {
+        "mean_difference": 82.40685281236327,
+        "differences_by_seed": {
+          "10001": 89.45762020670583,
+          "10002": 77.62938230383973,
+          "10003": 80.13355592654423
+        }
+      },
+      "gross_fills": {
+        "mean_difference": 21.333333333333332,
+        "differences_by_seed": {
+          "10001": 22.0,
+          "10002": 19.0,
+          "10003": 23.0
+        }
+      }
+    },
+    "b_training_against_a": {
+      "pnl_dollars": {
+        "mean_difference": 125.45,
+        "differences_by_seed": {
+          "10001": 254.8,
+          "10002": 111.65,
+          "10003": 9.9
+        }
+      },
+      "any_quote_pct": {
+        "mean_difference": -71.73066221480245,
+        "differences_by_seed": {
+          "10001": -54.09015025041736,
+          "10002": -79.29883138564274,
+          "10003": -81.80300500834724
+        }
+      },
+      "gross_fills": {
+        "mean_difference": -17.666666666666668,
+        "differences_by_seed": {
+          "10001": -11.0,
+          "10002": -29.0,
+          "10003": -13.0
+        }
+      }
+    },
+    "a_change_when_b_trained": {
+      "pnl_dollars": {
+        "mean_difference": -169.37666666666658,
+        "differences_by_seed": {
+          "10001": 249.1300000000001,
+          "10002": -268.2199999999999,
+          "10003": -489.03999999999996
+        }
+      },
+      "any_quote_pct": {
+        "mean_difference": 4.952698942682251,
+        "differences_by_seed": {
+          "10001": 0.0,
+          "10002": 8.681135225375627,
+          "10003": 6.176961602671128
+        }
+      },
+      "gross_fills": {
+        "mean_difference": 1.6666666666666667,
+        "differences_by_seed": {
+          "10001": 7.0,
+          "10002": -13.0,
+          "10003": 11.0
+        }
+      }
+    },
+    "b_with_trained_vs_inactive_a": {
+      "pnl_dollars": {
+        "mean_difference": 0.0,
+        "differences_by_seed": {
+          "10001": 0.0,
+          "10002": 0.0,
+          "10003": 0.0
+        }
+      },
+      "any_quote_pct": {
+        "mean_difference": 0.0,
+        "differences_by_seed": {
+          "10001": 0.0,
+          "10002": 0.0,
+          "10003": 0.0
+        }
+      },
+      "gross_fills": {
+        "mean_difference": 0.0,
+        "differences_by_seed": {
+          "10001": 0.0,
+          "10002": 0.0,
+          "10003": 0.0
+        }
+      }
+    }
+  }
+}

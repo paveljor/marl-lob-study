@@ -1,0 +1,452 @@
+{
+  "results": [
+    {
+      "evaluation": "runs/concurrent/sequential_controls",
+      "metadata": {
+        "status": "complete",
+        "parent_run": "runs/two_trader/pilot_20260925",
+        "environment_config": {
+          "n_agents": 2,
+          "starting_cash": 10000000,
+          "k": 10,
+          "max_size": 100,
+          "max_inventory": 1000,
+          "inventory_penalty": 0.0001,
+          "termination_penalty": -1.0,
+          "start_time": "09:30:00",
+          "end_time": "09:40:00",
+          "wakeup_interval": "1s",
+          "gated_actions": true,
+          "offset_span": 15,
+          "mid_rounding": "outward",
+          "agent_id_obs": true,
+          "agent_id_width": 2,
+          "include_ofi": true,
+          "latency_edge": 1.0,
+          "config_kwargs": {
+            "num_noise_agents": 2000,
+            "num_value_agents": 50,
+            "num_momentum_agents": 10
+          }
+        },
+        "args": {
+          "run": "runs/two_trader/pilot_20260925",
+          "out_dir": "runs/concurrent/sequential_controls",
+          "market_seeds": [
+            30001,
+            30002,
+            30003,
+            30004,
+            30005,
+            30006
+          ],
+          "calibration_seeds": [
+            20001,
+            20002,
+            20003,
+            20004
+          ],
+          "replicates": [
+            0
+          ],
+          "scenarios": [
+            "sampled_pair",
+            "marginal_b",
+            "inactive_b"
+          ],
+          "a_mode": "mean",
+          "checkpoint": null
+        },
+        "checkpoint_sha256": {
+          "initial_a": "d3889907d82f25bea41a0a4d0b2e4b95cf0808c80c10306858d6ca0201c880d3",
+          "a": "2d0a542a9ba75f84a8a4b1245d66d6b5e56bfe95a8577e2268cdfb1abca5b837",
+          "initial_b": "9e2fefdf1e83428f95259db2b1fef31ec34603026ff94ee1b39de81e34da2e0d",
+          "b": "2f169c0debb34917d36220822454f01d362faad4d0f148447609a0e8a8cd9fd1"
+        },
+        "action_rng": "per-agent numpy default_rng; seed=SeedSequence([918273,market,replicate,role])",
+        "marginal_control": "IID complete rows from separate calibration markets; breaks state/time link",
+        "norm_obs": false,
+        "completed_markets": 18,
+        "wall_seconds": 382.3393340520561
+      },
+      "input_csv_sha256": "d9a6ee16f9bf87ccd966dfcee07cf9604c243ad14961e6e1b7caca2ac9106379",
+      "summary": [
+        {
+          "scenario": "inactive_b",
+          "agent": "mm_0",
+          "episodes": 6,
+          "risk_stops": 1,
+          "direct_pair_matches": 0,
+          "common_horizon_pnl_dollars": -959.5266666666668,
+          "pnl_dollars": -1017.765,
+          "any_quote_pct": 89.44963542248325,
+          "gross_fills": 87.0,
+          "final_inventory": 646.5,
+          "max_abs_inventory": 647.0,
+          "mean_abs_inventory": 302.958595890411,
+          "duration_seconds": 596.3333333333334,
+          "inventory_marking_dollars": -998.3316666666666,
+          "execution_vs_step_end_mid_dollars": -19.433333333333334
+        },
+        {
+          "scenario": "inactive_b",
+          "agent": "mm_1",
+          "episodes": 6,
+          "risk_stops": 1,
+          "direct_pair_matches": 0,
+          "common_horizon_pnl_dollars": 0.0,
+          "pnl_dollars": 0.0,
+          "any_quote_pct": 0.0,
+          "gross_fills": 0.0,
+          "final_inventory": 0.0,
+          "max_abs_inventory": 0.0,
+          "mean_abs_inventory": 0.0,
+          "duration_seconds": 596.3333333333334,
+          "inventory_marking_dollars": 0.0,
+          "execution_vs_step_end_mid_dollars": 0.0
+        },
+        {
+          "scenario": "marginal_b",
+          "agent": "mm_0",
+          "episodes": 6,
+          "risk_stops": 1,
+          "direct_pair_matches": 2,
+          "common_horizon_pnl_dollars": -1947.9749999999997,
+          "pnl_dollars": -1947.0866666666664,
+          "any_quote_pct": 89.35951546787682,
+          "gross_fills": 91.5,
+          "final_inventory": 690.0,
+          "max_abs_inventory": 690.0,
+          "mean_abs_inventory": 301.7338810779145,
+          "duration_seconds": 593.8333333333334,
+          "inventory_marking_dollars": -1917.1266666666668,
+          "execution_vs_step_end_mid_dollars": -29.960000000000004
+        },
+        {
+          "scenario": "marginal_b",
+          "agent": "mm_1",
+          "episodes": 6,
+          "risk_stops": 1,
+          "direct_pair_matches": 2,
+          "common_horizon_pnl_dollars": -812.8683333333333,
+          "pnl_dollars": -812.5116666666667,
+          "any_quote_pct": 59.11446699115114,
+          "gross_fills": 44.166666666666664,
+          "final_inventory": 260.5,
+          "max_abs_inventory": 265.5,
+          "mean_abs_inventory": 99.82422427260302,
+          "duration_seconds": 593.8333333333334,
+          "inventory_marking_dollars": -797.6416666666668,
+          "execution_vs_step_end_mid_dollars": -14.87
+        },
+        {
+          "scenario": "sampled_pair",
+          "agent": "mm_0",
+          "episodes": 6,
+          "risk_stops": 1,
+          "direct_pair_matches": 1,
+          "common_horizon_pnl_dollars": -1723.2416666666668,
+          "pnl_dollars": -1789.9750000000004,
+          "any_quote_pct": 88.36299071473638,
+          "gross_fills": 96.0,
+          "final_inventory": 747.0,
+          "max_abs_inventory": 750.3333333333334,
+          "mean_abs_inventory": 397.7011496011872,
+          "duration_seconds": 598.8333333333334,
+          "inventory_marking_dollars": -1763.3633333333335,
+          "execution_vs_step_end_mid_dollars": -26.611666666666668
+        },
+        {
+          "scenario": "sampled_pair",
+          "agent": "mm_1",
+          "episodes": 6,
+          "risk_stops": 1,
+          "direct_pair_matches": 1,
+          "common_horizon_pnl_dollars": -797.8333333333334,
+          "pnl_dollars": -832.2733333333334,
+          "any_quote_pct": 59.36543253992627,
+          "gross_fills": 44.333333333333336,
+          "final_inventory": 248.66666666666666,
+          "max_abs_inventory": 294.6666666666667,
+          "mean_abs_inventory": 138.1733314783899,
+          "duration_seconds": 598.8333333333334,
+          "inventory_marking_dollars": -819.625,
+          "execution_vs_step_end_mid_dollars": -12.648333333333333
+        }
+      ],
+      "paired_effects": [
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 6,
+          "mean_difference": 157.1116666666666,
+          "median_difference": -1023.75,
+          "positive_markets": 2,
+          "paired_market_bootstrap_95pct": [
+            -1620.335,
+            2208.234999999999
+          ],
+          "seed_differences": {
+            "30001": -1025.71,
+            "30002": -1504.6799999999998,
+            "30003": -1021.79,
+            "30004": 2947.0099999999998,
+            "30005": -2570.1,
+            "30006": 4117.94
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 6,
+          "mean_difference": -0.9965247531404415,
+          "median_difference": -4.389063932845815,
+          "positive_markets": 2,
+          "paired_market_bootstrap_95pct": [
+            -6.933046118992906,
+            5.031664668030449
+          ],
+          "seed_differences": {
+            "30001": 9.515859766277146,
+            "30002": -4.507512520868104,
+            "30003": -7.0507702357887325,
+            "30004": -4.270615344823526,
+            "30005": 9.849749582637727,
+            "30006": -9.51585976627716
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "gross_fills",
+          "n_market_seeds": 6,
+          "mean_difference": 4.5,
+          "median_difference": 12.5,
+          "positive_markets": 4,
+          "paired_market_bootstrap_95pct": [
+            -28.666666666666668,
+            32.5
+          ],
+          "seed_differences": {
+            "30001": 52.0,
+            "30002": 8.0,
+            "30003": 33.0,
+            "30004": -14.0,
+            "30005": 17.0,
+            "30006": -69.0
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 6,
+          "mean_difference": -19.761666666666695,
+          "median_difference": -376.245,
+          "positive_markets": 2,
+          "paired_market_bootstrap_95pct": [
+            -498.545,
+            500.64000000000004
+          ],
+          "seed_differences": {
+            "30001": -358.45,
+            "30002": -394.03999999999996,
+            "30003": -427.68,
+            "30004": 1018.3299999999999,
+            "30005": -691.71,
+            "30006": 734.98
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 6,
+          "mean_difference": 0.250965548775131,
+          "median_difference": -0.25041736227044,
+          "positive_markets": 3,
+          "paired_market_bootstrap_95pct": [
+            -1.2025337658639508,
+            1.9873694028388524
+          ],
+          "seed_differences": {
+            "30001": -1.1686143572621006,
+            "30002": 0.6677796327212207,
+            "30003": -1.403398082646099,
+            "30004": 0.7389075689529605,
+            "30005": 4.507512520868119,
+            "30006": -1.8363939899833142
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "gross_fills",
+          "n_market_seeds": 6,
+          "mean_difference": 0.16666666666666666,
+          "median_difference": -4.0,
+          "positive_markets": 2,
+          "paired_market_bootstrap_95pct": [
+            -7.5,
+            8.5
+          ],
+          "seed_differences": {
+            "30001": 16.0,
+            "30002": -6.0,
+            "30003": -3.0,
+            "30004": -5.0,
+            "30005": 12.0,
+            "30006": -13.0
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus inactive_b",
+          "agent": "mm_0",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 6,
+          "mean_difference": -772.21,
+          "median_difference": -975.6800000000001,
+          "positive_markets": 2,
+          "paired_market_bootstrap_95pct": [
+            -2268.2944999999995,
+            783.4166666666666
+          ],
+          "seed_differences": {
+            "30001": -2143.08,
+            "30002": -1932.92,
+            "30003": -18.440000000000055,
+            "30004": 1795.7800000000002,
+            "30005": -3599.12,
+            "30006": 1264.52
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus inactive_b",
+          "agent": "mm_0",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 6,
+          "mean_difference": -1.086644707746861,
+          "median_difference": -0.736218454428041,
+          "positive_markets": 2,
+          "paired_market_bootstrap_95pct": [
+            -6.212802573978763,
+            4.039513158485041
+          ],
+          "seed_differences": {
+            "30001": 6.176961602671128,
+            "30002": -6.343906510851397,
+            "30003": -11.558282756656851,
+            "30004": -1.472436908856082,
+            "30005": 6.677796327212036,
+            "30006": 0.0
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus inactive_b",
+          "agent": "mm_0",
+          "metric": "gross_fills",
+          "n_market_seeds": 6,
+          "mean_difference": 9.0,
+          "median_difference": 16.5,
+          "positive_markets": 4,
+          "paired_market_bootstrap_95pct": [
+            -12.666666666666666,
+            27.5
+          ],
+          "seed_differences": {
+            "30001": 40.0,
+            "30002": 26.0,
+            "30003": 26.0,
+            "30004": -12.0,
+            "30005": 7.0,
+            "30006": -33.0
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus inactive_b",
+          "agent": "mm_1",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 6,
+          "mean_difference": -832.2733333333334,
+          "median_difference": -694.24,
+          "positive_markets": 1,
+          "paired_market_bootstrap_95pct": [
+            -1374.5033333333333,
+            -293.6466666666667
+          ],
+          "seed_differences": {
+            "30001": -290.0,
+            "30002": -952.4,
+            "30003": 103.3,
+            "30004": -1625.38,
+            "30005": -1793.08,
+            "30006": -436.08
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus inactive_b",
+          "agent": "mm_1",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 6,
+          "mean_difference": 59.36543253992627,
+          "median_difference": 59.14805054131468,
+          "positive_markets": 6,
+          "paired_market_bootstrap_95pct": [
+            57.89075251766695,
+            61.174002378546184
+          ],
+          "seed_differences": {
+            "30001": 58.93155258764608,
+            "30002": 59.76627712854759,
+            "30003": 59.36454849498328,
+            "30004": 57.42904841402338,
+            "30005": 63.60601001669449,
+            "30006": 57.09515859766277
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus inactive_b",
+          "agent": "mm_1",
+          "metric": "gross_fills",
+          "n_market_seeds": 6,
+          "mean_difference": 44.333333333333336,
+          "median_difference": 42.0,
+          "positive_markets": 6,
+          "paired_market_bootstrap_95pct": [
+            36.0,
+            53.5
+          ],
+          "seed_differences": {
+            "30001": 48.0,
+            "30002": 36.0,
+            "30003": 35.0,
+            "30004": 55.0,
+            "30005": 61.0,
+            "30006": 31.0
+          },
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        }
+      ]
+    }
+  ],
+  "reconciled_agent_episodes": 36,
+  "limitations": [
+    "Exploratory intervals, no multiple-comparison correction",
+    "Intervals condition on each trained pair, not training uncertainty",
+    "Execution component uses next recorded midpoint, not spread profit",
+    "P&L marks inventory; no modeled fees or terminal liquidation"
+  ]
+}

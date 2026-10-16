@@ -1,0 +1,73 @@
+{
+  "action_rng": "per-agent numpy default_rng; seed=SeedSequence([918273,market,replicate,role])",
+  "args": {
+    "a_mode": "sampled",
+    "calibration_seeds": [
+      20001,
+      20002,
+      20003,
+      20004
+    ],
+    "checkpoint": null,
+    "market_seeds": [
+      40001,
+      40002,
+      40003,
+      40004,
+      40005,
+      40006,
+      40007,
+      40008,
+      40009,
+      40010,
+      40011,
+      40012
+    ],
+    "out_dir": "runs/concurrent/finite_seed29_confirmation",
+    "replicates": [
+      0,
+      1
+    ],
+    "run": "runs/concurrent/finite_seed29",
+    "scenarios": [
+      "sampled_pair",
+      "marginal_b"
+    ]
+  },
+  "checkpoint_sha256": {
+    "a": "ffaf9f84fe1d8bfc4fcdee3fbf22f2a0b0645fad808da0d3cfd254ef5cf91993",
+    "b": "5921a369813d61330b0ed30bdac5be9378b6e8f69dbe15fa7627ecfd49b54574",
+    "initial_a": "b155d065252be19f579361df77d6d8412dd39f9061055c0a4432af5a757e4c79",
+    "initial_b": "78a943b8144ac09def161c2c072cd1f64ee7d6fb1639298b3b853c7b2eb22750"
+  },
+  "completed_markets": 48,
+  "environment_config": {
+    "agent_id_obs": true,
+    "agent_id_width": 2,
+    "config_kwargs": {
+      "num_momentum_agents": 10,
+      "num_noise_agents": 2000,
+      "num_value_agents": 50
+    },
+    "end_time": "09:40:00",
+    "gated_actions": true,
+    "include_ofi": true,
+    "inventory_penalty": 0.0001,
+    "k": 10,
+    "latency_edge": 1.0,
+    "max_inventory": 1000,
+    "max_size": 100,
+    "mid_rounding": "outward",
+    "n_agents": 2,
+    "offset_span": 15,
+    "start_time": "09:30:00",
+    "starting_cash": 10000000,
+    "termination_penalty": -1.0,
+    "wakeup_interval": "1s"
+  },
+  "marginal_control": "IID complete rows from separate calibration markets; breaks state/time link",
+  "norm_obs": false,
+  "parent_run": "runs/concurrent/finite_seed29",
+  "status": "complete",
+  "wall_seconds": 1150.7357742970344
+}

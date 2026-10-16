@@ -1,0 +1,47 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: "1"
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install project and patched simulator
+        run: |
+          python -m pip install --upgrade pip
+          git clone https://github.com/jpmorganchase/abides-jpmc-public.git "$RUNNER_TEMP/abides"
+          git -C "$RUNNER_TEMP/abides" checkout f9cbe51342b7dedd9587e4e069040d68a5c6477f
+          git -C "$RUNNER_TEMP/abides" apply "$GITHUB_WORKSPACE/patches/abides-jpmc-public-local.patch"
+          python -m pip install -c requirements/linux-py311-cpu.txt torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -c requirements/linux-py311-cpu.txt coloredlogs psutil scipy tqdm
+          python -m pip install -e "$RUNNER_TEMP/abides/abides-core" -e "$RUNNER_TEMP/abides/abides-markets"
+          python -m pip install -c requirements/linux-py311-cpu.txt -c requirements/notebook-py311.txt -e '.[dev,notebook]'
+          python -m pip check
+      - name: Lint
+        run: python -m ruff check .
+      - name: Unit and integration tests
+        run: python -m pytest -q
+      - name: Verify published study data
+        run: python scripts/verify_study_data.py
+      - name: Check walkthrough source
+        run: python scripts/build_research_notebook.py --check
+      - name: Execute research walkthrough without training
+        run: |
+          python -m jupyter nbconvert --execute --to notebook notebooks/research_walkthrough.ipynb \
+            --output-dir "$RUNNER_TEMP" --output research_walkthrough --ExecutePreprocessor.timeout=180

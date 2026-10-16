@@ -1,0 +1,1718 @@
+{
+  "results": [
+    {
+      "evaluation": "runs/concurrent/finite_seed17_confirmation",
+      "metadata": {
+        "status": "complete",
+        "parent_run": "runs/concurrent/finite_seed17",
+        "environment_config": {
+          "n_agents": 2,
+          "starting_cash": 10000000,
+          "k": 10,
+          "max_size": 100,
+          "max_inventory": 1000,
+          "inventory_penalty": 0.0001,
+          "termination_penalty": -1.0,
+          "start_time": "09:30:00",
+          "end_time": "09:40:00",
+          "wakeup_interval": "1s",
+          "gated_actions": true,
+          "offset_span": 15,
+          "mid_rounding": "outward",
+          "agent_id_obs": true,
+          "agent_id_width": 2,
+          "include_ofi": true,
+          "latency_edge": 1.0,
+          "config_kwargs": {
+            "num_noise_agents": 2000,
+            "num_value_agents": 50,
+            "num_momentum_agents": 10
+          }
+        },
+        "args": {
+          "run": "runs/concurrent/finite_seed17",
+          "out_dir": "runs/concurrent/finite_seed17_confirmation",
+          "market_seeds": [
+            40001,
+            40002,
+            40003,
+            40004,
+            40005,
+            40006,
+            40007,
+            40008,
+            40009,
+            40010,
+            40011,
+            40012
+          ],
+          "calibration_seeds": [
+            20001,
+            20002,
+            20003,
+            20004
+          ],
+          "replicates": [
+            0,
+            1
+          ],
+          "scenarios": [
+            "sampled_pair",
+            "marginal_b"
+          ],
+          "a_mode": "sampled",
+          "checkpoint": null
+        },
+        "checkpoint_sha256": {
+          "initial_a": "ec1e9d3248edd188389e6e7c32b1b6b042eeb7e1bd655334391f996a05513d9e",
+          "a": "5d33331c4a00f0ec481c37f34cb72716680972b92a4357338a076e7bdaffa444",
+          "initial_b": "0ddaecf191da6a48df2247494c3269f4f0e41690c08a21b59d3695d5c4bd40f6",
+          "b": "8b764cea17cf0b64bd9ac2aa124b187735ddb5c66c0d2261e1d7f384820fb3c2"
+        },
+        "action_rng": "per-agent numpy default_rng; seed=SeedSequence([918273,market,replicate,role])",
+        "marginal_control": "IID complete rows from separate calibration markets; breaks state/time link",
+        "norm_obs": false,
+        "completed_markets": 48,
+        "wall_seconds": 1193.1808374279644
+      },
+      "input_csv_sha256": "04ba5245cdba2da01b95da7b06fce0cc34840fd147289968619d9a0e3f4988a9",
+      "summary": [
+        {
+          "scenario": "marginal_b",
+          "agent": "mm_0",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 4,
+          "common_horizon_pnl_dollars": -212.58249999999998,
+          "pnl_dollars": -212.58249999999998,
+          "any_quote_pct": 64.16249304396216,
+          "gross_fills": 15.791666666666666,
+          "final_inventory": -39.541666666666664,
+          "max_abs_inventory": 64.45833333333333,
+          "mean_abs_inventory": 34.76902777777778,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -210.44875,
+          "execution_vs_step_end_mid_dollars": -2.1337500000000005
+        },
+        {
+          "scenario": "marginal_b",
+          "agent": "mm_1",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 4,
+          "common_horizon_pnl_dollars": -691.235,
+          "pnl_dollars": -691.235,
+          "any_quote_pct": 83.53505843071785,
+          "gross_fills": 43.333333333333336,
+          "final_inventory": 169.625,
+          "max_abs_inventory": 214.91666666666666,
+          "mean_abs_inventory": 92.85222222222222,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -680.7516666666667,
+          "execution_vs_step_end_mid_dollars": -10.483333333333333
+        },
+        {
+          "scenario": "sampled_pair",
+          "agent": "mm_0",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 1,
+          "common_horizon_pnl_dollars": -224.55791666666664,
+          "pnl_dollars": -224.55791666666664,
+          "any_quote_pct": 65.66499721758487,
+          "gross_fills": 15.875,
+          "final_inventory": -24.541666666666668,
+          "max_abs_inventory": 60.0,
+          "mean_abs_inventory": 31.739305555555557,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -223.15333333333334,
+          "execution_vs_step_end_mid_dollars": -1.4045833333333333
+        },
+        {
+          "scenario": "sampled_pair",
+          "agent": "mm_1",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 1,
+          "common_horizon_pnl_dollars": -927.4562500000001,
+          "pnl_dollars": -927.4562500000001,
+          "any_quote_pct": 83.21508069003896,
+          "gross_fills": 50.333333333333336,
+          "final_inventory": 349.9166666666667,
+          "max_abs_inventory": 358.0833333333333,
+          "mean_abs_inventory": 155.19208333333333,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -913.847916666667,
+          "execution_vs_step_end_mid_dollars": -13.608333333333334
+        }
+      ],
+      "paired_effects": [
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 12,
+          "mean_difference": -11.97541666666667,
+          "median_difference": 77.255,
+          "positive_markets": 7,
+          "paired_market_bootstrap_95pct": [
+            -146.27053125,
+            100.68375
+          ],
+          "seed_differences": {
+            "40001": 184.875,
+            "40002": 59.11000000000001,
+            "40003": 95.39999999999998,
+            "40004": -33.79,
+            "40005": -12.179999999999993,
+            "40006": 101.85999999999999,
+            "40007": -374.97499999999997,
+            "40008": 180.54500000000002,
+            "40009": 109.16499999999999,
+            "40010": 234.49,
+            "40011": -511.83000000000004,
+            "40012": -176.375
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -27.150833333333335,
+              "positive_markets": 7,
+              "seed_differences": {
+                "40001": 192.7,
+                "40002": 158.28,
+                "40003": 181.15000000000003,
+                "40004": -59.870000000000005,
+                "40005": 14.219999999999999,
+                "40006": 125.81,
+                "40007": -208.04999999999998,
+                "40008": 266.39000000000004,
+                "40009": -224.19,
+                "40010": 459.67999999999995,
+                "40011": -834.3900000000001,
+                "40012": -397.54
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 3.199999999999991,
+              "positive_markets": 7,
+              "seed_differences": {
+                "40001": 177.05,
+                "40002": -40.06,
+                "40003": 9.649999999999977,
+                "40004": -7.710000000000001,
+                "40005": -38.579999999999984,
+                "40006": 77.91,
+                "40007": -541.9,
+                "40008": 94.7,
+                "40009": 442.52,
+                "40010": 9.299999999999955,
+                "40011": -189.26999999999998,
+                "40012": 44.78999999999999
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 12,
+          "mean_difference": 1.5025041736227085,
+          "median_difference": 1.419031719532562,
+          "positive_markets": 9,
+          "paired_market_bootstrap_95pct": [
+            -0.2573734001112946,
+            3.4293266555370097
+          ],
+          "seed_differences": {
+            "40001": 1.669449081803009,
+            "40002": 1.1686143572621148,
+            "40003": 2.2537562604340593,
+            "40004": 0.08347245409014192,
+            "40005": 3.9232053422370683,
+            "40006": 4.924874791318871,
+            "40007": 2.2537562604340735,
+            "40008": -3.255425709515862,
+            "40009": -1.669449081803009,
+            "40010": 0.9181969949916606,
+            "40011": -3.0050083472454077,
+            "40012": 8.764607679465783
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 0.9321090706733433,
+              "positive_markets": 7,
+              "seed_differences": {
+                "40001": 5.008347245409013,
+                "40002": -2.6711185308848115,
+                "40003": 1.5025041736227038,
+                "40004": -2.1702838063439174,
+                "40005": 5.509181969949921,
+                "40006": 5.676126878130212,
+                "40007": 3.005008347245422,
+                "40008": -11.018363939899842,
+                "40009": -7.846410684474122,
+                "40010": 1.502504173622711,
+                "40011": -2.003338898163605,
+                "40012": 14.691151919866435
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 2.072899276572066,
+              "positive_markets": 10,
+              "seed_differences": {
+                "40001": -1.669449081803009,
+                "40002": 5.00834724540902,
+                "40003": 3.0050083472454077,
+                "40004": 2.3372287145242154,
+                "40005": 2.3372287145242012,
+                "40006": 4.173622704507515,
+                "40007": 1.502504173622711,
+                "40008": 4.507512520868119,
+                "40009": 4.5075125208681115,
+                "40010": 0.3338898163605961,
+                "40011": -4.006677796327203,
+                "40012": 2.8380634390651096
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "gross_fills",
+          "n_market_seeds": 12,
+          "mean_difference": 0.08333333333333333,
+          "median_difference": 0.25,
+          "positive_markets": 6,
+          "paired_market_bootstrap_95pct": [
+            -2.0833333333333335,
+            2.2083333333333335
+          ],
+          "seed_differences": {
+            "40001": 3.0,
+            "40002": -6.5,
+            "40003": -5.5,
+            "40004": -3.5,
+            "40005": 3.0,
+            "40006": -1.0,
+            "40007": 5.0,
+            "40008": -1.0,
+            "40009": 1.0,
+            "40010": 1.0,
+            "40011": 6.0,
+            "40012": -0.5
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 0.08333333333333333,
+              "positive_markets": 5,
+              "seed_differences": {
+                "40001": 4.0,
+                "40002": -6.0,
+                "40003": -2.0,
+                "40004": -3.0,
+                "40005": 2.0,
+                "40006": -2.0,
+                "40007": -1.0,
+                "40008": -3.0,
+                "40009": 1.0,
+                "40010": 5.0,
+                "40011": 9.0,
+                "40012": -3.0
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 0.08333333333333333,
+              "positive_markets": 7,
+              "seed_differences": {
+                "40001": 2.0,
+                "40002": -7.0,
+                "40003": -9.0,
+                "40004": -4.0,
+                "40005": 4.0,
+                "40006": 0.0,
+                "40007": 11.0,
+                "40008": 1.0,
+                "40009": 1.0,
+                "40010": -3.0,
+                "40011": 3.0,
+                "40012": 2.0
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 12,
+          "mean_difference": -236.22125000000003,
+          "median_difference": 16.532500000000006,
+          "positive_markets": 6,
+          "paired_market_bootstrap_95pct": [
+            -1026.2675000000002,
+            406.2431666666666
+          ],
+          "seed_differences": {
+            "40001": -508.38,
+            "40002": -510.16499999999996,
+            "40003": -90.91000000000003,
+            "40004": 69.61,
+            "40005": -36.54499999999999,
+            "40006": 92.07499999999999,
+            "40007": -3518.78,
+            "40008": 1255.0700000000002,
+            "40009": 212.24,
+            "40010": 1339.66,
+            "40011": 740.0749999999999,
+            "40012": -1878.6050000000002
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -288.60666666666674,
+              "positive_markets": 6,
+              "seed_differences": {
+                "40001": -144.60000000000002,
+                "40002": -235.61000000000013,
+                "40003": 177.85,
+                "40004": 158.91,
+                "40005": -595.05,
+                "40006": 321.90999999999997,
+                "40007": -3590.1900000000005,
+                "40008": 2559.41,
+                "40009": -175.49,
+                "40010": 187.07999999999998,
+                "40011": 906.3699999999999,
+                "40012": -3033.87
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": -183.8358333333333,
+              "positive_markets": 4,
+              "seed_differences": {
+                "40001": -872.1600000000001,
+                "40002": -784.7199999999999,
+                "40003": -359.66999999999996,
+                "40004": -19.690000000000012,
+                "40005": 521.96,
+                "40006": -137.76,
+                "40007": -3447.37,
+                "40008": -49.26999999999998,
+                "40009": 599.97,
+                "40010": 2492.24,
+                "40011": 573.78,
+                "40012": -723.3400000000001
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 12,
+          "mean_difference": -0.31997774067890816,
+          "median_difference": -0.04173622704507096,
+          "positive_markets": 6,
+          "paired_market_bootstrap_95pct": [
+            -1.7737896494156888,
+            1.0434056761268806
+          ],
+          "seed_differences": {
+            "40001": 0.8347245409015187,
+            "40002": 0.16694490818031227,
+            "40003": -5.759599332220361,
+            "40004": 4.340567612687806,
+            "40005": -3.088480801335564,
+            "40006": 0.16694490818028385,
+            "40007": -1.0851419031719445,
+            "40008": -0.16694490818029806,
+            "40009": 2.9215358931552515,
+            "40010": 0.08347245409015613,
+            "40011": -0.9181969949916606,
+            "40012": -1.3355592654423987
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -0.12520868113522354,
+              "positive_markets": 5,
+              "seed_differences": {
+                "40001": -1.6694490818029948,
+                "40002": 0.5008347245409084,
+                "40003": -3.1719532554257057,
+                "40004": 5.175292153589311,
+                "40005": -0.6677796327211922,
+                "40006": -1.836393989983307,
+                "40007": -1.1686143572621006,
+                "40008": -1.5025041736226967,
+                "40009": 3.3388981636060038,
+                "40010": -1.1686143572621006,
+                "40011": 0.3338898163605961,
+                "40012": 0.3338898163605961
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": -0.514746800222594,
+              "positive_markets": 6,
+              "seed_differences": {
+                "40001": 3.338898163606018,
+                "40002": -0.16694490818029806,
+                "40003": -8.34724540901503,
+                "40004": 3.505843071786302,
+                "40005": -5.509181969949921,
+                "40006": 2.170283806343903,
+                "40007": -1.0016694490818026,
+                "40008": 1.1686143572621006,
+                "40009": 2.5041736227045135,
+                "40010": 1.3355592654423987,
+                "40011": -2.170283806343903,
+                "40012": -3.0050083472454077
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "gross_fills",
+          "n_market_seeds": 12,
+          "mean_difference": 7.0,
+          "median_difference": 5.75,
+          "positive_markets": 9,
+          "paired_market_bootstrap_95pct": [
+            0.25,
+            13.541666666666666
+          ],
+          "seed_differences": {
+            "40001": 21.0,
+            "40002": 10.5,
+            "40003": -18.0,
+            "40004": -0.5,
+            "40005": 5.0,
+            "40006": 5.0,
+            "40007": 24.5,
+            "40008": -4.5,
+            "40009": 6.5,
+            "40010": 1.5,
+            "40011": 8.5,
+            "40012": 24.5
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 8.083333333333334,
+              "positive_markets": 9,
+              "seed_differences": {
+                "40001": 23.0,
+                "40002": 18.0,
+                "40003": -23.0,
+                "40004": -20.0,
+                "40005": 8.0,
+                "40006": 1.0,
+                "40007": 24.0,
+                "40008": -10.0,
+                "40009": 2.0,
+                "40010": 10.0,
+                "40011": 22.0,
+                "40012": 42.0
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 5.916666666666667,
+              "positive_markets": 9,
+              "seed_differences": {
+                "40001": 19.0,
+                "40002": 3.0,
+                "40003": -13.0,
+                "40004": 19.0,
+                "40005": 2.0,
+                "40006": 9.0,
+                "40007": 25.0,
+                "40008": 1.0,
+                "40009": 11.0,
+                "40010": -7.0,
+                "40011": -5.0,
+                "40012": 7.0
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        }
+      ]
+    },
+    {
+      "evaluation": "runs/concurrent/finite_seed29_confirmation",
+      "metadata": {
+        "status": "complete",
+        "parent_run": "runs/concurrent/finite_seed29",
+        "environment_config": {
+          "n_agents": 2,
+          "starting_cash": 10000000,
+          "k": 10,
+          "max_size": 100,
+          "max_inventory": 1000,
+          "inventory_penalty": 0.0001,
+          "termination_penalty": -1.0,
+          "start_time": "09:30:00",
+          "end_time": "09:40:00",
+          "wakeup_interval": "1s",
+          "gated_actions": true,
+          "offset_span": 15,
+          "mid_rounding": "outward",
+          "agent_id_obs": true,
+          "agent_id_width": 2,
+          "include_ofi": true,
+          "latency_edge": 1.0,
+          "config_kwargs": {
+            "num_noise_agents": 2000,
+            "num_value_agents": 50,
+            "num_momentum_agents": 10
+          }
+        },
+        "args": {
+          "run": "runs/concurrent/finite_seed29",
+          "out_dir": "runs/concurrent/finite_seed29_confirmation",
+          "market_seeds": [
+            40001,
+            40002,
+            40003,
+            40004,
+            40005,
+            40006,
+            40007,
+            40008,
+            40009,
+            40010,
+            40011,
+            40012
+          ],
+          "calibration_seeds": [
+            20001,
+            20002,
+            20003,
+            20004
+          ],
+          "replicates": [
+            0,
+            1
+          ],
+          "scenarios": [
+            "sampled_pair",
+            "marginal_b"
+          ],
+          "a_mode": "sampled",
+          "checkpoint": null
+        },
+        "checkpoint_sha256": {
+          "initial_a": "b155d065252be19f579361df77d6d8412dd39f9061055c0a4432af5a757e4c79",
+          "a": "ffaf9f84fe1d8bfc4fcdee3fbf22f2a0b0645fad808da0d3cfd254ef5cf91993",
+          "initial_b": "78a943b8144ac09def161c2c072cd1f64ee7d6fb1639298b3b853c7b2eb22750",
+          "b": "5921a369813d61330b0ed30bdac5be9378b6e8f69dbe15fa7627ecfd49b54574"
+        },
+        "action_rng": "per-agent numpy default_rng; seed=SeedSequence([918273,market,replicate,role])",
+        "marginal_control": "IID complete rows from separate calibration markets; breaks state/time link",
+        "norm_obs": false,
+        "completed_markets": 48,
+        "wall_seconds": 1150.7357742970344
+      },
+      "input_csv_sha256": "74ad73f0442d74973baa70a35a781b5b1da5da7e1a3052dfb97c0bba5a3dc8cf",
+      "summary": [
+        {
+          "scenario": "marginal_b",
+          "agent": "mm_0",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 2,
+          "common_horizon_pnl_dollars": -308.5095833333333,
+          "pnl_dollars": -308.5095833333333,
+          "any_quote_pct": 40.03199777406789,
+          "gross_fills": 18.666666666666668,
+          "final_inventory": -81.125,
+          "max_abs_inventory": 101.66666666666667,
+          "mean_abs_inventory": 55.81465277777778,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -306.09458333333333,
+          "execution_vs_step_end_mid_dollars": -2.4149999999999996
+        },
+        {
+          "scenario": "marginal_b",
+          "agent": "mm_1",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 2,
+          "common_horizon_pnl_dollars": -1191.8883333333333,
+          "pnl_dollars": -1191.8883333333333,
+          "any_quote_pct": 78.1858653311074,
+          "gross_fills": 74.125,
+          "final_inventory": 191.91666666666666,
+          "max_abs_inventory": 297.2083333333333,
+          "mean_abs_inventory": 130.16381944444444,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -1174.29125,
+          "execution_vs_step_end_mid_dollars": -17.597083333333334
+        },
+        {
+          "scenario": "sampled_pair",
+          "agent": "mm_0",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 0,
+          "common_horizon_pnl_dollars": -315.17625000000004,
+          "pnl_dollars": -315.17625000000004,
+          "any_quote_pct": 41.01279910962716,
+          "gross_fills": 18.333333333333332,
+          "final_inventory": -78.70833333333333,
+          "max_abs_inventory": 100.25,
+          "mean_abs_inventory": 52.725138888888885,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -311.1970833333333,
+          "execution_vs_step_end_mid_dollars": -3.9791666666666665
+        },
+        {
+          "scenario": "sampled_pair",
+          "agent": "mm_1",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 0,
+          "common_horizon_pnl_dollars": -353.1879166666667,
+          "pnl_dollars": -353.1879166666667,
+          "any_quote_pct": 80.06399554813578,
+          "gross_fills": 51.458333333333336,
+          "final_inventory": 81.25,
+          "max_abs_inventory": 196.625,
+          "mean_abs_inventory": 95.40555555555555,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -341.8866666666666,
+          "execution_vs_step_end_mid_dollars": -11.301250000000001
+        }
+      ],
+      "paired_effects": [
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 12,
+          "mean_difference": -6.666666666666671,
+          "median_difference": -94.72,
+          "positive_markets": 5,
+          "paired_market_bootstrap_95pct": [
+            -268.0443020833333,
+            305.8958437499999
+          ],
+          "seed_differences": {
+            "40001": -280.33000000000004,
+            "40002": -147.05,
+            "40003": 254.20000000000005,
+            "40004": -478.2900000000001,
+            "40005": 327.66999999999996,
+            "40006": 237.96000000000004,
+            "40007": -395.90999999999997,
+            "40008": -116.49999999999999,
+            "40009": -782.7299999999998,
+            "40010": 1352.1349999999998,
+            "40011": 21.784999999999968,
+            "40012": -72.94
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -8.462500000000002,
+              "positive_markets": 5,
+              "seed_differences": {
+                "40001": 123.94000000000001,
+                "40002": -133.22,
+                "40003": 549.97,
+                "40004": -597.6,
+                "40005": 660.6,
+                "40006": 214.26000000000005,
+                "40007": -232.25,
+                "40008": -101.89999999999999,
+                "40009": -873.46,
+                "40010": 579.7699999999999,
+                "40011": -266.96000000000004,
+                "40012": -24.700000000000003
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": -4.870833333333313,
+              "positive_markets": 3,
+              "seed_differences": {
+                "40001": -684.6,
+                "40002": -160.88,
+                "40003": -41.569999999999936,
+                "40004": -358.98,
+                "40005": -5.260000000000019,
+                "40006": 261.65999999999997,
+                "40007": -559.5699999999999,
+                "40008": -131.1,
+                "40009": -691.9999999999999,
+                "40010": 2124.5,
+                "40011": 310.53,
+                "40012": -121.18
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 12,
+          "mean_difference": 0.9808013355592647,
+          "median_difference": 1.794657762938229,
+          "positive_markets": 8,
+          "paired_market_bootstrap_95pct": [
+            -0.7792501391207581,
+            2.552865887590426
+          ],
+          "seed_differences": {
+            "40001": 2.9215358931552515,
+            "40002": 3.255425709515862,
+            "40003": -1.6694490818030019,
+            "40004": 1.1686143572621006,
+            "40005": 2.3372287145242083,
+            "40006": 1.2520868113522496,
+            "40007": 5.091819699499169,
+            "40008": 2.6711185308848044,
+            "40009": -1.836393989983307,
+            "40010": -6.427378964941568,
+            "40011": -0.16694490818029806,
+            "40012": 3.1719532554257057
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 0.7234279354479689,
+              "positive_markets": 8,
+              "seed_differences": {
+                "40001": 1.3355592654424058,
+                "40002": 4.507512520868119,
+                "40003": -3.839732888146912,
+                "40004": 1.3355592654424058,
+                "40005": 2.5041736227045064,
+                "40006": -1.0016694490818026,
+                "40007": 7.011686143572625,
+                "40008": 1.5025041736227038,
+                "40009": -1.669449081803009,
+                "40010": -5.676126878130219,
+                "40011": 1.0016694490818026,
+                "40012": 1.6694490818030019
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 1.2381747356705617,
+              "positive_markets": 9,
+              "seed_differences": {
+                "40001": 4.5075125208681115,
+                "40002": 2.003338898163605,
+                "40003": 0.5008347245409013,
+                "40004": 1.0016694490817954,
+                "40005": 2.170283806343903,
+                "40006": 3.505843071786309,
+                "40007": 3.1719532554257057,
+                "40008": 3.839732888146912,
+                "40009": -2.003338898163605,
+                "40010": -7.178631051752909,
+                "40011": -1.3355592654424058,
+                "40012": 4.674457429048417
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "gross_fills",
+          "n_market_seeds": 12,
+          "mean_difference": -0.3333333333333333,
+          "median_difference": 0.25,
+          "positive_markets": 6,
+          "paired_market_bootstrap_95pct": [
+            -3.0416666666666665,
+            2.375
+          ],
+          "seed_differences": {
+            "40001": 2.0,
+            "40002": -5.0,
+            "40003": -5.0,
+            "40004": 5.5,
+            "40005": -6.5,
+            "40006": 3.5,
+            "40007": 2.0,
+            "40008": -1.5,
+            "40009": 8.0,
+            "40010": -7.5,
+            "40011": 1.5,
+            "40012": -1.0
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -1.5,
+              "positive_markets": 4,
+              "seed_differences": {
+                "40001": -1.0,
+                "40002": 1.0,
+                "40003": -9.0,
+                "40004": 2.0,
+                "40005": -10.0,
+                "40006": 3.0,
+                "40007": 0.0,
+                "40008": 0.0,
+                "40009": 13.0,
+                "40010": -5.0,
+                "40011": -3.0,
+                "40012": -9.0
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 0.8333333333333334,
+              "positive_markets": 7,
+              "seed_differences": {
+                "40001": 5.0,
+                "40002": -11.0,
+                "40003": -1.0,
+                "40004": 9.0,
+                "40005": -3.0,
+                "40006": 4.0,
+                "40007": 4.0,
+                "40008": -3.0,
+                "40009": 3.0,
+                "40010": -10.0,
+                "40011": 6.0,
+                "40012": 7.0
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 12,
+          "mean_difference": 838.7004166666667,
+          "median_difference": 789.5325,
+          "positive_markets": 9,
+          "paired_market_bootstrap_95pct": [
+            410.8812708333333,
+            1331.6709791666665
+          ],
+          "seed_differences": {
+            "40001": 659.79,
+            "40002": 1084.845,
+            "40003": 218.25,
+            "40004": 949.22,
+            "40005": 919.275,
+            "40006": -16.515000000000043,
+            "40007": 2456.2099999999996,
+            "40008": 1069.405,
+            "40009": -4.039999999999992,
+            "40010": 2361.925,
+            "40011": 527.2950000000001,
+            "40012": -161.255
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 638.3783333333334,
+              "positive_markets": 10,
+              "seed_differences": {
+                "40001": 93.31,
+                "40002": 1339.41,
+                "40003": 917.0,
+                "40004": 439.2,
+                "40005": 61.619999999999976,
+                "40006": -87.90000000000009,
+                "40007": 2858.9799999999996,
+                "40008": 510.97,
+                "40009": 482.06000000000006,
+                "40010": 1230.32,
+                "40011": 705.83,
+                "40012": -890.2600000000001
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 1039.0224999999998,
+              "positive_markets": 10,
+              "seed_differences": {
+                "40001": 1226.27,
+                "40002": 830.2800000000001,
+                "40003": -480.5,
+                "40004": 1459.24,
+                "40005": 1776.9299999999998,
+                "40006": 54.87,
+                "40007": 2053.4399999999996,
+                "40008": 1627.84,
+                "40009": -490.14000000000004,
+                "40010": 3493.5299999999997,
+                "40011": 348.76,
+                "40012": 567.75
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 12,
+          "mean_difference": 1.878130217028378,
+          "median_difference": 2.8797996661101735,
+          "positive_markets": 9,
+          "paired_market_bootstrap_95pct": [
+            -1.0920979410128016,
+            4.264051196438505
+          ],
+          "seed_differences": {
+            "40001": 0.25041736227044,
+            "40002": 1.8363939899832928,
+            "40003": 3.923205342237054,
+            "40004": 7.262103505843072,
+            "40005": 4.5909849749582605,
+            "40006": 0.9181969949916464,
+            "40007": -10.85141903171953,
+            "40008": -0.25041736227044,
+            "40009": 5.676126878130219,
+            "40010": 5.258764607679467,
+            "40011": 6.427378964941568,
+            "40012": -2.5041736227045135
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 1.530328324986088,
+              "positive_markets": 7,
+              "seed_differences": {
+                "40001": -1.0016694490818026,
+                "40002": 1.0016694490818026,
+                "40003": 4.173622704507508,
+                "40004": 6.510851419031724,
+                "40005": 5.843071786310517,
+                "40006": -2.1702838063439174,
+                "40007": -5.843071786310517,
+                "40008": -7.17863105175293,
+                "40009": 7.17863105175293,
+                "40010": 4.841402337228715,
+                "40011": 6.844741235392334,
+                "40012": -1.836393989983307
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 2.2259321090706696,
+              "positive_markets": 10,
+              "seed_differences": {
+                "40001": 1.5025041736226967,
+                "40002": 2.6711185308847973,
+                "40003": 3.6727879799666,
+                "40004": 8.01335559265442,
+                "40005": 3.3388981636060038,
+                "40006": 4.00667779632721,
+                "40007": -15.85976627712855,
+                "40008": 6.677796327212022,
+                "40009": 4.173622704507508,
+                "40010": 5.676126878130219,
+                "40011": 6.010016694490815,
+                "40012": -3.1719532554257057
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "gross_fills",
+          "n_market_seeds": 12,
+          "mean_difference": -22.666666666666668,
+          "median_difference": -22.75,
+          "positive_markets": 0,
+          "paired_market_bootstrap_95pct": [
+            -28.875,
+            -16.583333333333332
+          ],
+          "seed_differences": {
+            "40001": -7.5,
+            "40002": -28.5,
+            "40003": -26.0,
+            "40004": -37.0,
+            "40005": -43.5,
+            "40006": -7.0,
+            "40007": -31.0,
+            "40008": -25.0,
+            "40009": -16.5,
+            "40010": -12.5,
+            "40011": -17.0,
+            "40012": -20.5
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -27.833333333333332,
+              "positive_markets": 0,
+              "seed_differences": {
+                "40001": -27.0,
+                "40002": -28.0,
+                "40003": -24.0,
+                "40004": -44.0,
+                "40005": -51.0,
+                "40006": -6.0,
+                "40007": -49.0,
+                "40008": -23.0,
+                "40009": -22.0,
+                "40010": -15.0,
+                "40011": -24.0,
+                "40012": -21.0
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": -17.5,
+              "positive_markets": 1,
+              "seed_differences": {
+                "40001": 12.0,
+                "40002": -29.0,
+                "40003": -28.0,
+                "40004": -30.0,
+                "40005": -36.0,
+                "40006": -8.0,
+                "40007": -13.0,
+                "40008": -27.0,
+                "40009": -11.0,
+                "40010": -10.0,
+                "40011": -10.0,
+                "40012": -20.0
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        }
+      ]
+    },
+    {
+      "evaluation": "runs/concurrent/finite_seed43_confirmation",
+      "metadata": {
+        "status": "complete",
+        "parent_run": "runs/concurrent/finite_seed43",
+        "environment_config": {
+          "n_agents": 2,
+          "starting_cash": 10000000,
+          "k": 10,
+          "max_size": 100,
+          "max_inventory": 1000,
+          "inventory_penalty": 0.0001,
+          "termination_penalty": -1.0,
+          "start_time": "09:30:00",
+          "end_time": "09:40:00",
+          "wakeup_interval": "1s",
+          "gated_actions": true,
+          "offset_span": 15,
+          "mid_rounding": "outward",
+          "agent_id_obs": true,
+          "agent_id_width": 2,
+          "include_ofi": true,
+          "latency_edge": 1.0,
+          "config_kwargs": {
+            "num_noise_agents": 2000,
+            "num_value_agents": 50,
+            "num_momentum_agents": 10
+          }
+        },
+        "args": {
+          "run": "runs/concurrent/finite_seed43",
+          "out_dir": "runs/concurrent/finite_seed43_confirmation",
+          "market_seeds": [
+            40001,
+            40002,
+            40003,
+            40004,
+            40005,
+            40006,
+            40007,
+            40008,
+            40009,
+            40010,
+            40011,
+            40012
+          ],
+          "calibration_seeds": [
+            20001,
+            20002,
+            20003,
+            20004
+          ],
+          "replicates": [
+            0,
+            1
+          ],
+          "scenarios": [
+            "sampled_pair",
+            "marginal_b"
+          ],
+          "a_mode": "sampled",
+          "checkpoint": null
+        },
+        "checkpoint_sha256": {
+          "initial_a": "c100f4a2b77792d3899a34f5a510912896e191d1b9b8ebbf2fc5411dc75ab449",
+          "a": "cd49ed402de16c14603084eb3072ee7cab923dcb7745724bcd048d08c2e4ea0a",
+          "initial_b": "11c1ea35df41b9f4dbd8efb75d4b8bf2f828170eaed75c58340012924d92a5d8",
+          "b": "b984ea299eaa5ef73029ddd92a0c5384271dfbc80ca0ddae21d2da7d2572aa59"
+        },
+        "action_rng": "per-agent numpy default_rng; seed=SeedSequence([918273,market,replicate,role])",
+        "marginal_control": "IID complete rows from separate calibration markets; breaks state/time link",
+        "norm_obs": false,
+        "completed_markets": 48,
+        "wall_seconds": 637.9781129499897
+      },
+      "input_csv_sha256": "fcc8851a6fca8e669ae608c93166bb522507c2814d2a42c591420ec4ede8e827",
+      "summary": [
+        {
+          "scenario": "marginal_b",
+          "agent": "mm_0",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 0,
+          "common_horizon_pnl_dollars": -179.30875,
+          "pnl_dollars": -179.30875,
+          "any_quote_pct": 33.77156371730663,
+          "gross_fills": 23.791666666666668,
+          "final_inventory": 200.04166666666666,
+          "max_abs_inventory": 200.45833333333334,
+          "mean_abs_inventory": 98.17722222222221,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -172.55791666666667,
+          "execution_vs_step_end_mid_dollars": -6.750833333333333
+        },
+        {
+          "scenario": "marginal_b",
+          "agent": "mm_1",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 0,
+          "common_horizon_pnl_dollars": -505.0229166666666,
+          "pnl_dollars": -505.0229166666666,
+          "any_quote_pct": 56.93516972732331,
+          "gross_fills": 36.875,
+          "final_inventory": -84.29166666666667,
+          "max_abs_inventory": 138.375,
+          "mean_abs_inventory": 64.96194444444446,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -501.1775,
+          "execution_vs_step_end_mid_dollars": -3.8454166666666665
+        },
+        {
+          "scenario": "sampled_pair",
+          "agent": "mm_0",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 0,
+          "common_horizon_pnl_dollars": -348.42958333333337,
+          "pnl_dollars": -348.42958333333337,
+          "any_quote_pct": 32.7977184195882,
+          "gross_fills": 23.333333333333332,
+          "final_inventory": 203.875,
+          "max_abs_inventory": 204.70833333333334,
+          "mean_abs_inventory": 96.71673611111112,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -341.0375,
+          "execution_vs_step_end_mid_dollars": -7.392083333333335
+        },
+        {
+          "scenario": "sampled_pair",
+          "agent": "mm_1",
+          "episodes": 24,
+          "risk_stops": 0,
+          "direct_pair_matches": 0,
+          "common_horizon_pnl_dollars": -294.5208333333333,
+          "pnl_dollars": -294.5208333333333,
+          "any_quote_pct": 55.759599332220375,
+          "gross_fills": 41.708333333333336,
+          "final_inventory": -61.541666666666664,
+          "max_abs_inventory": 153.58333333333334,
+          "mean_abs_inventory": 75.15833333333333,
+          "duration_seconds": 599.0,
+          "inventory_marking_dollars": -285.4025,
+          "execution_vs_step_end_mid_dollars": -9.118333333333334
+        }
+      ],
+      "paired_effects": [
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 12,
+          "mean_difference": -169.1208333333333,
+          "median_difference": -34.09500000000003,
+          "positive_markets": 5,
+          "paired_market_bootstrap_95pct": [
+            -581.79009375,
+            265.46928125000005
+          ],
+          "seed_differences": {
+            "40001": -710.715,
+            "40002": 1368.7450000000001,
+            "40003": -50.760000000000105,
+            "40004": 123.63500000000002,
+            "40005": 134.385,
+            "40006": 54.50999999999999,
+            "40007": -1618.07,
+            "40008": 625.515,
+            "40009": -1008.52,
+            "40010": -17.42999999999995,
+            "40011": -422.5,
+            "40012": -508.24499999999995
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -172.23333333333335,
+              "positive_markets": 3,
+              "seed_differences": {
+                "40001": -512.09,
+                "40002": 1638.6399999999999,
+                "40003": -710.1200000000001,
+                "40004": -530.39,
+                "40005": 287.55,
+                "40006": -91.15,
+                "40007": -499.65999999999985,
+                "40008": -59.639999999999986,
+                "40009": -1182.04,
+                "40010": -305.86,
+                "40011": -302.29999999999995,
+                "40012": 200.26
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": -166.00833333333335,
+              "positive_markets": 6,
+              "seed_differences": {
+                "40001": -909.34,
+                "40002": 1098.85,
+                "40003": 608.6,
+                "40004": 777.6600000000001,
+                "40005": -18.78,
+                "40006": 200.16999999999996,
+                "40007": -2736.48,
+                "40008": 1310.6699999999998,
+                "40009": -835.0,
+                "40010": 271.0,
+                "40011": -542.7,
+                "40012": -1216.75
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 12,
+          "mean_difference": -0.9738452977184204,
+          "median_difference": -2.5876460767946607,
+          "positive_markets": 4,
+          "paired_market_bootstrap_95pct": [
+            -2.8311074012242643,
+            1.0642737896494159
+          ],
+          "seed_differences": {
+            "40001": 0.6677796327212064,
+            "40002": -4.257095158597664,
+            "40003": -2.921535893155262,
+            "40004": -4.42404006677797,
+            "40005": -3.0884808013355567,
+            "40006": -3.171953255425713,
+            "40007": 4.00667779632721,
+            "40008": -2.2537562604340593,
+            "40009": -4.674457429048417,
+            "40010": -0.41736227045075225,
+            "40011": 6.010016694490822,
+            "40012": 2.8380634390651096
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -0.11129660545353588,
+              "positive_markets": 6,
+              "seed_differences": {
+                "40001": 2.1702838063439103,
+                "40002": -7.011686143572632,
+                "40003": 3.3388981636060038,
+                "40004": -1.3355592654424022,
+                "40005": -4.173622704507508,
+                "40006": -5.008347245409016,
+                "40007": 0.3338898163605961,
+                "40008": 0.6677796327211993,
+                "40009": -1.0016694490818097,
+                "40010": -3.5058430717863125,
+                "40011": 9.849749582637727,
+                "40012": 4.340567612687813
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": -1.8363939899833055,
+              "positive_markets": 4,
+              "seed_differences": {
+                "40001": -0.8347245409015045,
+                "40002": -1.5025041736227038,
+                "40003": -9.181969949916528,
+                "40004": -7.512520868113526,
+                "40005": -2.003338898163612,
+                "40006": -1.3355592654424058,
+                "40007": 7.679465776293817,
+                "40008": -5.175292153589311,
+                "40009": -8.347245409015024,
+                "40010": 2.6711185308848115,
+                "40011": 2.170283806343914,
+                "40012": 1.3355592654424058
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_0",
+          "metric": "gross_fills",
+          "n_market_seeds": 12,
+          "mean_difference": -0.4583333333333333,
+          "median_difference": 0.75,
+          "positive_markets": 7,
+          "paired_market_bootstrap_95pct": [
+            -3.9583333333333335,
+            2.8760416666666515
+          ],
+          "seed_differences": {
+            "40001": 1.0,
+            "40002": -11.5,
+            "40003": 1.0,
+            "40004": -10.0,
+            "40005": -4.0,
+            "40006": 5.5,
+            "40007": 10.5,
+            "40008": -3.5,
+            "40009": 1.0,
+            "40010": 0.5,
+            "40011": 5.5,
+            "40012": -1.5
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 0.8333333333333334,
+              "positive_markets": 5,
+              "seed_differences": {
+                "40001": 0.0,
+                "40002": -5.0,
+                "40003": 3.0,
+                "40004": -1.0,
+                "40005": -6.0,
+                "40006": -1.0,
+                "40007": 9.0,
+                "40008": 8.0,
+                "40009": 4.0,
+                "40010": -9.0,
+                "40011": 17.0,
+                "40012": -9.0
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": -1.75,
+              "positive_markets": 5,
+              "seed_differences": {
+                "40001": 2.0,
+                "40002": -18.0,
+                "40003": -1.0,
+                "40004": -19.0,
+                "40005": -2.0,
+                "40006": 12.0,
+                "40007": 12.0,
+                "40008": -15.0,
+                "40009": -2.0,
+                "40010": 10.0,
+                "40011": -6.0,
+                "40012": 6.0
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "pnl_dollars",
+          "n_market_seeds": 12,
+          "mean_difference": 210.5020833333334,
+          "median_difference": 72.4725,
+          "positive_markets": 8,
+          "paired_market_bootstrap_95pct": [
+            -92.82587499999993,
+            574.9025104166667
+          ],
+          "seed_differences": {
+            "40001": 11.600000000000023,
+            "40002": 323.615,
+            "40003": 1736.975,
+            "40004": 53.44999999999999,
+            "40005": -317.85,
+            "40006": 91.495,
+            "40007": -679.8699999999999,
+            "40008": 316.59000000000003,
+            "40009": 769.61,
+            "40010": -222.88999999999987,
+            "40011": 446.715,
+            "40012": -3.414999999999992
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 296.76000000000005,
+              "positive_markets": 9,
+              "seed_differences": {
+                "40001": -360.15,
+                "40002": 706.13,
+                "40003": 3157.05,
+                "40004": 177.46999999999997,
+                "40005": -731.04,
+                "40006": 231.18,
+                "40007": -821.1399999999999,
+                "40008": 271.61,
+                "40009": 250.24,
+                "40010": 90.33999999999992,
+                "40011": 413.96,
+                "40012": 175.47
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 124.24416666666669,
+              "positive_markets": 6,
+              "seed_differences": {
+                "40001": 383.35,
+                "40002": -58.900000000000006,
+                "40003": 316.9,
+                "40004": -70.57,
+                "40005": 95.33999999999997,
+                "40006": -48.19,
+                "40007": -538.6,
+                "40008": 361.57000000000005,
+                "40009": 1288.98,
+                "40010": -536.1199999999999,
+                "40011": 479.46999999999997,
+                "40012": -182.29999999999998
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "any_quote_pct",
+          "n_market_seeds": 12,
+          "mean_difference": -1.1755703951029481,
+          "median_difference": -1.7529215358931545,
+          "positive_markets": 5,
+          "paired_market_bootstrap_95pct": [
+            -3.401676405119645,
+            1.0573177518085697
+          ],
+          "seed_differences": {
+            "40001": -2.4207011686143503,
+            "40002": 4.5909849749582605,
+            "40003": -5.091819699499169,
+            "40004": -1.0851419031719587,
+            "40005": 4.924874791318871,
+            "40006": -3.4223706176961457,
+            "40007": -6.594323873121866,
+            "40008": 1.0016694490818097,
+            "40009": -6.928213689482476,
+            "40010": 0.8347245409014903,
+            "40011": -2.7545909849749535,
+            "40012": 2.8380634390651096
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": -0.15303283249860714,
+              "positive_markets": 7,
+              "seed_differences": {
+                "40001": 0.16694490818030516,
+                "40002": 3.505843071786302,
+                "40003": 2.5041736227045135,
+                "40004": -1.3355592654424058,
+                "40005": 5.008347245409013,
+                "40006": -8.34724540901501,
+                "40007": -7.345575959933221,
+                "40008": 2.1702838063439245,
+                "40009": 1.1686143572620935,
+                "40010": -1.1686143572621148,
+                "40011": -2.003338898163612,
+                "40012": 3.8397328881469264
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": -2.1981079577072884,
+              "positive_markets": 5,
+              "seed_differences": {
+                "40001": -5.008347245409013,
+                "40002": 5.676126878130226,
+                "40003": -12.687813021702844,
+                "40004": -0.8347245409015116,
+                "40005": 4.841402337228722,
+                "40006": 1.502504173622711,
+                "40007": -5.84307178631051,
+                "40008": -0.16694490818029806,
+                "40009": -15.025041736227045,
+                "40010": 2.8380634390651096,
+                "40011": -3.505843071786302,
+                "40012": 1.8363939899832928
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        },
+        {
+          "contrast": "sampled_pair minus marginal_b",
+          "agent": "mm_1",
+          "metric": "gross_fills",
+          "n_market_seeds": 12,
+          "mean_difference": 4.833333333333333,
+          "median_difference": 5.5,
+          "positive_markets": 8,
+          "paired_market_bootstrap_95pct": [
+            -0.20833333333333334,
+            10.125
+          ],
+          "seed_differences": {
+            "40001": 4.0,
+            "40002": 8.5,
+            "40003": -5.5,
+            "40004": -2.0,
+            "40005": 22.0,
+            "40006": 7.0,
+            "40007": -10.0,
+            "40008": 7.5,
+            "40009": 1.5,
+            "40010": 8.5,
+            "40011": -3.0,
+            "40012": 19.5
+          },
+          "action_replicate_effects": [
+            {
+              "replicate": 0,
+              "n_market_seeds": 12,
+              "mean_difference": 3.75,
+              "positive_markets": 6,
+              "seed_differences": {
+                "40001": 7.0,
+                "40002": 5.0,
+                "40003": -3.0,
+                "40004": -3.0,
+                "40005": 10.0,
+                "40006": 0.0,
+                "40007": -6.0,
+                "40008": 4.0,
+                "40009": 0.0,
+                "40010": 10.0,
+                "40011": -6.0,
+                "40012": 27.0
+              }
+            },
+            {
+              "replicate": 1,
+              "n_market_seeds": 12,
+              "mean_difference": 5.916666666666667,
+              "positive_markets": 8,
+              "seed_differences": {
+                "40001": 1.0,
+                "40002": 12.0,
+                "40003": -8.0,
+                "40004": -1.0,
+                "40005": 34.0,
+                "40006": 14.0,
+                "40007": -14.0,
+                "40008": 11.0,
+                "40009": 3.0,
+                "40010": 7.0,
+                "40011": 0.0,
+                "40012": 12.0
+              }
+            }
+          ],
+          "scope": "conditional on this trained pair; action replicates averaged within market"
+        }
+      ]
+    }
+  ],
+  "reconciled_agent_episodes": 288,
+  "limitations": [
+    "Exploratory intervals, no multiple-comparison correction",
+    "Intervals condition on each trained pair, not training uncertainty",
+    "Execution component uses next recorded midpoint, not spread profit",
+    "P&L marks inventory; no modeled fees or terminal liquidation"
+  ]
+}
